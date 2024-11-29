@@ -1,25 +1,27 @@
 
 
-<div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526">
-    <ng-container *ngFor="let appareil of appareils">
-        <button class="button">
-            <!-- Utiliser ngStyle pour lier dynamiquement l'URL -->
-            <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2" [ngStyle]="{'background-image': 'linear-gradient(180deg, #fff0 0%, #57069596 100%), url(' + appareil.photo + ')'}">
-                <div
-                class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2__texts2"
-                >
-                <div
-                    class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2__texts2__facebooth"
-                >
-                {{ appareil.nom }}
+<div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526" class="photo-slider" #slider>
+    <div class="photo-container">
+        <ng-container *ngFor="let appareil of appareils">
+            <button class="button">
+                <!-- Utiliser ngStyle pour lier dynamiquement l'URL -->
+                <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2" [ngStyle]="{'background-image': 'linear-gradient(180deg, #fff0 0%, #57069596 100%), url(' + appareil.photo + ')'}">
+                    <div
+                    class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2__texts2"
+                    >
+                    <div
+                        class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2__texts2__facebooth"
+                    >
+                    {{ appareil.nom }}
+                    </div>
+                    <div
+                        class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2__texts2__laPlusProfessionnelle"
+                    >
+                    {{ appareil.description }}
+                    </div>
+                    </div>
                 </div>
-                <div
-                    class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002526__location2__texts2__laPlusProfessionnelle"
-                >
-                {{ appareil.description }}
-                </div>
-                </div>
-            </div>
-    </button>
-    </ng-container>
+        </button>
+        </ng-container>
+    </div>
   </div>

@@ -1,0 +1,315 @@
+<div class="topDestinationSafeTourLandingP">
+  <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2">
+    <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__texts">
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__texts__nosOffres">Nos Offres</div>
+    </div>
+
+
+    <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525" class="photo-slider" #slider>
+      <div class="photo-container">
+          <ng-container *ngFor="let appareil of appareils">
+              <button class="button">
+                  <!-- Utiliser ngStyle pour lier dynamiquement l'URL -->
+                  <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button" [ngStyle]="{'background-image': 'linear-gradient(180deg, #fff0 0%, #57069596 100%), url(' + appareil.photo + ')'}">
+                      <div
+                      class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button__texts2"
+                      >
+                      <div
+                          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button__texts2__tinyLabel"
+                      >
+                      {{ appareil.nom }}
+                      </div>
+                      <div
+                          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button__texts2__laPlusProfessionnelle"
+                      >
+                      {{ appareil.description }}
+                      </div>
+                      </div>
+                  </div>
+          </button>
+          </ng-container>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525">
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button__texts2"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button__texts2__tinyLabel"
+          >
+            Tiny Label
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location7Button__texts2__laPlusProfessionnelle"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2Button__texts3"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2Button__texts3__facebooth"
+          >
+            Facebooth
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2Button__texts3__laPlusProfessionnelle2"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location9Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location9Button__texts4"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location9Button__texts4__labelbox"
+          >
+            Labelbox
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location9Button__texts4__laPlusProfessionnelle3"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4Button__texts5"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4Button__texts5__labelboxMini"
+          >
+            Labelbox Mini
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4Button__texts5__laPlusProfessionnelle4"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button
+        class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location11Button"
+      >
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location11Button__texts6"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location11Button__texts6__labelbox2"
+          >
+            Labelbox
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location11Button__texts6__laPlusProfessionnelle5"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button
+        class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location12Button"
+      >
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location12Button__texts7"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location12Button__texts7__labelboxMini2"
+          >
+            Labelbox Mini
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location12Button__texts7__laPlusProfessionnelle6"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location8Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location8Button__texts8"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location8Button__texts8__facebooth2"
+          >
+            Facebooth
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location8Button__texts8__laPlusProfessionnelle7"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button
+        class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location13Button"
+      >
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location13Button__texts9"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location13Button__texts9__tinyLabel2"
+          >
+            Tiny Label
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location13Button__texts9__laPlusProfessionnelle8"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6Button__texts10"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6Button__texts10__lABELXS"
+          >
+            LABEL XS
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6Button__texts10__laPlusProfessionnelle9"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button
+        class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location10Button"
+      >
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location10Button__texts11"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location10Button__texts11__facebooth3"
+          >
+            Facebooth
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location10Button__texts11__laPlusProfessionnelle10"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3Button__texts12"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3Button__texts12__labelbox3"
+          >
+            Labelbox
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3Button__texts12__laPlusProfessionnelle11"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+      <button class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5Button">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5Button__texts13"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5Button__texts13__tinyLabel3"
+          >
+            Tiny Label
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5Button__texts13__laPlusProfessionnelle12"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </button>
+    </div> -->
+    <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination">
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__expand">
+        <Chiiz-icon-property-1-chevron-left-p></Chiiz-icon-property-1-chevron-left-p>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group">
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group__ellipse25">
+          <img
+            src="assets/ellipse-25-icon.svg"
+            alt=""
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group__ellipse25__icon"
+          />
+        </div>
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group___1">1</div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group2">
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group2__ellipse252">
+          <img
+            src="assets/ellipse-25-icon2.svg"
+            alt=""
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group2__ellipse252__icon2"
+          />
+        </div>
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group2___2">2</div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group3">
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group3__ellipse253">
+          <img
+            src="assets/ellipse-25-icon3.svg"
+            alt=""
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group3__ellipse253__icon3"
+          />
+        </div>
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group3___3">3</div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group4">
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group4__unnamed">
+          ...
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group5">
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group5__ellipse254">
+          <img
+            src="assets/ellipse-25-icon4.svg"
+            alt=""
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group5__ellipse254__icon4"
+          />
+        </div>
+        <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__group5___10">10</div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__pagination__expand2">
+        <Chiiz-icon-property-1-chevron-right></Chiiz-icon-property-1-chevron-right>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header__group1000002517">
+    <div class="header__group1000002517__logo1">
+      <img src="assets/logo-1-icon.svg" alt="" class="header__group1000002517__logo1__icon5" />
+    </div>
+    <div class="header__group1000002517__chiiiz">Chiiiz</div>
+  </div>
+  <div class="header__nav">
+    <div class="header__nav__aProposButton">À propos</div>
+    <div class="header__nav__nosOffresButton">Nos Offres</div>
+    <div class="header__nav__contactButton">Contact</div>
+    <div class="header__nav__frame1000002518">
+      <div class="header__nav__frame1000002518__plusButton">Plus</div>
+      <div class="header__nav__frame1000002518__vector">
+        <img src="assets/vector-icon3.svg" alt="" class="header__nav__frame1000002518__vector__icon6" />
+      </div>
+    </div>
+  </div>
+  <div class="header__frame3">
+    <div class="header__frame3__frame1"><div class="header__frame3__frame1__reserver">Réserver</div></div>
+  </div>
+</div>
+<Chiiz-footer></Chiiz-footer>

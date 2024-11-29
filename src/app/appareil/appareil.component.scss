@@ -1,149 +1,20 @@
-// .topDestinationSafeTourLandingP {
-//     position: relative;
-//     height: min-content;
-//     align-self: stretch;
-//     flex-direction: column;
-//     padding: 100px 132px;
-//     &__topDestinationSafeTourLandingP2 {
-//       height: min-content;
-//       align-self: stretch;
-//       flex-direction: column;
-//       gap: 50px;
-//       &__frame1000002522 {
-//         height: min-content;
-//         align-self: stretch;
-//         align-items: flex-end;
-//         gap: 340px;
-//         &__texts {
-//           height: min-content;
-//           flex: 1;
-//           flex-direction: column;
-//           gap: 18px;
-//           &__nosOffres {
-//             color: #570695;
-//             font-size: 40px;
-//             line-height: 40px;
-//             font-weight: bold;
-//             font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-//               'Liberation Sans', sans-serif;
-//             height: min-content;
-//             align-self: stretch;
-//             flex-direction: column;
-//           }
-//           &__trouvezLaBorneIdealePourVosEve {
-//             height: min-content;
-//             align-self: stretch;
-//             flex-direction: column;
-//             &__textBlock3 {
-//               color: #676a6c;
-//               font-size: 18px;
-//               line-height: 28px;
-//               font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-//                 'Liberation Sans', sans-serif;
-//             }
-//             &__textBlock4 {
-//               margin-top: 0;
-//               color: #676a6c;
-//               font-size: 18px;
-//               line-height: 28px;
-//               font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-//                 'Liberation Sans', sans-serif;
-//             }
-//           }
-//         }
-//         &__secondaryBtn3 {
-//           width: min-content;
-//           height: min-content;
-//           padding: 18px 50px;
-//           border-radius: 100px;
-//           box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
-//             0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
-//             0px 100px 80px 0px #f201901a;
-//           &__decouvrir {
-//             background-image: linear-gradient(254.8deg, #7d00deff 0%, #f6018dff 100%);
-//             background-position: center;
-//             background-repeat: no-repeat;
-//             background-size: auto;
-//             -webkit-background-clip: text;
-//             background-clip: text;
-//             -webkit-text-fill-color: transparent;
-//             font-size: 16px;
-//             font-weight: bold;
-//             font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-//               'Liberation Sans', sans-serif;
-//             width: min-content;
-//             height: min-content;
-//             text-align: center;
-//             align-items: center;
-//             white-space: nowrap;
-//             flex-direction: column;
-//           }
-//         }
-//       }
-//       &__frame1000002526 {
-//         height: min-content;
-//         align-self: stretch;
-//         align-items: center;
-//         gap: 30px;
-//         &__location2 {
-//           width: 276px;
-//           height: 400px;
-//           flex-direction: column;
-//           justify-content: flex-end;
-//           align-items: flex-start;
-//           gap: 402px;
-//           padding: 22px 24px;
-//           border-radius: 20px;
-//         //   background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location2.png');
-//           background-position: center;
-//           background-repeat: no-repeat;
-//           background-size: auto, contain;
-//           &__texts2 {
-//             position: relative;
-//             width: 166px;
-//             height: 50px;
-//             &__facebooth {
-//               color: #fff;
-//               font-size: 24px;
-//               line-height: 20px;
-//               font-weight: bold;
-//               font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-//                 'Liberation Sans', sans-serif;
-//               letter-spacing: -0.01em;
-//               position: absolute;
-//               left: 0;
-//               right: 32.5301%;
-//               top: 0;
-//               bottom: 60%;
-//               width: min-content;
-//               height: min-content;
-//               text-shadow: 0px 6px 15px #0003;
-//               white-space: nowrap;
-//               flex-direction: column;
-//             }
-//             &__laPlusProfessionnelle {
-//               opacity: 0.9;
-//               color: #fff;
-//               font-size: 16px;
-//               line-height: 14px;
-//               font-weight: 500;
-//               font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-//                 'Liberation Sans', sans-serif;
-//               position: absolute;
-//               left: 0;
-//               right: 0;
-//               top: 72%;
-//               bottom: 0;
-//               width: min-content;
-//               height: min-content;
-//               white-space: nowrap;
-//               flex-direction: column;
-//             }
-//           }
-//         }
-//       }
-//     }
-// }
+
+.photo-slider {
+  overflow-x: auto; /* Active le défilement horizontal */
+  white-space: nowrap; /* Évite le retour à la ligne */
+  display: flex;
+  scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+  -ms-overflow-style: none; /* Cache la scrollbar sur IE et Edge */
+}
+
+.photo-slider::-webkit-scrollbar {
+  display: none; /* Cache la scrollbar sur Chrome, Safari et Edge */
+}
+.photo-container {
+  display: flex;
+  transition: transform 0.5s linear; /* Transition pour un effet fluide */
+  gap: 10px; /* Ajoute un espacement entre les photos */
+}
 .home_27-1035 {
     position: relative;
     display: flex;

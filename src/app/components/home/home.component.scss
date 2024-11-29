@@ -16,6 +16,21 @@
   overflow-y: scroll;   /* Permet le défilement vertical si nécessaire */
   overflow-x: scroll;
 }
+button {
+  cursor: pointer; // Curseur en forme de main au survol
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none; // Suppression du cadre
+  background-color: transparent;  //suppression de la couleur de fond
+  // Effet de survol
+  &:hover {
+    transform: scale(1.05);  // Légère augmentation de taille
+  }
+
+  // Effet au clic
+  &:active {
+    transform: scale(0.98);    // Réduction de la taille au clic
+  }
+}
 :host,
 * {
   box-sizing: border-box;
@@ -2289,18 +2304,5 @@ svg {
     }
   }
 }
-.button {
-  cursor: pointer; // Curseur en forme de main au survol
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  border: none; // Suppression du cadre
-  background-color: transparent;  //suppression de la couleur de fond
-  // Effet de survol
-  &:hover {
-    transform: scale(1.05);  // Légère augmentation de taille
-  }
 
-  // Effet au clic
-  &:active {
-    transform: scale(0.98);    // Réduction de la taille au clic
-  }
-}
+
