@@ -259,8 +259,7 @@ svg {
     width: 420px;
     height: 630px;
     border-radius: 25px;
-    background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%),
-      url('/assets/_7e3000d5f9c890a1d1634d9920bc40.jpeg');
+    background-image: linear-gradient(180deg, rgb(241, 134, 202) 0%, #57069596 100%), url('/assets/_7e3000d5f9c890a1d1634d9920bc40.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto, cover;
@@ -590,8 +589,7 @@ svg {
         width: 476px;
         height: 580px;
         border-radius: 25px;
-        background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%),
-          url('/assets/n7e3000d5f9c890a1d1634d9920bc4.jpeg');
+        background-image: linear-gradient(180deg, rgb(241, 134, 202) 0%, #57069596 100%), url('/assets/_7e3000d5f9c890a1d1634d9920bc402.jpeg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, cover;
@@ -1668,7 +1666,7 @@ svg {
     padding: 70px 79px;
     border-radius: 20px;
     background-color: #51068bbf;
-    background-image: url('/assets/ctasectionbg.jpeg');
+    background-image: linear-gradient(180deg, #57069596 0%, #57069596 100%), url('/assets/ctasectionbg.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

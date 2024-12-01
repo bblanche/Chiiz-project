@@ -1,724 +1,1544 @@
-
 .home_27-1035 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 0px;
-    box-sizing: border-box;
-    overflow: hidden;
-    background: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  width: 1440px;
+  margin: 0;            /* Supprime les marges par défaut */
+  padding: 0;           /* Supprime les espacements par défaut */
+  height: 100%;         /* Assure que le body prend toute la hauteur de la fenêtre */
+  overflow-y: scroll;   /* Permet le défilement vertical si nécessaire */
+  overflow-x: scroll;
+}
+button {
+  cursor: pointer; // Curseur en forme de main au survol
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none; // Suppression du cadre
+  background-color: transparent;  //suppression de la couleur de fond
+  // Effet de survol
+  &:hover {
+    transform: scale(1.05);  // Légère augmentation de taille
+  }
+
+  // Effet au clic
+  &:active {
+    transform: scale(0.98);    // Réduction de la taille au clic
+  }
+}
+:host,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+:host,
+:not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+ul,
+ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+img {
+  object-fit: contain;
+}
+
+svg {
+  overflow: visible;
+}
+
+:host {
+  position: relative;
+  width: 1440px;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+.herosection {
+  position: relative;
+  height: 1024px;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 199px 68px;
+  &__herobg {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 1440px;
-    margin: 0;            /* Supprime les marges par défaut */
-    padding: 0;           /* Supprime les espacements par défaut */
-    height: 100%;         /* Assure que le body prend toute la hauteur de la fenêtre */
-    overflow-y: scroll;   /* Permet le défilement vertical si nécessaire */
-    overflow-x: scroll;
-  }
-  :host,
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    flex-shrink: 0;
-    text-decoration: none;
-    min-width: 0;
-    overflow-wrap: anywhere;
-  }
-  
-  :host,
-  :not(span, a, ul, ol, li, p) {
-    display: flex;
-  }
-  
-  ul,
-  ol {
-    text-indent: 0;
-    padding-inline-start: 1.5em;
-  }
-  
-  p:empty::before {
-    content: '';
-    display: inline-block;
-  }
-  
-  img {
-    object-fit: contain;
-  }
-  
-  svg {
-    overflow: visible;
-  }
-  
-  :host {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    overflow: hidden;
-  }
-  .heroSection {
-    position: relative;
     height: 1024px;
-    align-self: stretch;
+    overflow: visible;
+    &__icon {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    position: relative;
+    width: min-content;
+    height: min-content;
+    align-items: center;
+    &__heroText {
+      width: 652px;
+      height: min-content;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 38px;
+      &__immortalisezVosMoments {
+        height: min-content;
+        align-self: stretch;
+        flex-direction: column;
+        &__textBlock {
+          color: #570695;
+          font-size: 90px;
+          font-weight: 800;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          text-transform: capitalize;
+        }
+        &__textBlock2 {
+          margin-top: 0;
+          color: #570695;
+          font-size: 90px;
+          font-weight: 800;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          text-transform: capitalize;
+        }
+      }
+      &__rendezVosMomentsSpciauxInoubli {
+        color: #2d2d2d;
+        font-size: 18px;
+        line-height: 28px;
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          'Liberation Sans', sans-serif;
+        width: 499px;
+        height: min-content;
+        flex-direction: column;
+      }
+      &__secondarybtn {
+        width: min-content;
+        height: min-content;
+        padding: 18px 50px;
+        border-radius: 100px;
+        box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
+          0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
+          0px 100px 80px 0px #f201901a;
+        &__rservezMaintenant {
+          background-image: linear-gradient(262.9deg, #7d00deff 0%, #f6018dff 100%);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 16px;
+          font-weight: bold;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          width: min-content;
+          height: min-content;
+          text-align: center;
+          align-items: center;
+          white-space: nowrap;
+          flex-direction: column;
+        }
+      }
+    }
+    &__heroImages {
+      width: min-content;
+      height: min-content;
+      align-items: center;
+      &__img2 {
+        position: relative;
+        width: 258px;
+        height: 414.75px;
+        &__ellipse7 {
+          position: absolute;
+          left: 4.2636%;
+          right: 4.2636%;
+          top: 86.739%;
+          bottom: 0;
+          width: 236px;
+          height: 55px;
+          overflow: visible;
+          filter: blur(15px);
+          &__icon2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &___68aa145e0b10f0e5436e4b0bdc7949 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 6.6908%;
+          width: 258px;
+          height: 387px;
+          background-image: url('/assets/_68aa145e0b10f0e5436e4b0bdc7949.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      &__img1 {
+        position: relative;
+        width: 316px;
+        height: 758.5px;
+        &__ellipse8 {
+          position: absolute;
+          left: 7.7532%;
+          right: 6.8038%;
+          top: 91.6941%;
+          bottom: 0;
+          width: 270px;
+          height: 63px;
+          overflow: visible;
+          filter: blur(15px);
+          &__icon3 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &___8f17ad98cc7402f4142236bd4995e3 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0.3296%;
+          width: 316px;
+          height: 756px;
+          background-image: url('/assets/_8f17ad98cc7402f4142236bd4995e3.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+.feature {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 100px 0;
+  background-color: #ffe6f9;
+  &___7e3000d5f9c890a1d1634d9920bc40 {
+    width: 420px;
+    height: 630px;
+    border-radius: 25px;
+    background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%),
+      url('/assets/_7e3000d5f9c890a1d1634d9920bc40.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+  }
+  &__content2 {
+    width: min-content;
+    height: min-content;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    &__inoubliable {
+      color: #7d00de;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: bold;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      height: min-content;
+      align-self: stretch;
+      flex-direction: column;
+    }
+    &__desBornesPhotoUniquesPourVosVn {
+      color: #570695;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: bold;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      text-transform: capitalize;
+      height: min-content;
+      align-self: stretch;
+      flex-direction: column;
+    }
+    &__louezNosBornesPhotoPourCapture {
+      color: #2d2d2d;
+      font-size: 18px;
+      line-height: 32px;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      letter-spacing: -0.01em;
+      width: 521px;
+      height: min-content;
+      flex-direction: column;
+    }
+    &__frame1000002518 {
+      height: min-content;
+      align-self: stretch;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 10px;
+      &__learnMore {
+        height: min-content;
+        align-self: stretch;
+        align-items: center;
+        gap: 20px;
+        &__arrow {
+          width: 14px;
+          height: 10px;
+          overflow: visible;
+          &__icon4 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &__desImpressionsInstantanesDeHau {
+          color: #2d2d2d;
+          font-size: 16px;
+          line-height: 18px;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          width: min-content;
+          height: min-content;
+          white-space: nowrap;
+          flex-direction: column;
+        }
+      }
+      &__learnMore2 {
+        height: min-content;
+        align-self: stretch;
+        align-items: center;
+        gap: 20px;
+        &__vector727 {
+          width: 14px;
+          height: 10px;
+          overflow: visible;
+          &__icon5 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &__optionsDePersonnalisationPourC {
+          color: #2d2d2d;
+          font-size: 16px;
+          line-height: 18px;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          width: min-content;
+          height: min-content;
+          white-space: nowrap;
+          flex-direction: column;
+        }
+      }
+      &__learnMore_2 {
+        height: min-content;
+        align-self: stretch;
+        align-items: center;
+        gap: 20px;
+        &__vector7272 {
+          width: 14px;
+          height: 10px;
+          overflow: visible;
+          &__icon6 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &__partageFacileSurLesRseauxSocia {
+          color: #2d2d2d;
+          font-size: 16px;
+          line-height: 18px;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          width: min-content;
+          height: min-content;
+          white-space: nowrap;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+.feature_2 {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 100px;
+  &__content_2 {
+    width: 800px;
+    height: min-content;
+    flex-direction: column;
+    gap: 20px;
+    &__capturezVosMomentsSpciaux {
+      color: #7d00de;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: bold;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      height: min-content;
+      align-self: stretch;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    &__adaptPourTousVosVnements {
+      color: #570695;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: bold;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      text-transform: capitalize;
+      height: min-content;
+      align-self: stretch;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    &__notreServiceDeLocationDeBornes {
+      color: #2d2d2d;
+      font-size: 18px;
+      line-height: 32px;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      letter-spacing: -0.01em;
+      height: min-content;
+      align-self: stretch;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &__feature_3 {
+    height: min-content;
+    align-self: stretch;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 199px 68px;
-    &__heroBg {
+    gap: 30px;
+    &__frame10000025182 {
+      width: 360px;
+      align-self: stretch;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      &__card3 {
+        height: min-content;
+        align-self: stretch;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 42px 20px;
+        outline: solid 1px #f5f5f5;
+        outline-offset: -1px;
+        border-radius: 12px;
+        &__mariageicon {
+          z-index: 0;
+          width: 90px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+          padding: 17px;
+          border-radius: 45px;
+          background-color: #ed019333;
+          box-shadow: 0px 30px 35px -8px #fab33f26;
+          &__engagementring1 {
+            width: 48px;
+            height: 48px;
+            background-image: url('/assets/engagementring1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+        &__mariage {
+          color: #2d2d2d;
+          font-size: 22px;
+          font-weight: 500;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: -0.01em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        &__immortalisezVotreMariageAvecNo {
+          color: #2d2d2d;
+          font-size: 16px;
+          line-height: 28px;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: 0.005em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+      &__card4 {
+        height: min-content;
+        align-self: stretch;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 42px 20px;
+        outline: solid 1px #f5f5f5;
+        outline-offset: -1px;
+        border-radius: 12px;
+        &__hbdicon {
+          z-index: 0;
+          width: 90px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+          padding: 17px;
+          border-radius: 45px;
+          background-color: #ed019333;
+          box-shadow: 0px 30px 35px -8px #fab33f26;
+          &__birthdaycake1 {
+            width: 48px;
+            height: 48px;
+            background-image: url('/assets/birthdaycake1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+        &__anniversaire {
+          color: #2d2d2d;
+          font-size: 22px;
+          font-weight: 500;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: -0.01em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        &__ajoutezUneToucheAmusanteVotreF {
+          color: #2d2d2d;
+          font-size: 16px;
+          line-height: 28px;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: 0.005em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+    &__frame1000002518_2 {
+      width: min-content;
+      height: min-content;
+      &__n7e3000d5f9c890a1d1634d9920bc4 {
+        width: 476px;
+        height: 580px;
+        border-radius: 25px;
+        background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%),
+          url('/assets/n7e3000d5f9c890a1d1634d9920bc4.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, cover;
+      }
+    }
+    &__frame1000002519 {
+      width: 360px;
+      align-self: stretch;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      &__card03 {
+        height: min-content;
+        align-self: stretch;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 40px 20px;
+        outline: solid 1px #f5f5f5;
+        outline-offset: -1px;
+        border-radius: 12px;
+        &__baby_showericon {
+          z-index: 0;
+          width: 90px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+          padding: 17px;
+          border-radius: 45px;
+          background-color: #ed019333;
+          box-shadow: 0px 30px 35px -8px #fab33f26;
+          &__babyshower1 {
+            width: 48px;
+            height: 48px;
+            background-image: url('/assets/babyshower1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+        &__babyShower {
+          color: #2d2d2d;
+          font-size: 22px;
+          font-weight: 500;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: -0.01em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        &__capturezVosMomentsDeJoieLorsDe {
+          color: #2d2d2d;
+          font-size: 16px;
+          line-height: 28px;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: 0.005em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+      &__card42 {
+        height: min-content;
+        align-self: stretch;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 40px 20px;
+        outline: solid 1px #f5f5f5;
+        outline-offset: -1px;
+        border-radius: 12px;
+        &__baptisicon {
+          z-index: 0;
+          width: 90px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+          padding: 17px;
+          border-radius: 45px;
+          background-color: #ed019333;
+          box-shadow: 0px 30px 35px -8px #fab33f26;
+          &__baptism1 {
+            width: 48px;
+            height: 48px;
+            background-image: url('/assets/baptism1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+        &__baptme {
+          color: #2d2d2d;
+          font-size: 22px;
+          font-weight: 500;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: -0.01em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        &__ajoutezUneToucheAmusanteVotreF2 {
+          color: #2d2d2d;
+          font-size: 16px;
+          line-height: 28px;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          letter-spacing: 0.005em;
+          z-index: 0;
+          height: min-content;
+          align-self: stretch;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  &__secondarybtn_2 {
+    width: min-content;
+    height: min-content;
+    padding: 18px 50px;
+    border-radius: 100px;
+    background-image: linear-gradient(257.7deg, #7d00deff 0%, #f6018dff 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a, 0px 20px 13px 0px #f201900d,
+      0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013, 0px 100px 80px 0px #f201901a;
+    &__rservezMaintenant2 {
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      width: min-content;
+      height: min-content;
+      text-align: center;
+      align-items: center;
+      white-space: nowrap;
+      flex-direction: column;
+    }
+  }
+}
+.topDestinationSafeTourLandingP {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  padding: 100px 132px;
+  &__topDestinationsafeTourLandingP {
+    height: min-content;
+    align-self: stretch;
+    flex-direction: column;
+    gap: 50px;
+    &__frame1000002522 {
+      height: min-content;
+      align-self: stretch;
+      align-items: flex-end;
+      gap: 340px;
+      &__texts {
+        height: min-content;
+        flex: 1;
+        flex-direction: column;
+        gap: 18px;
+        &__nosOffres {
+          color: #570695;
+          font-size: 40px;
+          line-height: 40px;
+          font-weight: bold;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          height: min-content;
+          align-self: stretch;
+          flex-direction: column;
+        }
+        &__trouvezLaBorneIdalePourVosVnem {
+          height: min-content;
+          align-self: stretch;
+          flex-direction: column;
+          &__textBlock3 {
+            color: #676a6c;
+            font-size: 18px;
+            line-height: 28px;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+          }
+          &__textBlock4 {
+            margin-top: 0;
+            color: #676a6c;
+            font-size: 18px;
+            line-height: 28px;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+          }
+        }
+      }
+      &__secondarybtn_3 {
+        width: min-content;
+        height: min-content;
+        padding: 18px 50px;
+        border-radius: 100px;
+        box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
+          0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
+          0px 100px 80px 0px #f201901a;
+        &__dcouvrir {
+          background-image: linear-gradient(254.8deg, #7d00deff 0%, #f6018dff 100%);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 16px;
+          font-weight: bold;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          width: min-content;
+          height: min-content;
+          text-align: center;
+          align-items: center;
+          white-space: nowrap;
+          flex-direction: column;
+        }
+      }
+    }
+    &__frame1000002526 {
+      height: min-content;
+      align-self: stretch;
+      align-items: center;
+      gap: 30px;
+      &__location2 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location2.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts2 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__facebooth {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 32.5301%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location3 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location3.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_2 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__labelbox {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 42.1687%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle2 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location4 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location4.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_3 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__labelboxMini {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 10.8434%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_2 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location5 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location5.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_4 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__tinyLabel {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 33.7349%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_3 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location6 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location6.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_5 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__lABELXS {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 36.1446%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_4 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    &__frame1000002527 {
+      height: min-content;
+      align-self: stretch;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 30px;
+      &__location22 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location22.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_6 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__facebooth_2 {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 32.5301%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_5 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location32 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_7 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__labelbox_2 {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 42.1687%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_6 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location42 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location42.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_8 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__labelboxMini2 {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 10.8434%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_7 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location52 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location52.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_9 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__tinyLabel2 {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 33.7349%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_8 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+      &__location62 {
+        width: 276px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 402px;
+        padding: 22px 24px;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location62.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, contain;
+        &__texts_10 {
+          position: relative;
+          width: 166px;
+          height: 50px;
+          &__labelXs {
+            color: #fff;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            letter-spacing: -0.01em;
+            position: absolute;
+            left: 0;
+            right: 36.1446%;
+            top: 0;
+            bottom: 60%;
+            width: min-content;
+            height: min-content;
+            text-shadow: 0px 6px 15px #0003;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+          &__laPlusProfessionnelle_9 {
+            opacity: 0.9;
+            color: #fff;
+            font-size: 16px;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72%;
+            bottom: 0;
+            width: min-content;
+            height: min-content;
+            white-space: nowrap;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+.header {
+  position: absolute;
+  left: calc(50% - -0.5px);
+  top: 48px;
+  width: 1305px;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 182px;
+  transform: translateX(-50%);
+  &__group1000002517 {
+    position: relative;
+    width: 149px;
+    height: 50px;
+    &__logo1 {
       position: absolute;
       left: 0;
+      right: 78.5235%;
       top: 0;
-      width: 1440px;
-      height: 1024px;
+      bottom: 0;
+      width: 32px;
+      height: 50px;
       overflow: visible;
-      &__icon {
+      &__icon7 {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    &__content {
-      position: relative;
-      width: min-content;
-      height: min-content;
-      align-items: center;
-      &__heroText {
-        width: 652px;
-        height: min-content;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 38px;
-        &__immortalisezVosMoments {
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-          &__textBlock {
-            color: #570695;
-            font-size: 90px;
-            font-weight: 800;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            text-transform: capitalize;
-          }
-          &__textBlock2 {
-            margin-top: 0;
-            color: #570695;
-            font-size: 90px;
-            font-weight: 800;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            text-transform: capitalize;
-          }
-        }
-        &__rendezVosMomentsSpeciauxInoubl {
-          color: #2d2d2d;
-          font-size: 18px;
-          line-height: 28px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: 499px;
-          height: min-content;
-          flex-direction: column;
-        }
-        &__secondaryBtn {
-          width: min-content;
-          height: min-content;
-          padding: 18px 50px;
-          border-radius: 100px;
-          box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
-            0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
-            0px 100px 80px 0px #f201901a;
-          &__reservezMaintenant {
-            background-image: linear-gradient(262.9deg, #7d00deff 0%, #f6018dff 100%);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 16px;
-            font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            width: min-content;
-            height: min-content;
-            text-align: center;
-            align-items: center;
-            white-space: nowrap;
-            flex-direction: column;
-          }
-        }
-      }
-      &__heroImages {
-        width: min-content;
-        height: min-content;
-        align-items: center;
-        &__img2 {
-          position: relative;
-          width: 258px;
-          height: 414.75px;
-          &__ellipse7 {
-            position: absolute;
-            left: 4.2636%;
-            right: 4.2636%;
-            top: 86.739%;
-            bottom: 0;
-            width: 236px;
-            height: 55px;
-            overflow: visible;
-            filter: blur(15px);
-            &__icon2 {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          &___68aa145e0b10f0e5436e4b0bdc7949 {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 6.6908%;
-            width: 258px;
-            height: 387px;
-            background-image: url('/assets/_68aa145e0b10f0e5436e4b0bdc7949.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-        }
-        &__img1 {
-          position: relative;
-          width: 316px;
-          height: 758.5px;
-          &__ellipse8 {
-            position: absolute;
-            left: 7.7532%;
-            right: 6.8038%;
-            top: 91.6941%;
-            bottom: 0;
-            width: 270px;
-            height: 63px;
-            overflow: visible;
-            filter: blur(15px);
-            &__icon3 {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          &___8f17ad98cc7402f4142236bd4995e3 {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0.3296%;
-            width: 316px;
-            height: 756px;
-            background-image: url('/assets/_8f17ad98cc7402f4142236bd4995e3.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-        }
-      }
-    }
-  }
-  .feature {
-    position: relative;
-    height: min-content;
-    align-self: stretch;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    padding: 100px 0;
-    background-color: #ffe6f9;
-    &___7e3000d5f9c890a1d1634d9920bc40 {
-      width: 420px;
-      height: 630px;
-  
-      border-radius: 25px;
-      background-image: linear-gradient(180deg, rgb(241, 134, 202) 0%, #57069596 100%), url('/assets/_7e3000d5f9c890a1d1634d9920bc40.jpeg');
+    &__chiiiz {
+      background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: auto, contain;
-    }
-    &__content2 {
+      background-size: auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 40px;
+      font-family: Arciform Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      letter-spacing: 0.05em;
+      position: absolute;
+      left: 34.8993%;
+      right: 0;
+      top: 10%;
+      bottom: 10%;
       width: min-content;
       height: min-content;
+      white-space: nowrap;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-      &__inoubliable {
-        color: #7d00de;
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: bold;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        height: min-content;
-        align-self: stretch;
-        flex-direction: column;
-      }
-      &__desBornesPhotoUniquesPourVosEv {
+    }
+  }
+  &__nav {
+    width: min-content;
+    height: min-content;
+    align-items: center;
+    gap: 73px;
+    &__propos {
+      color: #570695;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      width: min-content;
+      height: min-content;
+      white-space: nowrap;
+      flex-direction: column;
+    }
+    &__nosOffres2 {
+      color: #570695;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      width: min-content;
+      height: min-content;
+      white-space: nowrap;
+      flex-direction: column;
+    }
+    &__contact {
+      color: #570695;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      width: min-content;
+      height: min-content;
+      white-space: nowrap;
+      flex-direction: column;
+    }
+    &__frame1000002518_3 {
+      width: min-content;
+      height: min-content;
+      align-items: center;
+      gap: 4px;
+      &__plus {
         color: #570695;
-        font-size: 40px;
-        line-height: 48px;
-        font-weight: bold;
+        font-size: 16px;
+        font-weight: 600;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
-        text-transform: capitalize;
+        width: min-content;
         height: min-content;
-        align-self: stretch;
+        white-space: nowrap;
         flex-direction: column;
       }
-      &__louezNosBornesPhotoPourCapture {
-        color: #2d2d2d;
-        font-size: 18px;
-        line-height: 32px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        letter-spacing: -0.01em;
-        width: 521px;
-        height: min-content;
-        flex-direction: column;
-      }
-      &__frame1000002518 {
-        height: min-content;
-        align-self: stretch;
-        flex-direction: column;
-        gap: 10px;
-        padding: 0 10px;
-        &__learnMore {
-          height: min-content;
-          align-self: stretch;
-          align-items: center;
-          gap: 20px;
-          &__arrow {
-            width: 14px;
-            height: 10px;
-            overflow: visible;
-            &__icon4 {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          &__desImpressionsInstantaneesDeHa {
-            color: #2d2d2d;
-            font-size: 16px;
-            line-height: 18px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            width: min-content;
-            height: min-content;
-            white-space: nowrap;
-            flex-direction: column;
-          }
-        }
-        &__learnMore2 {
-          height: min-content;
-          align-self: stretch;
-          align-items: center;
-          gap: 20px;
-          &__vector727 {
-            width: 14px;
-            height: 10px;
-            overflow: visible;
-            &__icon5 {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          &__optionsDePersonnalisationPourC {
-            color: #2d2d2d;
-            font-size: 16px;
-            line-height: 18px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            width: min-content;
-            height: min-content;
-            white-space: nowrap;
-            flex-direction: column;
-          }
-        }
-        &__learnMore3 {
-          height: min-content;
-          align-self: stretch;
-          align-items: center;
-          gap: 20px;
-          &__vector7272 {
-            width: 14px;
-            height: 10px;
-            overflow: visible;
-            &__icon6 {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          &__partageFacileSurLesReseauxSoci {
-            color: #2d2d2d;
-            font-size: 16px;
-            line-height: 18px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            width: min-content;
-            height: min-content;
-            white-space: nowrap;
-            flex-direction: column;
-          }
+      &__vector {
+        width: 8px;
+        height: 4.9433px;
+        overflow: visible;
+        &__icon8 {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }
   }
-  .feature2 {
-    position: relative;
+  &__frame3 {
+    width: min-content;
     height: min-content;
-    align-self: stretch;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 100px;
-    &__content3 {
-      width: 800px;
-      height: min-content;
-      flex-direction: column;
-      gap: 20px;
-      &__capturezVosMomentsSpeciaux {
-        color: #7d00de;
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: bold;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        height: min-content;
-        align-self: stretch;
-        text-align: center;
-        align-items: center;
-        flex-direction: column;
-      }
-      &__adaptePourTousVosEvenements {
-        color: #570695;
-        font-size: 40px;
-        line-height: 48px;
-        font-weight: bold;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        text-transform: capitalize;
-        height: min-content;
-        align-self: stretch;
-        text-align: center;
-        align-items: center;
-        flex-direction: column;
-      }
-      &__notreServiceDeLocationDeBornes {
-        color: #2d2d2d;
-        font-size: 18px;
-        line-height: 32px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        letter-spacing: -0.01em;
-        height: min-content;
-        align-self: stretch;
-        text-align: center;
-        align-items: center;
-        flex-direction: column;
-      }
-    }
-    &__feature3 {
-      height: min-content;
-      align-self: stretch;
+    &__frame1 {
+      width: 152px;
+      height: 58px;
       justify-content: center;
       align-items: center;
-      gap: 30px;
-      &__frame10000025182 {
-        width: 360px;
-        align-self: stretch;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-        &__card3 {
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-          align-items: center;
-          gap: 25px;
-          padding: 42px 20px;
-          outline: solid 1px #f5f5f5;
-          outline-offset: -1px;
-          border-radius: 12px;
-          &__mariageIcon {
-            z-index: 0;
-            width: 90px;
-            height: 90px;
-            justify-content: center;
-            align-items: center;
-            padding: 17px;
-            border-radius: 45px;
-            background-color: #ed019333;
-            box-shadow: 0px 30px 35px -8px #fab33f26;
-            &__engagementRing1 {
-              width: 48px;
-              height: 48px;
-              background-image: url('/assets/engagementRing1.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-          }
-          &__mariage {
-            color: #2d2d2d;
-            font-size: 22px;
-            font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: -0.01em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-          &__immortalisezVotreMariageAvecNo {
-            color: #2d2d2d;
-            font-size: 16px;
-            line-height: 28px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: 0.005em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-        }
-        &__card4 {
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-          align-items: center;
-          gap: 25px;
-          padding: 42px 20px;
-          outline: solid 1px #f5f5f5;
-          outline-offset: -1px;
-          border-radius: 12px;
-          &__hbdIcon {
-            z-index: 0;
-            width: 90px;
-            height: 90px;
-            justify-content: center;
-            align-items: center;
-            padding: 17px;
-            border-radius: 45px;
-            background-color: #ed019333;
-            box-shadow: 0px 30px 35px -8px #fab33f26;
-            &__birthdayCake1 {
-              width: 48px;
-              height: 48px;
-              background-image: url('/assets/birthdayCake1.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-          }
-          &__anniversaire {
-            color: #2d2d2d;
-            font-size: 22px;
-            font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: -0.01em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-          &__ajoutezUneToucheAmusanteAVotre {
-            color: #2d2d2d;
-            font-size: 16px;
-            line-height: 28px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: 0.005em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-        }
-      }
-      &__frame10000025183 {
-        width: min-content;
-        height: min-content;
-        &___7e3000d5f9c890a1d1634d9920bc402 {
-          width: 476px;
-          height: 580px;
-          border-radius: 25px;
-  
-          background-image: linear-gradient(180deg, rgb(241, 134, 202) 0%, #57069596 100%), url('/assets/_7e3000d5f9c890a1d1634d9920bc402.jpeg');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 100%, 100%;
-        }
-      }
-      &__frame1000002519 {
-        width: 360px;
-        align-self: stretch;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-        &__card32 {
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-          align-items: center;
-          gap: 25px;
-          padding: 40px 20px;
-          outline: solid 1px #f5f5f5;
-          outline-offset: -1px;
-          border-radius: 12px;
-          &__baby_showerIcon {
-            z-index: 0;
-            width: 90px;
-            height: 90px;
-            justify-content: center;
-            align-items: center;
-            padding: 17px;
-            border-radius: 45px;
-            background-color: #ed019333;
-            box-shadow: 0px 30px 35px -8px #fab33f26;
-            &__babyShower1 {
-              width: 48px;
-              height: 48px;
-              background-image: url('/assets/babyShower1.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-          }
-          &__babyShower {
-            color: #2d2d2d;
-            font-size: 22px;
-            font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: -0.01em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-          &__capturezVosMomentsDeJoieLorsDe {
-            color: #2d2d2d;
-            font-size: 16px;
-            line-height: 28px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: 0.005em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-        }
-        &__card42 {
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-          align-items: center;
-          gap: 25px;
-          padding: 40px 20px;
-          outline: solid 1px #f5f5f5;
-          outline-offset: -1px;
-          border-radius: 12px;
-          &__baptisIcon {
-            z-index: 0;
-            width: 90px;
-            height: 90px;
-            justify-content: center;
-            align-items: center;
-            padding: 17px;
-            border-radius: 45px;
-            background-color: #ed019333;
-            box-shadow: 0px 30px 35px -8px #fab33f26;
-            &__baptism1 {
-              width: 48px;
-              height: 48px;
-              background-image: url('/assets/baptism1.png');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-          }
-          &__bapteme {
-            color: #2d2d2d;
-            font-size: 22px;
-            font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: -0.01em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-          &__ajoutezUneToucheAmusanteAVotre2 {
-            color: #2d2d2d;
-            font-size: 16px;
-            line-height: 28px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            letter-spacing: 0.005em;
-            z-index: 0;
-            height: min-content;
-            align-self: stretch;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-          }
-        }
-      }
-    }
-    &__secondaryBtn2 {
-      width: min-content;
-      height: min-content;
-      padding: 18px 50px;
+      padding: 18px 43px;
       border-radius: 100px;
-      background-image: linear-gradient(257.7deg, #7d00deff 0%, #f6018dff 100%);
+      background-image: linear-gradient(249.1deg, #7d00deff 0%, #f6018dff 100%);
       background-position: center;
       background-repeat: no-repeat;
       background-size: auto;
       box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a, 0px 20px 13px 0px #f201900d,
         0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013, 0px 100px 80px 0px #f201901a;
-      &__reservezMaintenant2 {
+      &__rserver {
         color: #fff;
         font-size: 16px;
         font-weight: bold;
@@ -733,31 +1553,273 @@
       }
     }
   }
-  .topDestinationSafeTourLandingP {
-    position: relative;
+}
+.testimonialSafeTourLandingPage {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  &__testimonialsafeTourLandingPage {
+    width: min-content;
     height: min-content;
-    align-self: stretch;
-    flex-direction: column;
-    padding: 100px 132px;
-    &__topDestinationSafeTourLandingP2 {
+    align-items: center;
+    gap: 70px;
+    &__frame1000002518_4 {
+      position: relative;
+      width: min-content;
       height: min-content;
-      align-self: stretch;
+      align-items: center;
+      gap: 10px;
+      &__shapes {
+        position: absolute;
+        left: -60px;
+        top: -50.0005px;
+        width: 424.9971px;
+        height: 429.2428px;
+        overflow: visible;
+        &__icon9 {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__testimonialsimg {
+        width: 300px;
+        height: 300px;
+        border-radius: 500px;
+        background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%), url('/assets/testimonialsimg.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto, cover;
+        box-shadow: 0px 28px 30px 0px #51068b1a;
+      }
+    }
+    &__texts_22 {
+      width: 516px;
+      height: min-content;
       flex-direction: column;
-      gap: 50px;
-      &__frame1000002522 {
+      align-items: flex-start;
+      gap: 20px;
+      &__avisDesClients {
+        color: #570695;
+        font-size: 40px;
+        line-height: 57px;
+        font-weight: bold;
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          'Liberation Sans', sans-serif;
+        letter-spacing: -0.02em;
+        text-transform: capitalize;
         height: min-content;
         align-self: stretch;
-        align-items: flex-end;
-        gap: 340px;
-        &__texts {
+        flex-direction: column;
+      }
+      &__laLocationDeBornesPhotoPourNot {
+        color: #676a6c;
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 500;
+        font-style: italic;
+        font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          'Liberation Sans', sans-serif;
+        letter-spacing: 0.01em;
+        height: min-content;
+        align-self: stretch;
+        flex-direction: column;
+      }
+      &__johnDoe {
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          'Liberation Sans', sans-serif;
+        letter-spacing: -0.01em;
+        width: min-content;
+        height: min-content;
+        white-space: nowrap;
+        flex-direction: column;
+      }
+      &__button {
+        width: 81.5176px;
+        height: 30px;
+        overflow: visible;
+        &__icon10 {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.newsletterSafeTourLandingPage {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  justify-content: center;
+  padding: 100px 0;
+  &__ctasectionbg {
+    width: 1110px;
+    height: 335px;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 26px;
+    padding: 70px 79px;
+    border-radius: 20px;
+    background-color: #51068bbf;
+    background-image: url('/assets/ctasectionbg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__frame1000002520 {
+      width: 601px;
+      height: min-content;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 26px;
+      &__louezUneBornePhotoMaintenant {
+        color: #fff;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: bold;
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          'Liberation Sans', sans-serif;
+        letter-spacing: -0.02em;
+        height: min-content;
+        align-self: stretch;
+        flex-direction: column;
+      }
+      &__rendreInoubliableVosVnementsCe {
+        color: #ffffffe0;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          'Liberation Sans', sans-serif;
+        width: 401px;
+        height: min-content;
+        flex-direction: column;
+      }
+      &__secondarybtn_4 {
+        width: min-content;
+        height: min-content;
+        padding: 18px 50px;
+        outline: solid 2px #fff;
+        outline-offset: -2px;
+        border-radius: 100px;
+        box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
+          0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
+          0px 100px 80px 0px #f201901a;
+        &__faireUneDemande {
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            'Liberation Sans', sans-serif;
+          z-index: 0;
+          width: min-content;
+          height: min-content;
+          text-align: center;
+          align-items: center;
+          white-space: nowrap;
+          flex-direction: column;
+        }
+      }
+    }
+    &__ctasectionimg {
+      width: 270px;
+      height: 460px;
+      border-radius: 30px;
+      background-image: url('/assets/ctasectionimg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  }
+}
+.faqs {
+  position: relative;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 100px 0;
+  &__illustration2 {
+    position: absolute;
+    left: 735px;
+    top: -142px;
+    width: 705.5px;
+    height: 1306px;
+    overflow: visible;
+    &__icon11 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__fAQs {
+    color: #570695;
+    font-size: 64px;
+    line-height: 100%;
+    font-weight: bold;
+    font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    letter-spacing: -3px;
+    width: min-content;
+    height: min-content;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  &__faqs2 {
+    position: relative;
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    &__card {
+      width: min-content;
+      height: min-content;
+      flex-direction: column;
+      padding: 37px 51px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 20px 95px 0px #c9cbcc4d;
+      &__content_22 {
+        width: 574px;
+        height: min-content;
+        align-self: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+        &__minusicon {
+          width: 30px;
+          height: 30px;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px 0;
+          &__icon_3 {
+            opacity: 0.8;
+            height: 3px;
+            align-self: stretch;
+            border-radius: 20px;
+            background-color: #7d00de;
+          }
+        }
+        &__frame1000002521 {
           height: min-content;
           flex: 1;
           flex-direction: column;
-          gap: 18px;
-          &__nosOffres {
-            color: #570695;
-            font-size: 40px;
-            line-height: 40px;
+          gap: 30px;
+          &__questceQuuneBornePhoto {
+            opacity: 0.88;
+            color: #2d2d2d;
+            font-size: 18px;
+            line-height: 130%;
             font-weight: bold;
             font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
@@ -765,646 +1827,310 @@
             align-self: stretch;
             flex-direction: column;
           }
-          &__trouvezLaBorneIdealePourVosEve {
+          &__uneBornePhotoEstUnDispositifQu {
+            color: #2d2d2d;
+            font-size: 18px;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
             height: min-content;
             align-self: stretch;
             flex-direction: column;
-            &__textBlock3 {
-              color: #676a6c;
-              font-size: 18px;
-              line-height: 28px;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-            }
-            &__textBlock4 {
-              margin-top: 0;
-              color: #676a6c;
-              font-size: 18px;
-              line-height: 28px;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-            }
           }
         }
-        &__secondaryBtn3 {
+      }
+    }
+    &__card_2 {
+      width: min-content;
+      height: min-content;
+      flex-direction: column;
+      padding: 35px 51px;
+      outline: solid 1px #e7ebee;
+      outline-offset: -1px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      box-shadow: 0px 20px 95px 0px #c9cbcc4d;
+      &__content_3 {
+        z-index: 0;
+        height: min-content;
+        align-self: stretch;
+        align-items: flex-start;
+        gap: 30px;
+        &__plusicon {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          &__rectangle324 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 46.6667%;
+            bottom: 43.3333%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+          }
+          &__rectangle325 {
+            transform-origin: top left;
+            position: absolute;
+            left: 53.3333%;
+            right: -53.3333%;
+            top: 0;
+            bottom: 90%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+            transform: matrix(0, 1, -1, 0, 0, 0);
+          }
+        }
+        &__frame10000025192 {
           width: min-content;
           height: min-content;
-          padding: 18px 50px;
-          border-radius: 100px;
-          box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
-            0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
-            0px 100px 80px 0px #f201901a;
-          &__decouvrir {
-            background-image: linear-gradient(254.8deg, #7d00deff 0%, #f6018dff 100%);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 16px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          &__commentAMarche {
+            opacity: 0.88;
+            color: #2d2d2d;
+            font-size: 18px;
+            line-height: 130%;
             font-weight: bold;
             font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
-            width: min-content;
+            width: 514px;
             height: min-content;
-            text-align: center;
-            align-items: center;
-            white-space: nowrap;
             flex-direction: column;
           }
         }
       }
-      &__frame1000002526 {
+    }
+    &__card_3 {
+      width: min-content;
+      height: min-content;
+      flex-direction: column;
+      padding: 35px 51px;
+      outline: solid 1px #e7ebee;
+      outline-offset: -1px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      box-shadow: 0px 20px 95px 0px #c9cbcc4d;
+      &__content_4 {
+        z-index: 0;
         height: min-content;
         align-self: stretch;
-        align-items: center;
+        align-items: flex-start;
         gap: 30px;
-        &__location2 {
-          width: 276px;
-          height: 400px;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location2.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts2 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__facebooth {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 32.5301%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
+        &__group1000002518 {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          &__rectangle3242 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 46.6667%;
+            bottom: 43.3333%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+          }
+          &__rectangle3252 {
+            transform-origin: top left;
+            position: absolute;
+            left: 53.3333%;
+            right: -53.3333%;
+            top: 0;
+            bottom: 90%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+            transform: matrix(0, 1, -1, 0, 0, 0);
           }
         }
-        &__location3 {
-          width: 276px;
-          height: 400px;
+        &__frame1000002519_2 {
+          width: min-content;
+          height: min-content;
           flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location3.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts3 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__labelbox {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 42.1687%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle2 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-          }
-        }
-        &__location4 {
-          width: 276px;
-          height: 400px;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location4.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts4 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__labelboxMini {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 10.8434%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle3 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-          }
-        }
-        &__location5 {
-          width: 276px;
-          height: 400px;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location5.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts5 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__tinyLabel {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 33.7349%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle4 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-          }
-        }
-        &__location6 {
-          width: 276px;
-          height: 400px;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location6.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts6 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__lABELXS {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 36.1446%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle5 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          &__quelsVnementsPourLaLocationDun {
+            opacity: 0.88;
+            color: #2d2d2d;
+            font-size: 18px;
+            line-height: 130%;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            width: 514px;
+            height: min-content;
+            flex-direction: column;
           }
         }
       }
-      &__frame1000002527 {
+    }
+    &__card_4 {
+      width: min-content;
+      height: min-content;
+      flex-direction: column;
+      padding: 35px 51px;
+      outline: solid 1px #e7ebee;
+      outline-offset: -1px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      box-shadow: 0px 20px 95px 0px #c9cbcc4d;
+      &__content_5 {
+        z-index: 0;
         height: min-content;
         align-self: stretch;
-        justify-content: flex-end;
-        align-items: center;
+        align-items: flex-start;
         gap: 30px;
-        &__location22 {
-          width: 276px;
-          height: 400px;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location22.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts7 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__facebooth2 {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 32.5301%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle6 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
+        &__group10000025182 {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          &__rectangle324_2 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 46.6667%;
+            bottom: 43.3333%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+          }
+          &__rectangle325_2 {
+            transform-origin: top left;
+            position: absolute;
+            left: 53.3333%;
+            right: -53.3333%;
+            top: 0;
+            bottom: 90%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+            transform: matrix(0, 1, -1, 0, 0, 0);
           }
         }
-        &__location32 {
-          width: 276px;
-          height: 400px;
+        &__frame1000002519_3 {
+          width: min-content;
+          height: min-content;
           flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location32.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts8 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__labelbox2 {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 42.1687%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle7 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          &__commentRserverUneBornePhoto {
+            opacity: 0.88;
+            color: #2d2d2d;
+            font-size: 18px;
+            line-height: 130%;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            width: 514px;
+            height: min-content;
+            flex-direction: column;
           }
         }
-        &__location42 {
-          width: 276px;
-          height: 400px;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location42.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts9 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__labelboxMini2 {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 10.8434%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle8 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
+      }
+    }
+    &__card_5 {
+      width: min-content;
+      height: min-content;
+      flex-direction: column;
+      padding: 35px 51px;
+      outline: solid 1px #e7ebee;
+      outline-offset: -1px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      box-shadow: 0px 20px 95px 0px #c9cbcc4d;
+      &__content_6 {
+        z-index: 0;
+        height: min-content;
+        align-self: stretch;
+        align-items: flex-start;
+        gap: 30px;
+        &__group1000002518_2 {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          &__rectangle324_3 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 46.6667%;
+            bottom: 43.3333%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+          }
+          &__rectangle325_3 {
+            transform-origin: top left;
+            position: absolute;
+            left: 53.3333%;
+            right: -53.3333%;
+            top: 0;
+            bottom: 90%;
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: #1b1139;
+            transform: matrix(0, 1, -1, 0, 0, 0);
           }
         }
-        &__location52 {
-          width: 276px;
-          height: 400px;
+        &__frame1000002519_4 {
+          width: min-content;
+          height: min-content;
           flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location52.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts10 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__tinyLabel2 {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 33.7349%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle9 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-          }
-        }
-        &__location62 {
-          width: 276px;
-          height: 400px;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-start;
-          gap: 402px;
-          padding: 22px 24px;
-          border-radius: 20px;
-          background-image: linear-gradient(180deg, #fff0 0%, #57069596 100%), url('/assets/location62.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, contain;
-          &__texts11 {
-            position: relative;
-            width: 166px;
-            height: 50px;
-            &__lABELXS2 {
-              color: #fff;
-              font-size: 24px;
-              line-height: 20px;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              letter-spacing: -0.01em;
-              position: absolute;
-              left: 0;
-              right: 36.1446%;
-              top: 0;
-              bottom: 60%;
-              width: min-content;
-              height: min-content;
-              text-shadow: 0px 6px 15px #0003;
-              white-space: nowrap;
-              flex-direction: column;
-            }
-            &__laPlusProfessionnelle10 {
-              opacity: 0.9;
-              color: #fff;
-              font-size: 16px;
-              line-height: 14px;
-              font-weight: 500;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 72%;
-              bottom: 0;
-              width: min-content;
-              height: min-content;
-              white-space: nowrap;
-              flex-direction: column;
-            }
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          &__quellesSontLesOptionsDePersonn {
+            opacity: 0.88;
+            color: #2d2d2d;
+            font-size: 18px;
+            line-height: 130%;
+            font-weight: bold;
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+              'Liberation Sans', sans-serif;
+            width: 514px;
+            height: min-content;
+            flex-direction: column;
           }
         }
       }
     }
   }
-  .header {
-    position: absolute;
-    left: calc(50% - -0.5px);
-    top: 48px;
+}
+.footer {
+  position: relative;
+  width: 1440px;
+  height: min-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+  background-color: #ffe6f9;
+  overflow: hidden;
+  &__nav_2 {
     width: 1305px;
     height: min-content;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 182px;
-    transform: translateX(-50%);
-    &__group1000002517 {
+    gap: 40px;
+    padding: 20px 0;
+    &__logo {
       position: relative;
       width: 149px;
       height: 50px;
-      &__logo1 {
+      &__logo12 {
         position: absolute;
         left: 0;
         right: 78.5235%;
@@ -1413,13 +2139,13 @@
         width: 32px;
         height: 50px;
         overflow: visible;
-        &__icon7 {
+        &__icon12 {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
-      &__chiiiz {
+      &__chiiiz_2 {
         background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
         background-position: center;
         background-repeat: no-repeat;
@@ -1442,15 +2168,14 @@
         flex-direction: column;
       }
     }
-    &__nav {
+    &__nav_3 {
       width: min-content;
       height: min-content;
       align-items: center;
       gap: 73px;
-      &__aPropos {
+      &__propos2 {
         color: #570695;
         font-size: 16px;
-        font-weight: 600;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
@@ -1458,10 +2183,9 @@
         white-space: nowrap;
         flex-direction: column;
       }
-      &__nosOffres2 {
+      &__nosBornes {
         color: #570695;
         font-size: 16px;
-        font-weight: 600;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
@@ -1469,10 +2193,9 @@
         white-space: nowrap;
         flex-direction: column;
       }
-      &__contact {
+      &__contact_2 {
         color: #570695;
         font-size: 16px;
-        font-weight: 600;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
@@ -1480,15 +2203,14 @@
         white-space: nowrap;
         flex-direction: column;
       }
-      &__frame10000025184 {
+      &__frame1000002518_5 {
         width: min-content;
         height: min-content;
         align-items: center;
         gap: 4px;
-        &__plus {
+        &__plus_2 {
           color: #570695;
           font-size: 16px;
-          font-weight: 600;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           width: min-content;
@@ -1496,634 +2218,9 @@
           white-space: nowrap;
           flex-direction: column;
         }
-        &__vector {
+        &__vector_2 {
           width: 8px;
           height: 4.9433px;
-          overflow: visible;
-          &__icon8 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-    &__frame3 {
-      width: min-content;
-      height: min-content;
-      &__frame1 {
-        width: 152px;
-        height: 58px;
-        justify-content: center;
-        align-items: center;
-        padding: 18px 43px;
-        border-radius: 100px;
-        background-image: linear-gradient(249.1deg, #7d00deff 0%, #f6018dff 100%);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: auto;
-        box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a, 0px 20px 13px 0px #f201900d,
-          0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013, 0px 100px 80px 0px #f201901a;
-        &__reserver {
-          color: #fff;
-          font-size: 16px;
-          font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: min-content;
-          height: min-content;
-          text-align: center;
-          align-items: center;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-      }
-    }
-  }
-  .testimonialSafeTourLandingPage {
-    position: relative;
-    height: min-content;
-    align-self: stretch;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px 0;
-    &__testimonialSafeTourLandingPage2 {
-      width: min-content;
-      height: min-content;
-      align-items: center;
-      gap: 70px;
-      &__frame10000025185 {
-        position: relative;
-        width: min-content;
-        height: min-content;
-        align-items: center;
-        gap: 10px;
-        &__shapes {
-          position: absolute;
-          left: -60px;
-          top: -50.0005px;
-          width: 424.9971px;
-          height: 429.2428px;
-          overflow: visible;
-          &__icon9 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        &__testimonialsImg {
-          width: 300px;
-          height: 300px;
-          border-radius: 500px;
-          background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%), url('/assets/testimonialsImg.jpeg');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto, cover;
-          box-shadow: 0px 28px 30px 0px #51068b1a;
-        }
-      }
-      &__texts12 {
-        width: 516px;
-        height: min-content;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        &__avisDesClients {
-          color: #570695;
-          font-size: 40px;
-          line-height: 57px;
-          font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          letter-spacing: -0.02em;
-          text-transform: capitalize;
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-        }
-        &__LaLocationDeBornesPhotoPourNot {
-          color: #676a6c;
-          font-size: 18px;
-          line-height: 32px;
-          font-weight: 500;
-          font-style: italic;
-          font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          letter-spacing: 0.01em;
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-        }
-        &__johnDoe {
-          color: #000;
-          font-size: 14px;
-          font-weight: 600;
-          font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          letter-spacing: -0.01em;
-          width: min-content;
-          height: min-content;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-        &__button {
-          width: 81.5176px;
-          height: 30px;
-          overflow: visible;
-          &__icon10 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-  }
-  .newsletterSafeTourLandingPage {
-    position: relative;
-    height: min-content;
-    align-self: stretch;
-    justify-content: center;
-    padding: 100px 0;
-    &__ctaSectionBg {
-      width: 1110px;
-      height: 335px;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 26px;
-      padding: 70px 79px;
-      border-radius: 20px;
-      background-color: #51068bbf;
-      background-image: url('/assets/ctaSectionBg.jpeg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      &__frame1000002520 {
-        width: 601px;
-        height: min-content;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 26px;
-        &__louezUneBornePhotoMaintenant {
-          color: #fff;
-          font-size: 40px;
-          line-height: 40px;
-          font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          letter-spacing: -0.02em;
-          height: min-content;
-          align-self: stretch;
-          flex-direction: column;
-        }
-        &__rendreInoubliableVosEvenements {
-          color: #ffffffe0;
-          font-size: 16px;
-          line-height: 24px;
-          font-weight: 500;
-          font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: 401px;
-          height: min-content;
-          flex-direction: column;
-        }
-        &__secondaryBtn4 {
-          width: min-content;
-          height: min-content;
-          padding: 18px 50px;
-          outline: solid 2px #fff;
-          outline-offset: -2px;
-          border-radius: 100px;
-          box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
-            0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
-            0px 100px 80px 0px #f201901a;
-          &__faireUneDemande {
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            z-index: 0;
-            width: min-content;
-            height: min-content;
-            text-align: center;
-            align-items: center;
-            white-space: nowrap;
-            flex-direction: column;
-          }
-        }
-      }
-      &__ctaSectionImg {
-        width: 270px;
-        height: 460px;
-        border-radius: 30px;
-        background-image: url('/assets/ctaSectionImg.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
-      }
-    }
-  }
-  .faqs {
-    position: relative;
-    height: min-content;
-    align-self: stretch;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    padding: 100px 0;
-    &__illustration2 {
-      position: absolute;
-      left: 735px;
-      top: -142px;
-      width: 705.5px;
-      height: 1306px;
-      overflow: visible;
-      &__icon11 {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    &__fAQS {
-      color: #570695;
-      font-size: 64px;
-      line-height: 100%;
-      font-weight: bold;
-      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-        'Liberation Sans', sans-serif;
-      letter-spacing: -3px;
-      width: min-content;
-      height: min-content;
-      text-align: center;
-      align-items: center;
-      white-space: nowrap;
-      flex-direction: column;
-    }
-    &__faqs2 {
-      position: relative;
-      width: min-content;
-      height: min-content;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      &__card {
-        width: min-content;
-        height: min-content;
-        flex-direction: column;
-        padding: 37px 51px;
-        border-radius: 10px;
-        background-color: #fff;
-        box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-        &__content4 {
-          width: 574px;
-          height: min-content;
-          align-self: flex-start;
-          align-items: flex-start;
-          gap: 30px;
-          &__minusIcon {
-            width: 30px;
-            height: 30px;
-            flex-direction: column;
-            justify-content: center;
-            padding: 10px 0;
-            &__icon12 {
-              opacity: 0.8;
-              height: 3px;
-              align-self: stretch;
-              border-radius: 20px;
-              background-color: #7d00de;
-            }
-          }
-          &__frame1000002521 {
-            height: min-content;
-            flex: 1;
-            flex-direction: column;
-            gap: 30px;
-            &__quEstCeQuUneBornePhoto {
-              opacity: 0.88;
-              color: #2d2d2d;
-              font-size: 18px;
-              line-height: 130%;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              height: min-content;
-              align-self: stretch;
-              flex-direction: column;
-            }
-            &__uneBornePhotoEstUnDispositifQu {
-              color: #2d2d2d;
-              font-size: 18px;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              height: min-content;
-              align-self: stretch;
-              flex-direction: column;
-            }
-          }
-        }
-      }
-      &__card2 {
-        width: min-content;
-        height: min-content;
-        flex-direction: column;
-        padding: 35px 51px;
-        outline: solid 1px #e7ebee;
-        outline-offset: -1px;
-        border-radius: 10px;
-        background-color: #fafafa;
-        box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-        &__content5 {
-          z-index: 0;
-          height: min-content;
-          align-self: stretch;
-          align-items: flex-start;
-          gap: 30px;
-          &__plusIcon {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            &__rectangle324 {
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 46.6667%;
-              bottom: 43.3333%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-            }
-            &__rectangle325 {
-              transform-origin: top left;
-              position: absolute;
-              left: 53.3333%;
-              right: -53.3333%;
-              top: 0;
-              bottom: 90%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-              transform: matrix(0, 1, -1, 0, 0, 0);
-            }
-          }
-          &__frame10000025192 {
-            width: min-content;
-            height: min-content;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            &__commentCaMarche {
-              opacity: 0.88;
-              color: #2d2d2d;
-              font-size: 18px;
-              line-height: 130%;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              width: 514px;
-              height: min-content;
-              flex-direction: column;
-            }
-          }
-        }
-      }
-      &__card5 {
-        width: min-content;
-        height: min-content;
-        flex-direction: column;
-        padding: 35px 51px;
-        outline: solid 1px #e7ebee;
-        outline-offset: -1px;
-        border-radius: 10px;
-        background-color: #fafafa;
-        box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-        &__content6 {
-          z-index: 0;
-          height: min-content;
-          align-self: stretch;
-          align-items: flex-start;
-          gap: 30px;
-          &__group1000002518 {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            &__rectangle3242 {
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 46.6667%;
-              bottom: 43.3333%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-            }
-            &__rectangle3252 {
-              transform-origin: top left;
-              position: absolute;
-              left: 53.3333%;
-              right: -53.3333%;
-              top: 0;
-              bottom: 90%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-              transform: matrix(0, 1, -1, 0, 0, 0);
-            }
-          }
-          &__frame10000025193 {
-            width: min-content;
-            height: min-content;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            &__quelsEvenementsPourALaLocation {
-              opacity: 0.88;
-              color: #2d2d2d;
-              font-size: 18px;
-              line-height: 130%;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              width: 514px;
-              height: min-content;
-              flex-direction: column;
-            }
-          }
-        }
-      }
-      &__card6 {
-        width: min-content;
-        height: min-content;
-        flex-direction: column;
-        padding: 35px 51px;
-        outline: solid 1px #e7ebee;
-        outline-offset: -1px;
-        border-radius: 10px;
-        background-color: #fafafa;
-        box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-        &__content7 {
-          z-index: 0;
-          height: min-content;
-          align-self: stretch;
-          align-items: flex-start;
-          gap: 30px;
-          &__group10000025182 {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            &__rectangle3243 {
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 46.6667%;
-              bottom: 43.3333%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-            }
-            &__rectangle3253 {
-              transform-origin: top left;
-              position: absolute;
-              left: 53.3333%;
-              right: -53.3333%;
-              top: 0;
-              bottom: 90%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-              transform: matrix(0, 1, -1, 0, 0, 0);
-            }
-          }
-          &__frame10000025194 {
-            width: min-content;
-            height: min-content;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            &__commentReserverUneBornePhoto {
-              opacity: 0.88;
-              color: #2d2d2d;
-              font-size: 18px;
-              line-height: 130%;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              width: 514px;
-              height: min-content;
-              flex-direction: column;
-            }
-          }
-        }
-      }
-      &__card7 {
-        width: min-content;
-        height: min-content;
-        flex-direction: column;
-        padding: 35px 51px;
-        outline: solid 1px #e7ebee;
-        outline-offset: -1px;
-        border-radius: 10px;
-        background-color: #fafafa;
-        box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-        &__content8 {
-          z-index: 0;
-          height: min-content;
-          align-self: stretch;
-          align-items: flex-start;
-          gap: 30px;
-          &__group10000025183 {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            &__rectangle3244 {
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 46.6667%;
-              bottom: 43.3333%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-            }
-            &__rectangle3254 {
-              transform-origin: top left;
-              position: absolute;
-              left: 53.3333%;
-              right: -53.3333%;
-              top: 0;
-              bottom: 90%;
-              width: 30px;
-              height: 3px;
-              border-radius: 20px;
-              background-color: #1b1139;
-              transform: matrix(0, 1, -1, 0, 0, 0);
-            }
-          }
-          &__frame10000025195 {
-            width: min-content;
-            height: min-content;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            &__quellesSontLesOptionsDePersonn {
-              opacity: 0.88;
-              color: #2d2d2d;
-              font-size: 18px;
-              line-height: 130%;
-              font-weight: bold;
-              font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-                'Liberation Sans', sans-serif;
-              width: 514px;
-              height: min-content;
-              flex-direction: column;
-            }
-          }
-        }
-      }
-    }
-  }
-  .footer {
-    position: relative;
-    width: 1440px;
-    height: min-content;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 50px 0;
-    background-color: #ffe6f9;
-    overflow: hidden;
-    &__nav2 {
-      width: 1305px;
-      height: min-content;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
-      padding: 20px 0;
-      &__logo {
-        position: relative;
-        width: 149px;
-        height: 50px;
-        &__logo12 {
-          position: absolute;
-          left: 0;
-          right: 78.5235%;
-          top: 0;
-          bottom: 0;
-          width: 32px;
-          height: 50px;
           overflow: visible;
           &__icon13 {
             width: 100%;
@@ -2131,97 +2228,42 @@
             object-fit: cover;
           }
         }
-        &__chiiiz2 {
-          background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: auto;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-size: 40px;
-          font-family: Arciform Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          letter-spacing: 0.05em;
-          position: absolute;
-          left: 34.8993%;
-          right: 0;
-          top: 10%;
-          bottom: 10%;
-          width: min-content;
-          height: min-content;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-      }
-      &__nav3 {
-        width: min-content;
-        height: min-content;
-        align-items: center;
-        gap: 73px;
-        &__aPropos2 {
-          color: #570695;
-          font-size: 16px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: min-content;
-          height: min-content;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-        &__nosBornes {
-          color: #570695;
-          font-size: 16px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: min-content;
-          height: min-content;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-        &__contact2 {
-          color: #570695;
-          font-size: 16px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: min-content;
-          height: min-content;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-        &__frame10000025186 {
-          width: min-content;
-          height: min-content;
-          align-items: center;
-          gap: 4px;
-          &__plus2 {
-            color: #570695;
-            font-size: 16px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-              'Liberation Sans', sans-serif;
-            width: min-content;
-            height: min-content;
-            white-space: nowrap;
-            flex-direction: column;
-          }
-          &__vector2 {
-            width: 8px;
-            height: 4.9433px;
-            overflow: visible;
-            &__icon14 {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-        }
       }
     }
-    &__line {
-      width: 1170px;
-      max-width: 100%;
-      height: 0;
-      max-height: 100%;
+  }
+  &__line {
+    width: 1170px;
+    max-width: 100%;
+    height: 0;
+    max-height: 100%;
+    overflow: visible;
+    &__icon14 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__footer2 {
+    width: 1440px;
+    height: min-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 783px;
+    padding: 0 135px 20px;
+    &__copyright2024ChiizTousDroitsRs {
+      color: #666;
+      font-size: 13px;
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+      letter-spacing: -0.01em;
+      width: min-content;
+      height: min-content;
+      white-space: nowrap;
+      flex-direction: column;
+    }
+    &__frame1000002519_5 {
+      width: 129px;
+      height: 23px;
       overflow: visible;
       &__icon15 {
         width: 100%;
@@ -2229,81 +2271,36 @@
         object-fit: cover;
       }
     }
-    &__footer2 {
-      width: 1440px;
+    &__frame1000002519_6 {
+      width: min-content;
       height: min-content;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      gap: 783px;
-      padding: 0 135px 20px;
-      &__copyright2024ChiizTousDroitsRe {
+      gap: 20px;
+      &__conditionsDutilisation {
         color: #666;
         font-size: 13px;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
-        letter-spacing: -0.01em;
         width: min-content;
         height: min-content;
+        text-align: end;
+        align-items: end;
         white-space: nowrap;
         flex-direction: column;
       }
-      &__frame10000025196 {
-        width: 129px;
-        height: 23px;
-        overflow: visible;
-        &__icon16 {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      &__frame10000025197 {
+      &__politiqueDeConfidentialit {
+        color: #666;
+        font-size: 13px;
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        &__conditionsDUtilisation {
-          color: #666;
-          font-size: 13px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: min-content;
-          height: min-content;
-          text-align: end;
-          align-items: end;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-        &__politiqueDeConfidentialite {
-          color: #666;
-          font-size: 13px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: min-content;
-          height: min-content;
-          text-align: end;
-          align-items: end;
-          white-space: nowrap;
-          flex-direction: column;
-        }
+        text-align: end;
+        align-items: end;
+        white-space: nowrap;
+        flex-direction: column;
       }
     }
   }
-  .button {
-    cursor: pointer; // Curseur en forme de main au survol
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border: none; // Suppression du cadre
-    background-color: transparent;  //suppression de la couleur de fond
-    // Effet de survol
-    &:hover {
-      transform: scale(1.05);  // Légère augmentation de taille
-    }
-  
-    // Effet au clic
-    &:active {
-      transform: scale(0.98);    // Réduction de la taille au clic
-    }
-  }
-  
-  
+}
