@@ -70,14 +70,14 @@ svg {
 
 :host {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  width: 1440px;
+  height: min-content;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   overflow: hidden;
 }
-.heroSection {
+.herosection {
   position: relative;
   height: 1024px;
   align-self: stretch;
@@ -86,7 +86,7 @@ svg {
   align-items: center;
   gap: 10px;
   padding: 199px 68px;
-  &__heroBg {
+  &__herobg {
     position: absolute;
     left: 0;
     top: 0;
@@ -132,7 +132,7 @@ svg {
           text-transform: capitalize;
         }
       }
-      &__rendezVosMomentsSpeciauxInoubl {
+      &__rendezVosMomentsSpciauxInoubli {
         color: #2d2d2d;
         font-size: 18px;
         line-height: 28px;
@@ -142,7 +142,7 @@ svg {
         height: min-content;
         flex-direction: column;
       }
-      &__secondaryBtn {
+      &__secondarybtn {
         width: min-content;
         height: min-content;
         padding: 18px 50px;
@@ -150,7 +150,7 @@ svg {
         box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
           0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
           0px 100px 80px 0px #f201901a;
-        &__reservezMaintenant {
+        &__rservezMaintenant {
           background-image: linear-gradient(262.9deg, #7d00deff 0%, #f6018dff 100%);
           background-position: center;
           background-repeat: no-repeat;
@@ -258,12 +258,12 @@ svg {
   &___7e3000d5f9c890a1d1634d9920bc40 {
     width: 420px;
     height: 630px;
-
     border-radius: 25px;
-    background-image: linear-gradient(180deg, rgb(241, 134, 202) 0%, #57069596 100%), url('/assets/_7e3000d5f9c890a1d1634d9920bc40.jpeg');
+    background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%),
+      url('/assets/_7e3000d5f9c890a1d1634d9920bc40.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto, contain;
+    background-size: auto, cover;
   }
   &__content2 {
     width: min-content;
@@ -284,7 +284,7 @@ svg {
       align-self: stretch;
       flex-direction: column;
     }
-    &__desBornesPhotoUniquesPourVosEv {
+    &__desBornesPhotoUniquesPourVosVn {
       color: #570695;
       font-size: 40px;
       line-height: 48px;
@@ -328,7 +328,7 @@ svg {
             object-fit: cover;
           }
         }
-        &__desImpressionsInstantaneesDeHa {
+        &__desImpressionsInstantanesDeHau {
           color: #2d2d2d;
           font-size: 16px;
           line-height: 18px;
@@ -367,7 +367,7 @@ svg {
           flex-direction: column;
         }
       }
-      &__learnMore3 {
+      &__learnMore_2 {
         height: min-content;
         align-self: stretch;
         align-items: center;
@@ -382,7 +382,7 @@ svg {
             object-fit: cover;
           }
         }
-        &__partageFacileSurLesReseauxSoci {
+        &__partageFacileSurLesRseauxSocia {
           color: #2d2d2d;
           font-size: 16px;
           line-height: 18px;
@@ -397,7 +397,7 @@ svg {
     }
   }
 }
-.feature2 {
+.feature_2 {
   position: relative;
   height: min-content;
   align-self: stretch;
@@ -406,12 +406,12 @@ svg {
   align-items: center;
   gap: 30px;
   padding: 100px;
-  &__content3 {
+  &__content_2 {
     width: 800px;
     height: min-content;
     flex-direction: column;
     gap: 20px;
-    &__capturezVosMomentsSpeciaux {
+    &__capturezVosMomentsSpciaux {
       color: #7d00de;
       font-size: 16px;
       line-height: 18px;
@@ -426,7 +426,7 @@ svg {
       align-items: center;
       flex-direction: column;
     }
-    &__adaptePourTousVosEvenements {
+    &__adaptPourTousVosVnements {
       color: #570695;
       font-size: 40px;
       line-height: 48px;
@@ -454,7 +454,7 @@ svg {
       flex-direction: column;
     }
   }
-  &__feature3 {
+  &__feature_3 {
     height: min-content;
     align-self: stretch;
     justify-content: center;
@@ -476,7 +476,7 @@ svg {
         outline: solid 1px #f5f5f5;
         outline-offset: -1px;
         border-radius: 12px;
-        &__mariageIcon {
+        &__mariageicon {
           z-index: 0;
           width: 90px;
           height: 90px;
@@ -486,10 +486,10 @@ svg {
           border-radius: 45px;
           background-color: #ed019333;
           box-shadow: 0px 30px 35px -8px #fab33f26;
-          &__engagementRing1 {
+          &__engagementring1 {
             width: 48px;
             height: 48px;
-            background-image: url('/assets/engagementRing1.png');
+            background-image: url('/assets/engagementring1.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -534,7 +534,7 @@ svg {
         outline: solid 1px #f5f5f5;
         outline-offset: -1px;
         border-radius: 12px;
-        &__hbdIcon {
+        &__hbdicon {
           z-index: 0;
           width: 90px;
           height: 90px;
@@ -544,10 +544,10 @@ svg {
           border-radius: 45px;
           background-color: #ed019333;
           box-shadow: 0px 30px 35px -8px #fab33f26;
-          &__birthdayCake1 {
+          &__birthdaycake1 {
             width: 48px;
             height: 48px;
-            background-image: url('/assets/birthdayCake1.png');
+            background-image: url('/assets/birthdaycake1.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -567,7 +567,7 @@ svg {
           align-items: center;
           flex-direction: column;
         }
-        &__ajoutezUneToucheAmusanteAVotre {
+        &__ajoutezUneToucheAmusanteVotreF {
           color: #2d2d2d;
           font-size: 16px;
           line-height: 28px;
@@ -583,18 +583,18 @@ svg {
         }
       }
     }
-    &__frame10000025183 {
+    &__frame1000002518_2 {
       width: min-content;
       height: min-content;
-      &___7e3000d5f9c890a1d1634d9920bc402 {
+      &__n7e3000d5f9c890a1d1634d9920bc4 {
         width: 476px;
         height: 580px;
         border-radius: 25px;
-
-        background-image: linear-gradient(180deg, rgb(241, 134, 202) 0%, #57069596 100%), url('/assets/_7e3000d5f9c890a1d1634d9920bc402.jpeg');
+        background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%),
+          url('/assets/n7e3000d5f9c890a1d1634d9920bc4.jpeg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100%, 100%;
+        background-size: auto, cover;
       }
     }
     &__frame1000002519 {
@@ -603,7 +603,7 @@ svg {
       flex-direction: column;
       justify-content: center;
       gap: 20px;
-      &__card32 {
+      &__card03 {
         height: min-content;
         align-self: stretch;
         flex-direction: column;
@@ -613,7 +613,7 @@ svg {
         outline: solid 1px #f5f5f5;
         outline-offset: -1px;
         border-radius: 12px;
-        &__baby_showerIcon {
+        &__baby_showericon {
           z-index: 0;
           width: 90px;
           height: 90px;
@@ -623,10 +623,10 @@ svg {
           border-radius: 45px;
           background-color: #ed019333;
           box-shadow: 0px 30px 35px -8px #fab33f26;
-          &__babyShower1 {
+          &__babyshower1 {
             width: 48px;
             height: 48px;
-            background-image: url('/assets/babyShower1.png');
+            background-image: url('/assets/babyshower1.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -671,7 +671,7 @@ svg {
         outline: solid 1px #f5f5f5;
         outline-offset: -1px;
         border-radius: 12px;
-        &__baptisIcon {
+        &__baptisicon {
           z-index: 0;
           width: 90px;
           height: 90px;
@@ -690,7 +690,7 @@ svg {
             background-size: cover;
           }
         }
-        &__bapteme {
+        &__baptme {
           color: #2d2d2d;
           font-size: 22px;
           font-weight: 500;
@@ -704,7 +704,7 @@ svg {
           align-items: center;
           flex-direction: column;
         }
-        &__ajoutezUneToucheAmusanteAVotre2 {
+        &__ajoutezUneToucheAmusanteVotreF2 {
           color: #2d2d2d;
           font-size: 16px;
           line-height: 28px;
@@ -721,7 +721,7 @@ svg {
       }
     }
   }
-  &__secondaryBtn2 {
+  &__secondarybtn_2 {
     width: min-content;
     height: min-content;
     padding: 18px 50px;
@@ -732,7 +732,7 @@ svg {
     background-size: auto;
     box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a, 0px 20px 13px 0px #f201900d,
       0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013, 0px 100px 80px 0px #f201901a;
-    &__reservezMaintenant2 {
+    &__rservezMaintenant2 {
       color: #fff;
       font-size: 16px;
       font-weight: bold;
@@ -753,7 +753,7 @@ svg {
   align-self: stretch;
   flex-direction: column;
   padding: 100px 132px;
-  &__topDestinationSafeTourLandingP2 {
+  &__topDestinationsafeTourLandingP {
     height: min-content;
     align-self: stretch;
     flex-direction: column;
@@ -779,7 +779,7 @@ svg {
           align-self: stretch;
           flex-direction: column;
         }
-        &__trouvezLaBorneIdealePourVosEve {
+        &__trouvezLaBorneIdalePourVosVnem {
           height: min-content;
           align-self: stretch;
           flex-direction: column;
@@ -800,7 +800,7 @@ svg {
           }
         }
       }
-      &__secondaryBtn3 {
+      &__secondarybtn_3 {
         width: min-content;
         height: min-content;
         padding: 18px 50px;
@@ -808,7 +808,7 @@ svg {
         box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
           0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
           0px 100px 80px 0px #f201901a;
-        &__decouvrir {
+        &__dcouvrir {
           background-image: linear-gradient(254.8deg, #7d00deff 0%, #f6018dff 100%);
           background-position: center;
           background-repeat: no-repeat;
@@ -903,7 +903,7 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts3 {
+        &__texts_2 {
           position: relative;
           width: 166px;
           height: 50px;
@@ -959,7 +959,7 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts4 {
+        &__texts_3 {
           position: relative;
           width: 166px;
           height: 50px;
@@ -982,7 +982,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle3 {
+          &__laPlusProfessionnelle_2 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1015,7 +1015,7 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts5 {
+        &__texts_4 {
           position: relative;
           width: 166px;
           height: 50px;
@@ -1038,7 +1038,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle4 {
+          &__laPlusProfessionnelle_3 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1071,7 +1071,7 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts6 {
+        &__texts_5 {
           position: relative;
           width: 166px;
           height: 50px;
@@ -1094,7 +1094,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle5 {
+          &__laPlusProfessionnelle_4 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1134,11 +1134,11 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts7 {
+        &__texts_6 {
           position: relative;
           width: 166px;
           height: 50px;
-          &__facebooth2 {
+          &__facebooth_2 {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
@@ -1157,7 +1157,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle6 {
+          &__laPlusProfessionnelle_5 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1190,11 +1190,11 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts8 {
+        &__texts_7 {
           position: relative;
           width: 166px;
           height: 50px;
-          &__labelbox2 {
+          &__labelbox_2 {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
@@ -1213,7 +1213,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle7 {
+          &__laPlusProfessionnelle_6 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1246,7 +1246,7 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts9 {
+        &__texts_8 {
           position: relative;
           width: 166px;
           height: 50px;
@@ -1269,7 +1269,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle8 {
+          &__laPlusProfessionnelle_7 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1302,7 +1302,7 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts10 {
+        &__texts_9 {
           position: relative;
           width: 166px;
           height: 50px;
@@ -1325,7 +1325,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle9 {
+          &__laPlusProfessionnelle_8 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1358,11 +1358,11 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
-        &__texts11 {
+        &__texts_10 {
           position: relative;
           width: 166px;
           height: 50px;
-          &__lABELXS2 {
+          &__labelXs {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
@@ -1381,7 +1381,7 @@ svg {
             white-space: nowrap;
             flex-direction: column;
           }
-          &__laPlusProfessionnelle10 {
+          &__laPlusProfessionnelle_9 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
@@ -1461,7 +1461,7 @@ svg {
     height: min-content;
     align-items: center;
     gap: 73px;
-    &__aPropos {
+    &__propos {
       color: #570695;
       font-size: 16px;
       font-weight: 600;
@@ -1494,7 +1494,7 @@ svg {
       white-space: nowrap;
       flex-direction: column;
     }
-    &__frame10000025184 {
+    &__frame1000002518_3 {
       width: min-content;
       height: min-content;
       align-items: center;
@@ -1538,7 +1538,7 @@ svg {
       background-size: auto;
       box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a, 0px 20px 13px 0px #f201900d,
         0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013, 0px 100px 80px 0px #f201901a;
-      &__reserver {
+      &__rserver {
         color: #fff;
         font-size: 16px;
         font-weight: bold;
@@ -1561,12 +1561,12 @@ svg {
   flex-direction: column;
   align-items: center;
   padding: 100px 0;
-  &__testimonialSafeTourLandingPage2 {
+  &__testimonialsafeTourLandingPage {
     width: min-content;
     height: min-content;
     align-items: center;
     gap: 70px;
-    &__frame10000025185 {
+    &__frame1000002518_4 {
       position: relative;
       width: min-content;
       height: min-content;
@@ -1585,18 +1585,18 @@ svg {
           object-fit: cover;
         }
       }
-      &__testimonialsImg {
+      &__testimonialsimg {
         width: 300px;
         height: 300px;
         border-radius: 500px;
-        background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%), url('/assets/testimonialsImg.jpeg');
+        background-image: linear-gradient(180deg, #ec0194ff 0%, #8700d7ff 100%), url('/assets/testimonialsimg.jpeg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, cover;
         box-shadow: 0px 28px 30px 0px #51068b1a;
       }
     }
-    &__texts12 {
+    &__texts_22 {
       width: 516px;
       height: min-content;
       flex-direction: column;
@@ -1615,7 +1615,7 @@ svg {
         align-self: stretch;
         flex-direction: column;
       }
-      &__LaLocationDeBornesPhotoPourNot {
+      &__laLocationDeBornesPhotoPourNot {
         color: #676a6c;
         font-size: 18px;
         line-height: 32px;
@@ -1659,7 +1659,7 @@ svg {
   align-self: stretch;
   justify-content: center;
   padding: 100px 0;
-  &__ctaSectionBg {
+  &__ctasectionbg {
     width: 1110px;
     height: 335px;
     justify-content: space-between;
@@ -1668,7 +1668,7 @@ svg {
     padding: 70px 79px;
     border-radius: 20px;
     background-color: #51068bbf;
-    background-image: url('/assets/ctaSectionBg.jpeg');
+    background-image: url('/assets/ctasectionbg.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1690,7 +1690,7 @@ svg {
         align-self: stretch;
         flex-direction: column;
       }
-      &__rendreInoubliableVosEvenements {
+      &__rendreInoubliableVosVnementsCe {
         color: #ffffffe0;
         font-size: 16px;
         line-height: 24px;
@@ -1701,7 +1701,7 @@ svg {
         height: min-content;
         flex-direction: column;
       }
-      &__secondaryBtn4 {
+      &__secondarybtn_4 {
         width: min-content;
         height: min-content;
         padding: 18px 50px;
@@ -1727,11 +1727,11 @@ svg {
         }
       }
     }
-    &__ctaSectionImg {
+    &__ctasectionimg {
       width: 270px;
       height: 460px;
       border-radius: 30px;
-      background-image: url('/assets/ctaSectionImg.png');
+      background-image: url('/assets/ctasectionimg.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1760,7 +1760,7 @@ svg {
       object-fit: cover;
     }
   }
-  &__fAQS {
+  &__fAQs {
     color: #570695;
     font-size: 64px;
     line-height: 100%;
@@ -1790,19 +1790,19 @@ svg {
       border-radius: 10px;
       background-color: #fff;
       box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-      &__content4 {
+      &__content_22 {
         width: 574px;
         height: min-content;
         align-self: flex-start;
         align-items: flex-start;
         gap: 30px;
-        &__minusIcon {
+        &__minusicon {
           width: 30px;
           height: 30px;
           flex-direction: column;
           justify-content: center;
           padding: 10px 0;
-          &__icon12 {
+          &__icon_3 {
             opacity: 0.8;
             height: 3px;
             align-self: stretch;
@@ -1815,7 +1815,7 @@ svg {
           flex: 1;
           flex-direction: column;
           gap: 30px;
-          &__quEstCeQuUneBornePhoto {
+          &__questceQuuneBornePhoto {
             opacity: 0.88;
             color: #2d2d2d;
             font-size: 18px;
@@ -1839,7 +1839,7 @@ svg {
         }
       }
     }
-    &__card2 {
+    &__card_2 {
       width: min-content;
       height: min-content;
       flex-direction: column;
@@ -1849,13 +1849,13 @@ svg {
       border-radius: 10px;
       background-color: #fafafa;
       box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-      &__content5 {
+      &__content_3 {
         z-index: 0;
         height: min-content;
         align-self: stretch;
         align-items: flex-start;
         gap: 30px;
-        &__plusIcon {
+        &__plusicon {
           position: relative;
           width: 30px;
           height: 30px;
@@ -1891,7 +1891,7 @@ svg {
           justify-content: center;
           align-items: center;
           gap: 10px;
-          &__commentCaMarche {
+          &__commentAMarche {
             opacity: 0.88;
             color: #2d2d2d;
             font-size: 18px;
@@ -1906,7 +1906,7 @@ svg {
         }
       }
     }
-    &__card5 {
+    &__card_3 {
       width: min-content;
       height: min-content;
       flex-direction: column;
@@ -1916,7 +1916,7 @@ svg {
       border-radius: 10px;
       background-color: #fafafa;
       box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-      &__content6 {
+      &__content_4 {
         z-index: 0;
         height: min-content;
         align-self: stretch;
@@ -1951,14 +1951,14 @@ svg {
             transform: matrix(0, 1, -1, 0, 0, 0);
           }
         }
-        &__frame10000025193 {
+        &__frame1000002519_2 {
           width: min-content;
           height: min-content;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 10px;
-          &__quelsEvenementsPourALaLocation {
+          &__quelsVnementsPourLaLocationDun {
             opacity: 0.88;
             color: #2d2d2d;
             font-size: 18px;
@@ -1973,7 +1973,7 @@ svg {
         }
       }
     }
-    &__card6 {
+    &__card_4 {
       width: min-content;
       height: min-content;
       flex-direction: column;
@@ -1983,7 +1983,7 @@ svg {
       border-radius: 10px;
       background-color: #fafafa;
       box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-      &__content7 {
+      &__content_5 {
         z-index: 0;
         height: min-content;
         align-self: stretch;
@@ -1993,7 +1993,7 @@ svg {
           position: relative;
           width: 30px;
           height: 30px;
-          &__rectangle3243 {
+          &__rectangle324_2 {
             position: absolute;
             left: 0;
             right: 0;
@@ -2004,7 +2004,7 @@ svg {
             border-radius: 20px;
             background-color: #1b1139;
           }
-          &__rectangle3253 {
+          &__rectangle325_2 {
             transform-origin: top left;
             position: absolute;
             left: 53.3333%;
@@ -2018,14 +2018,14 @@ svg {
             transform: matrix(0, 1, -1, 0, 0, 0);
           }
         }
-        &__frame10000025194 {
+        &__frame1000002519_3 {
           width: min-content;
           height: min-content;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 10px;
-          &__commentReserverUneBornePhoto {
+          &__commentRserverUneBornePhoto {
             opacity: 0.88;
             color: #2d2d2d;
             font-size: 18px;
@@ -2040,7 +2040,7 @@ svg {
         }
       }
     }
-    &__card7 {
+    &__card_5 {
       width: min-content;
       height: min-content;
       flex-direction: column;
@@ -2050,17 +2050,17 @@ svg {
       border-radius: 10px;
       background-color: #fafafa;
       box-shadow: 0px 20px 95px 0px #c9cbcc4d;
-      &__content8 {
+      &__content_6 {
         z-index: 0;
         height: min-content;
         align-self: stretch;
         align-items: flex-start;
         gap: 30px;
-        &__group10000025183 {
+        &__group1000002518_2 {
           position: relative;
           width: 30px;
           height: 30px;
-          &__rectangle3244 {
+          &__rectangle324_3 {
             position: absolute;
             left: 0;
             right: 0;
@@ -2071,7 +2071,7 @@ svg {
             border-radius: 20px;
             background-color: #1b1139;
           }
-          &__rectangle3254 {
+          &__rectangle325_3 {
             transform-origin: top left;
             position: absolute;
             left: 53.3333%;
@@ -2085,7 +2085,7 @@ svg {
             transform: matrix(0, 1, -1, 0, 0, 0);
           }
         }
-        &__frame10000025195 {
+        &__frame1000002519_4 {
           width: min-content;
           height: min-content;
           flex-direction: column;
@@ -2119,7 +2119,7 @@ svg {
   padding: 50px 0;
   background-color: #ffe6f9;
   overflow: hidden;
-  &__nav2 {
+  &__nav_2 {
     width: 1305px;
     height: min-content;
     flex-direction: column;
@@ -2139,13 +2139,13 @@ svg {
         width: 32px;
         height: 50px;
         overflow: visible;
-        &__icon13 {
+        &__icon12 {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
-      &__chiiiz2 {
+      &__chiiiz_2 {
         background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
         background-position: center;
         background-repeat: no-repeat;
@@ -2168,12 +2168,12 @@ svg {
         flex-direction: column;
       }
     }
-    &__nav3 {
+    &__nav_3 {
       width: min-content;
       height: min-content;
       align-items: center;
       gap: 73px;
-      &__aPropos2 {
+      &__propos2 {
         color: #570695;
         font-size: 16px;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -2193,7 +2193,7 @@ svg {
         white-space: nowrap;
         flex-direction: column;
       }
-      &__contact2 {
+      &__contact_2 {
         color: #570695;
         font-size: 16px;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -2203,12 +2203,12 @@ svg {
         white-space: nowrap;
         flex-direction: column;
       }
-      &__frame10000025186 {
+      &__frame1000002518_5 {
         width: min-content;
         height: min-content;
         align-items: center;
         gap: 4px;
-        &__plus2 {
+        &__plus_2 {
           color: #570695;
           font-size: 16px;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -2218,11 +2218,11 @@ svg {
           white-space: nowrap;
           flex-direction: column;
         }
-        &__vector2 {
+        &__vector_2 {
           width: 8px;
           height: 4.9433px;
           overflow: visible;
-          &__icon14 {
+          &__icon13 {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -2237,7 +2237,7 @@ svg {
     height: 0;
     max-height: 100%;
     overflow: visible;
-    &__icon15 {
+    &__icon14 {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -2250,7 +2250,7 @@ svg {
     align-items: center;
     gap: 783px;
     padding: 0 135px 20px;
-    &__copyright2024ChiizTousDroitsRe {
+    &__copyright2024ChiizTousDroitsRs {
       color: #666;
       font-size: 13px;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -2261,23 +2261,23 @@ svg {
       white-space: nowrap;
       flex-direction: column;
     }
-    &__frame10000025196 {
+    &__frame1000002519_5 {
       width: 129px;
       height: 23px;
       overflow: visible;
-      &__icon16 {
+      &__icon15 {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    &__frame10000025197 {
+    &__frame1000002519_6 {
       width: min-content;
       height: min-content;
       justify-content: center;
       align-items: center;
       gap: 20px;
-      &__conditionsDUtilisation {
+      &__conditionsDutilisation {
         color: #666;
         font-size: 13px;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -2289,7 +2289,7 @@ svg {
         white-space: nowrap;
         flex-direction: column;
       }
-      &__politiqueDeConfidentialite {
+      &__politiqueDeConfidentialit {
         color: #666;
         font-size: 13px;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -2304,5 +2304,3 @@ svg {
     }
   }
 }
-
-
