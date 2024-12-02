@@ -11,10 +11,12 @@ import { HeaderComponent } from './header/header.component';
 import { NosOffresComponent } from './nos-offres/nos-offres.component';
 import { IconProperty1ChevronLeftPComponent } from 'src/app/nos-offres/icon-property-1-chevron-left-p/icon-property-1-chevron-left-p.component';
 import {IconProperty1ChevronRightComponent} from 'src/app/nos-offres/icon-property-1-chevron-right/icon-property-1-chevron-right.component';
+import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Page d'accueil
   { path: 'nos-offres', component: NosOffresComponent }, // Route pour "Nos Offres"
+  { path: 'photobooth/:id', component: DetailsComponent }, // Route pour les détails d'un photobooth
   // { path: '**', redirectTo: '' } // Redirige vers la page d'accueil pour les chemins inconnus
 ];
 
@@ -23,7 +25,8 @@ const routes: Routes = [
     AppComponent, HomeComponent, AppareilComponent,
     FooterComponent, HeaderComponent, NosOffresComponent,
     IconProperty1ChevronLeftPComponent,
-    IconProperty1ChevronRightComponent,],
+    IconProperty1ChevronRightComponent,
+    DetailsComponent,],
   imports: [BrowserModule, CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [],

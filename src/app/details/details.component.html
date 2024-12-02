@@ -1,0 +1,518 @@
+<div class="heroSection">
+  <!-- <div class="heroSection__heroBg"></div> -->
+  
+  <div class="heroSection__back">
+    <button class="button" (click)="goBack()">
+      <div class="heroSection__back__frame">
+        <img src="assets/frame-icon.svg" alt="" class="heroSection__back__frame__icon" />
+      </div>
+      <div class="heroSection__back__retour">Retour</div>
+    </button>
+  </div>
+  
+  <div class="heroSection__content">
+    <div class="heroSection__content__heroImages">
+      <div class="heroSection__content__heroImages__img1">
+        <div class="heroSection__content__heroImages__img1__ellipse8">
+          <img src="assets/ellipse-8-icon.svg" alt="" class="heroSection__content__heroImages__img1__ellipse8__icon2" />
+        </div>
+        <div class="heroSection__content__heroImages__img1__illustration1">
+          <img
+            src="assets/illustration-1-icon.svg"
+            alt=""
+            class="heroSection__content__heroImages__img1__illustration1__icon3"
+          />
+        </div>
+        <div class="heroSection__content__heroImages__img1__label_mirror1" [ngStyle]="{'background-image': 'url(' + appareil.photo + ')'}"></div>
+      </div>
+    </div>
+    <div class="heroSection__content__heroText">
+      <div class="heroSection__content__heroText__laBelMiroir">{{appareil.nom}}</div>
+      <div class="heroSection__content__heroText__laLaBelEstUneBornePhotoMiroirA">
+        {{ appareil.longDescription }}
+      </div>
+      <div class="heroSection__content__heroText__frame1000002527">
+        <div class="heroSection__content__heroText__frame1000002527__caracteristiques">Caractéristiques</div>
+        <div class="heroSection__content__heroText__frame1000002527__frame1000002518" *ngFor="let caracteristique of appareil.caracteristiques">
+          <div class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore">
+            <div class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore__arrowIcon">
+              <img
+                src="assets/arrow-icon-icon.svg"
+                alt=""
+                class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore__arrowIcon__icon4"
+              />
+            </div>
+            <div
+              class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore__priseDeVueEnSelfieAvecAPNProfe"
+            >
+            {{ caracteristique }}
+            </div>
+          </div>
+        </div>
+      
+          
+        
+      </div>
+      <button class="heroSection__content__heroText__frame1Button">
+        <div class="heroSection__content__heroText__frame1Button__louerCetteBorne">Louer cette borne</div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="pricingTable2">
+  <div class="pricingTable2__nosPacks">Nos Packs</div>
+  <div class="pricingTable2__frame1000002531">
+    <div class="pricingTable2__frame1000002531__group3">
+      <div class="pricingTable2__frame1000002531__group3__shadow"></div>
+      <div class="pricingTable2__frame1000002531__group3__pricingCard2">
+        <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529">
+          <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__title">Pack Lite</div>
+          <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems">
+            <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list">
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list__checkIcon"
+              >
+                <img
+                  src="assets/check-icon-icon.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list__checkIcon__icon12"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list__templateSurSelection"
+              >
+                Template sur sélection
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list2">
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list2__bxsCheckCircle21"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list2__bxsCheckCircle21__icon13"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list2__impressionLocale"
+              >
+                Impression locale
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list3">
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list3__bxsCheckCircle212"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon2.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list3__bxsCheckCircle212__icon14"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list3___25ImpressionsPhotos"
+              >
+                25 impressions photos
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list4">
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list4__bxsCheckCircle213"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon3.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list4__bxsCheckCircle213__icon15"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__listOfItems__list4__envoieDesPhotosViaWhatsapp"
+              >
+                Envoie des photos via Whatsapp
+              </div>
+            </div>
+          </div>
+          <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__divider"></div>
+          <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__pricing">
+            <p class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__pricing__labelWrapper">
+              <span
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__pricing__labelWrapper__label"
+              >
+                200 000
+              </span>
+              <span
+                class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529__pricing__labelWrapper__label2"
+              >
+                /jour
+              </span>
+            </p>
+          </div>
+        </div>
+        <button class="pricingTable2__frame1000002531__group3__pricingCard2__primaryButton">
+          <div class="pricingTable2__frame1000002531__group3__pricingCard2__primaryButton__buttonLabel">Commander</div>
+        </button>
+      </div>
+    </div>
+    <div class="pricingTable2__frame1000002531__group7">
+      <div class="pricingTable2__frame1000002531__group7__shadow2"></div>
+      <div class="pricingTable2__frame1000002531__group7__pricingCard22">
+        <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292">
+          <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__title2">
+            Pack Digital
+          </div>
+          <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2">
+            <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list5">
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list5__bxsCheckCircle214"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon4.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list5__bxsCheckCircle214__icon16"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list5__templatePersonnalise"
+              >
+                Template personnalisé
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list6">
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list6__bxsCheckCircle215"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon5.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list6__bxsCheckCircle215__icon17"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list6__impressionLocale2"
+              >
+                Impression locale
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list7">
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list7__bxsCheckCircle216"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon6.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list7__bxsCheckCircle216__icon18"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list7___50ImpressionsPhotos"
+              >
+                50 impressions photos
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list8">
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list8__bxsCheckCircle217"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon7.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list8__bxsCheckCircle217__icon19"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__listOfItems2__list8__envoieDesPhotosViaWhatsapp2"
+              >
+                Envoie des photos via Whatsapp
+              </div>
+            </div>
+          </div>
+          <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__divider2"></div>
+          <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__pricing2">
+            <p class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__pricing2__labelWrapper2">
+              <span
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__pricing2__labelWrapper2__label3"
+              >
+                250 000
+              </span>
+              <span
+                class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292__pricing2__labelWrapper2__label4"
+              >
+                /jour
+              </span>
+            </p>
+          </div>
+        </div>
+        <button class="pricingTable2__frame1000002531__group7__pricingCard22__primaryButton2">
+          <div class="pricingTable2__frame1000002531__group7__pricingCard22__primaryButton2__buttonLabel2">
+            Commander
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="pricingTable2__frame1000002531__group6">
+      <div class="pricingTable2__frame1000002531__group6__shadow3"></div>
+      <div class="pricingTable2__frame1000002531__group6__pricingCard23">
+        <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530">
+          <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__title3">Pack Premium</div>
+          <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3">
+            <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list9">
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list9__bxsCheckCircle218"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon8.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list9__bxsCheckCircle218__icon20"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list9__conceptionPersonnaliseDuTempla"
+              >
+                Conception personnalisé du templates
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list10">
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list10__bxsCheckCircle219"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon9.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list10__bxsCheckCircle219__icon21"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list10__imprimantePhoto"
+              >
+                Imprimante photo
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list11">
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list11__bxsCheckCircle2110"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon10.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list11__bxsCheckCircle2110__icon22"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list11___75ImpressionsPhotos"
+              >
+                75 impressions photos
+              </div>
+            </div>
+            <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list12">
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list12__bxsCheckCircle2111"
+              >
+                <img
+                  src="assets/bxs-check-circle-2-1-icon11.svg"
+                  alt=""
+                  class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list12__bxsCheckCircle2111__icon23"
+                />
+              </div>
+              <div
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__listOfItems3__list12__envoieDesPhotosViaWhatsapp3"
+              >
+                Envoie des photos via Whatsapp
+              </div>
+            </div>
+          </div>
+          <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__divider3"></div>
+          <div class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__pricing3">
+            <p class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__pricing3__labelWrapper3">
+              <span
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__pricing3__labelWrapper3__label5"
+              >
+                300 000
+              </span>
+              <span
+                class="pricingTable2__frame1000002531__group6__pricingCard23__frame1000002530__pricing3__labelWrapper3__label6"
+              >
+                /jour
+              </span>
+            </p>
+          </div>
+        </div>
+        <button class="pricingTable2__frame1000002531__group6__pricingCard23__primaryButton3">
+          <div class="pricingTable2__frame1000002531__group6__pricingCard23__primaryButton3__buttonLabel3">
+            Commander
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feature">
+  <div class="feature__card">
+    <div class="feature__card__frame10000025272">
+      <div class="feature__card__frame10000025272__idealePour">Idéale pour</div>
+      <div class="feature__card__frame10000025272__frame10000025182">
+        <div class="feature__card__frame10000025272__frame10000025182__lesMariagesEtLesEvenementsOrga">
+          les mariages et les événements organisés par les marques haut de gamme ou qui souhaitent innover. Grace à ses
+          nombreuses animations digitales et sa réalité augmentée intégrés, ce n’est pas juste une borne photo mais une
+          animation toute entière !
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature__card2">
+    <div class="feature__card2__frame10000025273">
+      <div class="feature__card2__frame10000025273__avantagesPrincipaux">Avantages principaux</div>
+      <div class="feature__card2__frame10000025273__frame1000002519">
+        <div class="feature__card2__frame10000025273__frame1000002519__uneBorneEsthetiqueEtInnovanteL">
+          <div class="feature__card2__frame10000025273__frame1000002519__uneBorneEsthetiqueEtInnovanteL__textBlock">
+            Une borne esthétique et innovante
+          </div>
+          <div class="feature__card2__frame10000025273__frame1000002519__uneBorneEsthetiqueEtInnovanteL__textBlock2">
+            La prise de photos de plain-pied
+          </div>
+          <div class="feature__card2__frame10000025273__frame1000002519__uneBorneEsthetiqueEtInnovanteL__textBlock3">
+            Les photos sont personnalisables en dessinant sur l&amp;#39;écran
+          </div>
+          <div class="feature__card2__frame10000025273__frame1000002519__uneBorneEsthetiqueEtInnovanteL__textBlock4">
+            beaucoup de fonctionnalités peuvent être ajoutées
+          </div>
+          <div class="feature__card2__frame10000025273__frame1000002519__uneBorneEsthetiqueEtInnovanteL__textBlock5">
+            Produit peu connu
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="topDestinationSafeTourLandingP">
+  <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2">
+    <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522">
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__texts">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__texts__autresSuggestions"
+        >
+          Autres Suggestions
+        </div>
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__texts__cesBornesSerontPeutEtreSuscept"
+        >
+          Ces bornes seront peut-être susceptible de vous intéresser également, jetez-y un coup d’œil !
+        </div>
+      </div>
+      <button
+        class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__secondaryBtnButton"
+      >
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__secondaryBtnButton__decouvrir"
+        >
+          Découvrir
+        </div>
+      </button>
+    </div>
+    <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525">
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2__facebooth"
+          >
+            Facebooth
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2__laPlusProfessionnelle"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3__labelbox"
+          >
+            Labelbox
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3__laPlusProfessionnelle2"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4__labelboxMini"
+          >
+            Labelbox Mini
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4__laPlusProfessionnelle3"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5__tinyLabel"
+          >
+            Tiny Label
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5__laPlusProfessionnelle4"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6__lABELXS"
+          >
+            LABEL XS
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6__laPlusProfessionnelle5"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header__group1000002517">
+    <div class="header__group1000002517__logo1">
+      <img src="assets/logo-1-icon.svg" alt="" class="header__group1000002517__logo1__icon24" />
+    </div>
+    <div class="header__group1000002517__chiiiz">Chiiiz</div>
+  </div>
+  <div class="header__nav">
+    <div class="header__nav__aPropos">À propos</div>
+    <div class="header__nav__nosOffres">Nos Offres</div>
+    <div class="header__nav__contact">Contact</div>
+    <div class="header__nav__frame10000025183">
+      <div class="header__nav__frame10000025183__plus">Plus</div>
+      <div class="header__nav__frame10000025183__vector">
+        <img src="assets/vector-icon.svg" alt="" class="header__nav__frame10000025183__vector__icon25" />
+      </div>
+    </div>
+  </div>
+  <div class="header__frame3">
+    <div class="header__frame3__frame1"><div class="header__frame3__frame1__reserver">Réserver</div></div>
+  </div>
+</div>
+<Chiiz-footer></Chiiz-footer>
