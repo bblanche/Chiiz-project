@@ -1,0 +1,117 @@
+:host,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+:host,
+:not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+ul,
+ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+img {
+  object-fit: contain;
+}
+
+svg {
+  overflow: visible;
+}
+
+:host {
+  width: 352px;
+  height: 76px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.phoneNumber {
+  color: #000929;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 500;
+  font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.frame289 {
+  flex: 1;
+  align-self: stretch;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  outline: solid 1px #e0def7;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #f7f7fd;
+  &__country {
+    z-index: 0;
+    width: min-content;
+    height: min-content;
+    align-items: center;
+    gap: 8px;
+    &__uSUnitedStates {
+      width: 20px;
+      height: 16px;
+      overflow: visible;
+      &__icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__line {
+    z-index: 0;
+    width: 2px;
+    max-width: 100%;
+    height: 48px;
+    max-height: 100%;
+    position: relative;
+  }
+  &___1234567891 {
+    opacity: 0.5;
+    color: #000929;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    z-index: 0;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+}
+.line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  transform: translateX(2px) rotate(90deg);
+  width: 48px;
+  height: 1px;
+  border-bottom: solid 1px #e0def7;
+}

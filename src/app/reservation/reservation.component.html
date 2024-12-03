@@ -1,0 +1,302 @@
+<div class="heroSection">
+  <div class="heroSection__content">
+    <div class="heroSection__content__heroImages">
+      <div class="heroSection__content__heroImages__img1">
+        <div class="heroSection__content__heroImages__img1__shapes">
+          <img src="assets/shapes-icon.svg" alt="" class="heroSection__content__heroImages__img1__shapes__icon" />
+        </div>
+        <div class="heroSection__content__heroImages__img1__ellipse8">
+          <img src="assets/ellipse-8-icon.svg" alt="" class="heroSection__content__heroImages__img1__ellipse8__icon2" />
+        </div>
+        <div class="heroSection__content__heroImages__img1__image871"></div>
+        <div class="heroSection__content__heroImages__img1__secondaryBtn">
+          <div class="heroSection__content__heroImages__img1__secondaryBtn__voirLesDetails">Voir les détails</div>
+        </div>
+      </div>
+    </div>
+    <div class="heroSection__content__applicantDetails">
+      <div class="heroSection__content__applicantDetails__formulaireDeReservation">Formulaire de réservation</div>
+      <div class="heroSection__content__applicantDetails__frame1000002534">
+        <!-- <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002533">
+          <div class="driversLicenseState">Modèle de la borne</div>
+          <div class="frame">
+            <div class="frame__selectOne">Select one</div>
+            <Chiiz-icon-property-1-chevron-down-p></Chiiz-icon-property-1-chevron-down-p>
+          </div>
+          <div class="driversLicenseState">Package</div>
+          <div class="frame">
+            <div class="frame__selectOne">Select one</div>
+            <Chiiz-icon-property-1-chevron-down-p></Chiiz-icon-property-1-chevron-down-p>
+          </div>
+        </div>
+        <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002536">
+          <div class="dateOfBirth">Date de l'évènement</div>
+          <div class="frame289">
+            <div class="frame289__dDMMYYYY">DD/MM/YYYY</div>
+            <Chiiz-icon-property-1-calendar-prope></Chiiz-icon-property-1-calendar-prope>
+          </div>
+        </div>
+        <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002535">
+          <div class="name">Lieu de l'évènement</div>
+          <div class="frame"><div class="frame__fullName">Full location</div></div>
+        </div>
+        <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002535">
+          <div class="name">Nom complet</div>
+          <div class="frame"><div class="frame__fullName">Full name</div></div>
+        </div>
+        <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002532">
+          <div class="email">Email</div>
+          <div class="frame"><div class="frame__hiExampleCom">hiexample.com</div></div>
+          <div class="phoneNumber">Numéro Whatsapp</div>
+          <div class="frame289">
+            <div class="frame289__country">
+              <div class="frame289__country__uSUnitedStates">
+                <img src="assets/us-united-states-icon.svg" alt="" class="frame289__country__uSUnitedStates__icon" />
+              </div>
+              <Chiiz-icon-property-1-chevron-down-p></Chiiz-icon-property-1-chevron-down-p>
+            </div>
+            <div class="frame289__line"></div>
+            <div class="frame289___1234567891">+1 (234) 567 - 891</div>
+          </div>
+
+        </div>
+        <div class="heroSection__content__applicantDetails__frame1000002534__sSN">
+          <div class="heroSection__content__applicantDetails__frame1000002534__sSN__sSN2">
+            <Chiiz-checkbox-property-1-checked-pr></Chiiz-checkbox-property-1-checked-pr>
+            <div
+              class="heroSection__content__applicantDetails__frame1000002534__sSN__sSN2__jAiLuEtJAccepteVosConditionsDU"
+            >
+              <p
+                class="heroSection__content__applicantDetails__frame1000002534__sSN__sSN2__jAiLuEtJAccepteVosConditionsDU__labelWrapper"
+              >
+                <span
+                  class="heroSection__content__applicantDetails__frame1000002534__sSN__sSN2__jAiLuEtJAccepteVosConditionsDU__labelWrapper__label"
+                >
+                  J’ai lu et j’accepte vos
+                </span>
+                <span
+                  class="heroSection__content__applicantDetails__frame1000002534__sSN__sSN2__jAiLuEtJAccepteVosConditionsDU__labelWrapper__label2"
+                >
+                  conditions d’utilisation
+                </span>
+              </p>
+            </div>
+          </div>
+        </div> -->
+        <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+          <div class="form-grid">
+            <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002533">
+              <!-- Modèle de la borne -->
+              <div class="frame">
+                <div class="driversLicenseState">
+                  <label for="modele">Modèle de la borne</label>
+                  <select id="modele" formControlName="modele" readonly>
+                    <option>{{ photobooth?.nom }}</option>
+                  </select>
+                </div>
+              </div>
+        
+              <!-- Package -->
+              <div class="frame">
+                <div class="driversLicenseState">
+                  <label for="package">Package</label>
+                  <select id="package" formControlName="package">
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                    <option value="vip">VIP</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002536">
+              <!-- Date de l'événement -->
+              <div class="frame">
+                <div class="dateOfBirth">
+                  <label for="date">Date de l'événement</label>
+                  <input id="date" type="date" formControlName="date" />
+                </div>
+              </div>
+        
+              <!-- Lieu de l'événement -->
+              <div class="frame">
+                <div class="name">
+                  <label for="lieu">Lieu de l'événement</label>
+                  <input id="lieu" type="text" formControlName="lieu" placeholder="Ex : Bastos, Yaoundé" />
+                </div>
+              </div>
+            </div>
+        
+              <!-- Nom complet -->
+              <div class="name">
+                <label for="nom">Nom complet</label>
+                <input id="nom" type="text" formControlName="nom" placeholder="Ex : John Doe" />
+              </div>
+        
+              <div class="heroSection__content__applicantDetails__frame1000002534__frame1000002532">
+                <!-- Email -->
+                <div class="email">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" formControlName="email" placeholder="Ex : john.doe@example.com" />
+                </div>
+          
+                <!-- Numéro WhatsApp -->
+                <div class="phoneNumber">
+                  <label for="whatsapp">Numéro WhatsApp</label>
+                  <input
+                    id="whatsapp"
+                    type="text"
+                    formControlName="whatsapp"
+                    placeholder="Ex : +237 012 345 678"
+                  />
+                </div>
+              </div>
+          </div>
+      
+          <!-- Conditions d'utilisation -->
+          <div class="form-group terms">
+            <input type="checkbox" id="terms" formControlName="terms" />
+            <label for="terms">
+              J’ai lu et j’accepte vos <a href="#">conditions d’utilisation</a>
+            </label>
+          </div>
+      
+          <!-- Bouton Envoyer -->
+          <button type="submit" [disabled]="reservationForm.invalid" class="submit-button">Envoyer</button>
+        </form>
+      </div>
+      <div class="heroSection__content__applicantDetails__frame1">
+        <div class="heroSection__content__applicantDetails__frame1__envoyer">Envoyer</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header__group1000002517">
+    <div class="header__group1000002517__logo1">
+      <img src="assets/logo-1-icon.svg" alt="" class="header__group1000002517__logo1__icon3" />
+    </div>
+    <div class="header__group1000002517__chiiiz">Chiiiz</div>
+  </div>
+  <div class="header__nav">
+    <div class="header__nav__aPropos">À propos</div>
+    <div class="header__nav__nosOffres">Nos Offres</div>
+    <div class="header__nav__contact">Contact</div>
+    <div class="header__nav__frame1000002518">
+      <div class="header__nav__frame1000002518__plus">Plus</div>
+      <div class="header__nav__frame1000002518__vector">
+        <img src="assets/vector-icon3.svg" alt="" class="header__nav__frame1000002518__vector__icon4" />
+      </div>
+    </div>
+  </div>
+  <div class="header__frame3">
+    <div class="header__frame3__frame12"><div class="header__frame3__frame12__reserver">Réserver</div></div>
+  </div>
+</div>
+<div class="topDestinationSafeTourLandingP">
+  <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2">
+    <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522">
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__texts">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__texts__autresSuggestions"
+        >
+          Autres Suggestions
+        </div>
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__texts__cesBornesSerontPeutEtreSuscept"
+        >
+          Ces bornes seront peut-être susceptible de vous intéresser également, jetez-y un coup d’œil !
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__secondaryBtn2">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002522__secondaryBtn2__decouvrir"
+        >
+          Découvrir
+        </div>
+      </div>
+    </div>
+    <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525">
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2__facebooth"
+          >
+            Facebooth
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2__laPlusProfessionnelle"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3__labelbox"
+          >
+            Labelbox
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3__laPlusProfessionnelle2"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4__labelboxMini"
+          >
+            Labelbox Mini
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4__laPlusProfessionnelle3"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5__tinyLabel"
+          >
+            Tiny Label
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5__laPlusProfessionnelle4"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6">
+        <div
+          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6"
+        >
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6__lABELXS"
+          >
+            LABEL XS
+          </div>
+          <div
+            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6__laPlusProfessionnelle5"
+          >
+            La plus professionnelle
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<Chiiz-footer></Chiiz-footer>
