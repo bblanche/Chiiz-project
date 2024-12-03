@@ -9,42 +9,42 @@ import { AppareilService } from 'src/app/appareil/appareil.service';
   styleUrls: ['./reservation.component.scss']
 })
 export class ReservationComponent implements OnInit {
-  reservationForm: FormGroup;
+  // reservationForm: FormGroup;
   photobooth: any;
 
   constructor(
     private route: ActivatedRoute,
-    private fb: FormBuilder,
+    // private fb: FormBuilder,
     private appareil: AppareilService
   ) {
-    this.reservationForm = this.fb.group({
-      modele: ['', Validators.required],
-      package: ['standard', Validators.required],
-      date: ['', Validators.required],
-      lieu: ['', Validators.required],
-      nom: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      whatsapp: ['', Validators.required],
-      terms: [false, Validators.requiredTrue]
-    });
+    // this.reservationForm = this.fb.group({
+    //   modele: ['', Validators.required],
+    //   package: ['standard', Validators.required],
+    //   date: ['', Validators.required],
+    //   lieu: ['', Validators.required],
+    //   nom: ['', Validators.required],
+    //   email: ['', [Validators.required, Validators.email]],
+    //   whatsapp: ['', Validators.required],
+    //   terms: [false, Validators.requiredTrue]
+    // });
   }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
     this.photobooth = this.appareil.getAppareilById(id);
 
-    if (this.photobooth) {
-      this.reservationForm.patchValue({
-        modele: this.photobooth.nom
-      });
-    }
+    // if (this.photobooth) {
+    //   this.reservationForm.patchValue({
+    //     modele: this.photobooth.nom
+    //   });
+    // }
   }
 
-  onSubmit(): void {
-    if (this.reservationForm.valid) {
-      console.log('Détails de la réservation :', this.reservationForm.value);
-      alert('Votre réservation a été envoyée avec succès !');
-    }
-  }
+  // onSubmit(): void {
+  //   if (this.reservationForm.valid) {
+  //     console.log('Détails de la réservation :', this.reservationForm.value);
+  //     alert('Votre réservation a été envoyée avec succès !');
+  //   }
+  // }
 }
 

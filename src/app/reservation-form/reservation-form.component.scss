@@ -1,0 +1,75 @@
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .form-group {
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #6b00b6;
+      }
+  
+      input,
+      select {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+  
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: #6b00b6;
+      }
+    }
+  
+    .terms {
+      display: flex;
+      align-items: center;
+  
+      input {
+        margin-right: 10px;
+      }
+  
+      a {
+        color: #6b00b6;
+        text-decoration: underline;
+  
+        &:hover {
+          color: #8a33cc;
+        }
+      }
+    }
+  
+    .submit-button {
+      align-self: flex-end;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background: linear-gradient(45deg, #6b00b6, #8a33cc);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background: linear-gradient(45deg, #8a33cc, #6b00b6);
+      }
+  
+      &:disabled {
+     
+        background: linear-gradient(45deg, #ccc, #ddd);
+        cursor: not-allowed;
+      } 
+    }
+    }
