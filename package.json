@@ -20,6 +20,7 @@
     "@angular/router": "^14.1.0",
     "clapy-angular": "file:",
     "rxjs": "~7.5.0",
+    "stylelint-config-standard-scss": "^14.0.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -27,13 +28,19 @@
     "@angular-devkit/build-angular": "^14.1.0",
     "@angular/cli": "~14.1.0",
     "@angular/compiler-cli": "^14.1.0",
+    "@eslint/js": "^9.17.0",
     "@types/jasmine": "~4.0.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.13.0",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.7.2"
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1",
+    "typescript": "^4.8.4",
+    "typescript-eslint": "^8.18.1"
   }
 }
