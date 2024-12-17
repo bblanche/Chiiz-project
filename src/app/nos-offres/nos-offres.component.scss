@@ -1310,3 +1310,120 @@ svg {
     }
   }
 }
+
+/* Conteneur principal du slider */
+.photo-slider-container {
+  width: 100%; /* S'assure que la largeur ne dépasse pas son parent */
+  max-width: 100%; /* Évite les débordements */
+  overflow: hidden; /* Cache tout contenu débordant */
+  box-sizing: border-box; /* Inclut les paddings et bordures dans la largeur */
+  position: relative;
+}
+
+/* Slider qui permet le défilement horizontal */
+.photo-slider {
+  display: flex;
+  overflow-x: auto; /* Active le scroll horizontal */
+  width: 100%; /* Limite la largeur au conteneur parent */
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Défilement doux */
+  gap: 20px; /* Espacement entre les cartes */
+  padding: 10px; /* Padding pour éviter les bords coupés */
+  scrollbar-width: none; /* Cache la barre de défilement (Firefox) */
+}
+
+.photo-slider::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement (Chrome, Safari) */
+}
+
+/* Conteneur des cartes */
+.photo-container {
+  display: flex;
+  flex-wrap: nowrap; /* Empêche le retour à la ligne */
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+/* Bouton pour chaque élément */
+.slider-button {
+  all: unset; /* Réinitialise le style du bouton */
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Carte individuelle */
+.slider-card {
+  width: 276px;
+  height: 400px;
+  border-radius: 20px;
+  background-size: cover; /* L'image couvre la carte */
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Texte aligné en bas */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Conteneur de texte */
+.slider-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Titre */
+.slider-title {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Description */
+.slider-description {
+  font-size: 16px;
+  line-height: 1.2;
+  opacity: 0.9;
+  white-space: normal; /* Autorise les retours à la ligne */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3.6em; /* Limite la hauteur à environ 2-3 lignes */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacement entre les boutons */
+  margin-top: 20px; /* Décale la pagination vers le bas */
+
+  button {
+    display: flex;  /* Utilisation de Flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    width: 40px;  /* Largeur de chaque bouton */
+    height: 40px;  /* Hauteur de chaque bouton */
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;  /* Taille du texte */
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;  /* Pour s'assurer que le texte est bien centré verticalement */
+
+
+    &:hover {
+      background-color: #7d00de;
+      color: #fff;
+    }
+
+    &:focus {
+      outline: 2px solid #7d00de;
+    }
+  }
+}
