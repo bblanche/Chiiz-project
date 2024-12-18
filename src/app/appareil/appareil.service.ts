@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Appareil } from './appareil.model';
 
 @Injectable({
   providedIn: 'root' // Fournit le service à l'ensemble de l'application
 })
 export class AppareilService {
   // Liste d'appareils
-  private appareils = [
+  private appareils: Appareil[] = [
     {
       id: 1,
       nom: 'Photobooth 1',
@@ -91,7 +92,7 @@ export class AppareilService {
       nom: 'Photobooth 1',
       description: 'Appareil avec options personnalisées.',
       photo: '/assets/location2.png',
-      LongDescription: 'La La-Bel est une borne photo miroir à impression immédiate qui prend des photos en pied. Notre borne haut de gamme et innovante pour prendre des photos de plein pied, idéale pour les mariages et les marques. À la fois esthétique et élégante, cette borne étonnera tous vos convives !',
+      longDescription: 'La La-Bel est une borne photo miroir à impression immédiate qui prend des photos en pied. Notre borne haut de gamme et innovante pour prendre des photos de plein pied, idéale pour les mariages et les marques. À la fois esthétique et élégante, cette borne étonnera tous vos convives !',
       caracteristiques: ['Format réduit', 'Idéal pour petits événements']
     },
     {
@@ -169,11 +170,15 @@ export class AppareilService {
   ];
 
   // Méthode pour récupérer la liste d'appareils
-  getAppareils() {
+  getAppareils(): Appareil[] {
     return this.appareils;
   }
   // Méthode pour récupérer un appareil par son identifiant
-  getAppareilById(id: number) {
-    return this.appareils.find(appareil => appareil.id === id);
+  getAppareilById(id: number): Appareil {
+    const appareil = this.appareils.find(appareil => appareil.id === id);
+    if (!appareil) {
+      throw new Error(`Appareil with id ${id} not found`);
+    }
+    return appareil;
   }
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Appareil } from '../appareil/appareil.model';
 
 @Component({
   selector: 'app-reservation-form',
@@ -7,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reservation-form.component.scss']
 })
 export class ReservationFormComponent implements OnInit {
-  @Input() photobooth: any; // Recevoir le photobooth sélectionné
+  @Input() photobooth!: Appareil; // Recevoir le photobooth sélectionné
   reservationForm: FormGroup;
 
   constructor(private fb: FormBuilder) {

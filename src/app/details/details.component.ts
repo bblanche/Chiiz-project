@@ -3,6 +3,7 @@ import type { OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AppareilService } from '../appareil/appareil.service';
 import { Location } from '@angular/common';
+import { Appareil } from '../appareil/appareil.model';
 
 /* @figmaId 37:3267 */
 @Component({
@@ -11,7 +12,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
-  appareil: any;
+  appareil!: Appareil;
 
   constructor(
     private route: ActivatedRoute,

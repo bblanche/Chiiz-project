@@ -1,9 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import type { ElementRef, OnInit } from '@angular/core';
-import { IconProperty1ChevronLeftPComponent } from 'src/app/nos-offres/icon-property-1-chevron-left-p/icon-property-1-chevron-left-p.component';
-import {IconProperty1ChevronRightComponent} from 'src/app/nos-offres/icon-property-1-chevron-right/icon-property-1-chevron-right.component';
-import { AppareilComponent } from 'src/app/appareil/appareil.component';
 import { AppareilService } from 'src/app/appareil/appareil.service';
+import { Appareil } from '../appareil/appareil.model';
 
 /* @figmaId 95:295 */
 @Component({
@@ -13,7 +11,7 @@ import { AppareilService } from 'src/app/appareil/appareil.service';
 })
 export class NosOffresComponent implements OnInit {
   @ViewChild('slider') slider!: ElementRef;
-  public appareils: any[] = [];
+  public appareils: Appareil[] = [];
 
   constructor(private appareilService: AppareilService) {}
 

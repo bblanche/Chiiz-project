@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppareilService } from 'src/app/appareil/appareil.service';
+import { Appareil } from '../appareil/appareil.model';
 
 @Component({
   selector: 'app-reservation',
@@ -10,7 +10,7 @@ import { AppareilService } from 'src/app/appareil/appareil.service';
 })
 export class ReservationComponent implements OnInit {
   // reservationForm: FormGroup;
-  photobooth: any;
+  photobooth!: Appareil;
 
   constructor(
     private route: ActivatedRoute,

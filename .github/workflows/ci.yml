@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - refacto_and_ci
   pull_request:
     branches:
       - main
+      - refacto_and_ci
 
 jobs:
   lint:
@@ -25,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Run ESLint (JavaScript/TypeScript)
-        run: npx eslint . --ext .js,.ts
+        run: npx eslint src
 
       - name: Run Stylelint (SCSS)
         run: npx stylelint "**/*.scss"

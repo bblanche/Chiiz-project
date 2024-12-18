@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { AppareilService } from './appareil.service';
+import { Appareil } from './appareil.model';
 
 @Component({
   selector: 'Chiiz-appareil',
@@ -9,7 +10,7 @@ import { AppareilService } from './appareil.service';
 
 export class AppareilComponent implements OnInit, OnDestroy {
 
-  public appareils: any[] = [];
+  public appareils: Appareil[] = [];
 
   constructor(private appareilService: AppareilService) { }
 
@@ -120,7 +121,7 @@ export class AppareilComponent implements OnInit, OnDestroy {
   //   }
   // ];
 
-  intervalId!: any;
+  intervalId!: NodeJS.Timeout;
 
   ngOnInit() {
     this.appareils = this.appareilService.getAppareils();
