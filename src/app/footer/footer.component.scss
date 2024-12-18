@@ -1,26 +1,24 @@
 .home_27-1035 {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: flex-start;
-  flex-wrap: nowrap;
   align-items: center;
-  gap: 0px;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: #ffffff;
+  gap: 0;
+  box-sizing: border-box; // overflow: hidden;
+  background: #fff;
   width: 1440px;
   margin: 0;            /* Supprime les marges par défaut */
   padding: 0;           /* Supprime les espacements par défaut */
   height: 100%;         /* Assure que le body prend toute la hauteur de la fenêtre */
-  overflow-y: scroll;   /* Permet le défilement vertical si nécessaire */
-  overflow-x: scroll;
+  overflow: scroll;   /* Permet le défilement vertical si nécessaire */
 }
+
 button {
   cursor: pointer; // Curseur en forme de main au survol
   transition: background-color 0.3s ease, transform 0.3s ease;
   border: none; // Suppression du cadre
-  background-color: transparent;  //suppression de la couleur de fond
+  background-color: transparent;  // Suppression de la couleur de fond
   // Effet de survol
   &:hover {
     transform: scale(1.05);  // Légère augmentation de taille
@@ -31,6 +29,7 @@ button {
     transform: scale(0.98);    // Réduction de la taille au clic
   }
 }
+
 :host,
 * {
   box-sizing: border-box;
@@ -88,6 +87,7 @@ svg {
   padding: 50px 0;
   background-color: #ffe6f9;
   overflow: hidden;
+
   &__nav_2 {
     width: 92%;
     height: min-content;
@@ -95,25 +95,26 @@ svg {
     align-items: center;
     gap: 40px;
     padding: 20px 0;
+
     &__logo {
       position: relative;
       width: 149px;
       height: 50px;
+
       &__logo12 {
         position: absolute;
-        left: 0;
-        right: 78.5235%;
-        top: 0;
-        bottom: 0;
+        inset: 0 78.5235% 0 0;
         width: 32px;
         height: 50px;
         overflow: visible;
+
         &__icon12 {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
+
       &__chiiiz_2 {
         background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
         background-position: center;
@@ -123,74 +124,79 @@ svg {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 40px;
-        font-family: Arciform Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: "Arciform Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         letter-spacing: 0.05em;
         position: absolute;
-        left: 34.8993%;
-        right: 0;
-        top: 10%;
-        bottom: 10%;
+        inset: 10% 0 10% 34.8993%;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
     }
+
     &__nav_3 {
       width: min-content;
       height: min-content;
       align-items: center;
       gap: 73px;
+
       &__propos2 {
         color: #570695;
         font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__nosBornes {
         color: #570695;
         font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__contact_2 {
         color: #570695;
         font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__frame1000002518_5 {
         width: min-content;
         height: min-content;
         align-items: center;
         gap: 4px;
+
         &__plus_2 {
           color: #570695;
           font-size: 16px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           width: min-content;
           height: min-content;
           white-space: nowrap;
           flex-direction: column;
         }
+
         &__vector_2 {
           width: 8px;
           height: 4.9433px;
           overflow: visible;
+
           &__icon13 {
             width: 100%;
             height: 100%;
@@ -200,18 +206,21 @@ svg {
       }
     }
   }
+
   &__line {
     width: 1170px;
     max-width: 100%;
     height: 0;
     max-height: 100%;
     overflow: visible;
+
     &__icon14 {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   &__footer2 {
     width: 1440px;
     height: min-content;
@@ -219,10 +228,11 @@ svg {
     align-items: center;
     gap: 783px;
     padding: 0 135px 20px;
+
     &__copyright2024ChiizTousDroitsRs {
       color: #666;
       font-size: 13px;
-      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       letter-spacing: -0.01em;
       width: min-content;
@@ -230,26 +240,30 @@ svg {
       white-space: nowrap;
       flex-direction: column;
     }
+
     &__frame1000002519_5 {
       width: 129px;
       height: 23px;
       overflow: visible;
+
       &__icon15 {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
+
     &__frame1000002519_6 {
       width: min-content;
       height: min-content;
       justify-content: center;
       align-items: center;
       gap: 20px;
+
       &__conditionsDutilisation {
         color: #666;
         font-size: 13px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
@@ -258,10 +272,11 @@ svg {
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__politiqueDeConfidentialit {
         color: #666;
         font-size: 13px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;

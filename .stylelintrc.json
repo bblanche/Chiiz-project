@@ -3,6 +3,12 @@
     "rules": {
         "block-no-empty": true,
         "color-no-invalid-hex": true,
-        "property-no-vendor-prefix": false
+        "property-no-vendor-prefix": null,
+        "selector-class-pattern" : [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$|^[a-zA-Z][a-zA-Z0-9]*(_[a-zA-Z0-9-]+)*$", 
+            {
+                "message": "Class selectors should be kebab-case or follow specific patterns."
+            }
+        ]
     }
 }

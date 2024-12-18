@@ -77,13 +77,14 @@
   font-size: 14px;
   line-height: 140%;
   font-weight: 500;
-  font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   width: min-content;
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
 }
+
 .frame {
   flex: 1;
   align-self: stretch;
@@ -93,13 +94,14 @@
   outline-offset: -1px;
   border-radius: 8px;
   background-color: #f7f7fd;
+
   &__fullName {
     opacity: 0.5;
     color: #000929;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
-    font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
       'Liberation Sans', sans-serif;
     z-index: 0;
     width: min-content;
@@ -114,13 +116,14 @@
   font-size: 14px;
   line-height: 140%;
   font-weight: 500;
-  font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   width: min-content;
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
 }
+
 // .frame {
 //   flex: 1;
 //   align-self: stretch;
@@ -150,13 +153,14 @@
   font-size: 14px;
   line-height: 140%;
   font-weight: 500;
-  font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   width: min-content;
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
 }
+
 // .frame {
 //   flex: 1;
 //   align-self: stretch;
@@ -189,13 +193,14 @@
   font-size: 14px;
   line-height: 140%;
   font-weight: 500;
-  font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   width: min-content;
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
 }
+
 .frame289 {
   flex: 1;
   align-self: stretch;
@@ -207,13 +212,14 @@
   outline-offset: -1px;
   border-radius: 8px;
   background-color: #f7f7fd;
+
   &__dDMMYYYY {
     opacity: 0.5;
     color: #000929;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
-    font-family: Plus Jakarta Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
       'Liberation Sans', sans-serif;
     z-index: 0;
     width: min-content;
@@ -270,6 +276,7 @@ svg {
   background-color: #fff;
   overflow: hidden;
 }
+
 .heroSection {
   position: relative;
   height: 1024px;
@@ -279,26 +286,31 @@ svg {
   align-items: center;
   gap: 10px;
   padding: 100px 68px;
+
   &__heroBg {
     position: relative;
     width: 1440px;
     height: 1024px;
   }
+
   &__content {
     position: relative;
     width: 1253.9313px;
     height: min-content;
     align-items: center;
     gap: 92px;
+
     &__heroImages {
       height: min-content;
       flex: 1;
+
       &__img1 {
         position: relative;
         height: min-content;
         flex: 1;
         flex-direction: column;
         align-items: center;
+
         &__shapes {
           position: absolute;
           left: 101.9658px;
@@ -306,12 +318,14 @@ svg {
           width: 470.8414px;
           height: 441.2969px;
           overflow: visible;
+
           &__icon {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
         }
+
         &__ellipse8 {
           position: absolute;
           left: 116.9658px;
@@ -320,12 +334,14 @@ svg {
           height: 92px;
           overflow: visible;
           filter: blur(15px);
+
           &__icon2 {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
         }
+
         &__image871 {
           width: 380px;
           height: 646px;
@@ -336,12 +352,14 @@ svg {
           background-size: cover;
           transform: matrix(-1, 0, 0, 1, 0, 0);
         }
+
         &__secondaryBtn {
           position: relative;
           width: min-content;
           height: min-content;
           padding: 4px 50px;
           border-radius: 100px;
+
           &__voirLesDetails {
             background-image: linear-gradient(259.9deg, #7d00deff 0%, #f6018dff 100%);
             background-position: center;
@@ -352,7 +370,7 @@ svg {
             -webkit-text-fill-color: transparent;
             font-size: 16px;
             font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             width: min-content;
             height: min-content;
@@ -364,6 +382,7 @@ svg {
         }
       }
     }
+
     &__applicantDetails {
       flex: 1;
       align-self: stretch;
@@ -375,18 +394,20 @@ svg {
       outline-offset: -1px;
       border-radius: 15px;
       background-color: #fff;
+
       &__formulaireDeReservation {
         color: #570695;
         font-size: 24px;
         line-height: 48px;
         font-weight: bold;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         z-index: 0;
         height: min-content;
         align-self: stretch;
         flex-direction: column;
       }
+
       &__frame1000002534 {
         z-index: 0;
         height: min-content;
@@ -394,61 +415,71 @@ svg {
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
+
         &__frame1000002533 {
           height: min-content;
           align-self: stretch;
           align-items: flex-start;
           gap: 18px;
         }
+
         &__frame1000002536 {
           width: 578.9656px;
           height: min-content;
           align-items: flex-start;
           gap: 18px;
         }
+
         &__frame1000002535 {
           height: min-content;
           align-self: stretch;
         }
+
         &__frame1000002532 {
           height: min-content;
           align-self: stretch;
           align-items: flex-start;
           gap: 18px;
         }
+
         &__sSN {
           height: min-content;
           align-self: stretch;
           flex-direction: column;
           align-items: flex-start;
+
           &__sSN2 {
             width: min-content;
             height: min-content;
             align-items: center;
             gap: 8px;
+
             &__jAiLuEtJAccepteVosConditionsDU {
               width: 354px;
               height: min-content;
               flex-direction: column;
+
               &__labelWrapper {
                 font-size: 14px;
-                font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+                font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
                   'Liberation Sans', sans-serif;
                 flex-shrink: 1;
+
                 &__label {
                   color: #000929;
                   font-size: 14px;
                   line-height: 140%;
                   font-weight: 500;
-                  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+                  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial,
                     'Noto Sans', 'Liberation Sans', sans-serif;
                 }
+
                 &__label2 {
                   color: #7d00de;
                   font-size: 14px;
                   line-height: 140%;
                   font-weight: 500;
-                  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+                  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial,
                     'Noto Sans', 'Liberation Sans', sans-serif;
                 }
               }
@@ -456,6 +487,7 @@ svg {
           }
         }
       }
+
       &__frame1 {
         z-index: 0;
         width: min-content;
@@ -467,14 +499,15 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto;
-        box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
-          0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
-          0px 100px 80px 0px #f201901a;
+        box-shadow: 0 1.8519px 3.1481px 0 #f2019006, 0 8.1481px 6.5185px 0 #f201900a,
+          0 20px 13px 0 #f201900d, 0 38.5185px 25.4815px 0 #f201900f, 0 64.8148px 46.8519px 0 #f2019013,
+          0 100px 80px 0 #f201901a;
+
         &__envoyer {
           color: #fff;
           font-size: 16px;
           font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           width: min-content;
           height: min-content;
@@ -487,6 +520,7 @@ svg {
     }
   }
 }
+
 .header {
   position: absolute;
   left: calc(50% - -0.5px);
@@ -497,25 +531,26 @@ svg {
   align-items: center;
   gap: 182px;
   transform: translateX(-50%);
+
   &__group1000002517 {
     position: relative;
     width: 149px;
     height: 50px;
+
     &__logo1 {
       position: absolute;
-      left: 0;
-      right: 78.5235%;
-      top: 0;
-      bottom: 0;
+      inset: 0 78.5235% 0 0;
       width: 32px;
       height: 50px;
       overflow: visible;
+
       &__icon3 {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
+
     &__chiiiz {
       background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
       background-position: center;
@@ -525,78 +560,83 @@ svg {
       background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 40px;
-      font-family: Arciform Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      font-family: "Arciform Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       letter-spacing: 0.05em;
       position: absolute;
-      left: 34.8993%;
-      right: 0;
-      top: 10%;
-      bottom: 10%;
+      inset: 10% 0 10% 34.8993%;
       width: min-content;
       height: min-content;
       white-space: nowrap;
       flex-direction: column;
     }
   }
+
   &__nav {
     width: min-content;
     height: min-content;
     align-items: center;
     gap: 73px;
+
     &__aPropos {
       color: #570695;
       font-size: 16px;
       font-weight: 600;
-      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       width: min-content;
       height: min-content;
       white-space: nowrap;
       flex-direction: column;
     }
+
     &__nosOffres {
       color: #570695;
       font-size: 16px;
       font-weight: 600;
-      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       width: min-content;
       height: min-content;
       white-space: nowrap;
       flex-direction: column;
     }
+
     &__contact {
       color: #570695;
       font-size: 16px;
       font-weight: 600;
-      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       width: min-content;
       height: min-content;
       white-space: nowrap;
       flex-direction: column;
     }
+
     &__frame1000002518 {
       width: min-content;
       height: min-content;
       align-items: center;
       gap: 4px;
+
       &__plus {
         color: #570695;
         font-size: 16px;
         font-weight: 600;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__vector {
         width: 8px;
         height: 4.9433px;
         overflow: visible;
+
         &__icon4 {
           width: 100%;
           height: 100%;
@@ -605,9 +645,11 @@ svg {
       }
     }
   }
+
   &__frame3 {
     width: min-content;
     height: min-content;
+
     &__frame12 {
       width: 152px;
       height: 58px;
@@ -619,13 +661,14 @@ svg {
       background-position: center;
       background-repeat: no-repeat;
       background-size: auto;
-      box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a, 0px 20px 13px 0px #f201900d,
-        0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013, 0px 100px 80px 0px #f201901a;
+      box-shadow: 0 1.8519px 3.1481px 0 #f2019006, 0 8.1481px 6.5185px 0 #f201900a, 0 20px 13px 0 #f201900d,
+        0 38.5185px 25.4815px 0 #f201900f, 0 64.8148px 46.8519px 0 #f2019013, 0 100px 80px 0 #f201901a;
+
       &__reserver {
         color: #fff;
         font-size: 16px;
         font-weight: bold;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
@@ -637,57 +680,65 @@ svg {
     }
   }
 }
+
 .topDestinationSafeTourLandingP {
   position: relative;
   height: min-content;
   align-self: stretch;
   flex-direction: column;
   padding: 100px 132px;
+
   &__topDestinationSafeTourLandingP2 {
     height: min-content;
     align-self: stretch;
     flex-direction: column;
     gap: 50px;
+
     &__frame1000002522 {
       height: min-content;
       align-self: stretch;
       align-items: flex-end;
       gap: 340px;
+
       &__texts {
         height: min-content;
         flex: 1;
         flex-direction: column;
         gap: 18px;
+
         &__autresSuggestions {
           color: #570695;
           font-size: 40px;
           line-height: 40px;
           font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           height: min-content;
           align-self: stretch;
           flex-direction: column;
         }
+
         &__cesBornesSerontPeutEtreSuscept {
           color: #676a6c;
           font-size: 18px;
           line-height: 28px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           height: min-content;
           align-self: stretch;
           flex-direction: column;
         }
       }
+
       &__secondaryBtn2 {
         width: min-content;
         height: min-content;
         padding: 18px 50px;
         border-radius: 100px;
-        box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
-          0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
-          0px 100px 80px 0px #f201901a;
+        box-shadow: 0 1.8519px 3.1481px 0 #f2019006, 0 8.1481px 6.5185px 0 #f201900a,
+          0 20px 13px 0 #f201900d, 0 38.5185px 25.4815px 0 #f201900f, 0 64.8148px 46.8519px 0 #f2019013,
+          0 100px 80px 0 #f201901a;
+
         &__decouvrir {
           background-image: linear-gradient(254.8deg, #7d00deff 0%, #f6018dff 100%);
           background-position: center;
@@ -698,7 +749,7 @@ svg {
           -webkit-text-fill-color: transparent;
           font-size: 16px;
           font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           width: min-content;
           height: min-content;
@@ -709,11 +760,13 @@ svg {
         }
       }
     }
+
     &__frame1000002525 {
       height: min-content;
       align-self: stretch;
       align-items: center;
       gap: 30px;
+
       &__location2 {
         width: 276px;
         height: 400px;
@@ -727,42 +780,39 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
+
         &__texts2 {
           position: relative;
           width: 166px;
           height: 50px;
+
           &__facebooth {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
             font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             letter-spacing: -0.01em;
             position: absolute;
-            left: 0;
-            right: 32.5301%;
-            top: 0;
-            bottom: 60%;
+            inset: 0 32.5301% 60% 0;
             width: min-content;
             height: min-content;
-            text-shadow: 0px 6px 15px #0003;
+            text-shadow: 0 6px 15px #0003;
             white-space: nowrap;
             flex-direction: column;
           }
+
           &__laPlusProfessionnelle {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
             line-height: 14px;
             font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 72%;
-            bottom: 0;
+            inset: 72% 0 0;
             width: min-content;
             height: min-content;
             white-space: nowrap;
@@ -770,6 +820,7 @@ svg {
           }
         }
       }
+
       &__location3 {
         width: 276px;
         height: 400px;
@@ -783,42 +834,39 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
+
         &__texts3 {
           position: relative;
           width: 166px;
           height: 50px;
+
           &__labelbox {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
             font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             letter-spacing: -0.01em;
             position: absolute;
-            left: 0;
-            right: 42.1687%;
-            top: 0;
-            bottom: 60%;
+            inset: 0 42.1687% 60% 0;
             width: min-content;
             height: min-content;
-            text-shadow: 0px 6px 15px #0003;
+            text-shadow: 0 6px 15px #0003;
             white-space: nowrap;
             flex-direction: column;
           }
+
           &__laPlusProfessionnelle2 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
             line-height: 14px;
             font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 72%;
-            bottom: 0;
+            inset: 72% 0 0;
             width: min-content;
             height: min-content;
             white-space: nowrap;
@@ -826,6 +874,7 @@ svg {
           }
         }
       }
+
       &__location4 {
         width: 276px;
         height: 400px;
@@ -839,42 +888,39 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
+
         &__texts4 {
           position: relative;
           width: 166px;
           height: 50px;
+
           &__labelboxMini {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
             font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             letter-spacing: -0.01em;
             position: absolute;
-            left: 0;
-            right: 10.8434%;
-            top: 0;
-            bottom: 60%;
+            inset: 0 10.8434% 60% 0;
             width: min-content;
             height: min-content;
-            text-shadow: 0px 6px 15px #0003;
+            text-shadow: 0 6px 15px #0003;
             white-space: nowrap;
             flex-direction: column;
           }
+
           &__laPlusProfessionnelle3 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
             line-height: 14px;
             font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 72%;
-            bottom: 0;
+            inset: 72% 0 0;
             width: min-content;
             height: min-content;
             white-space: nowrap;
@@ -882,6 +928,7 @@ svg {
           }
         }
       }
+
       &__location5 {
         width: 276px;
         height: 400px;
@@ -895,42 +942,39 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
+
         &__texts5 {
           position: relative;
           width: 166px;
           height: 50px;
+
           &__tinyLabel {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
             font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             letter-spacing: -0.01em;
             position: absolute;
-            left: 0;
-            right: 33.7349%;
-            top: 0;
-            bottom: 60%;
+            inset: 0 33.7349% 60% 0;
             width: min-content;
             height: min-content;
-            text-shadow: 0px 6px 15px #0003;
+            text-shadow: 0 6px 15px #0003;
             white-space: nowrap;
             flex-direction: column;
           }
+
           &__laPlusProfessionnelle4 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
             line-height: 14px;
             font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 72%;
-            bottom: 0;
+            inset: 72% 0 0;
             width: min-content;
             height: min-content;
             white-space: nowrap;
@@ -938,6 +982,7 @@ svg {
           }
         }
       }
+
       &__location6 {
         width: 276px;
         height: 400px;
@@ -951,42 +996,39 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
+
         &__texts6 {
           position: relative;
           width: 166px;
           height: 50px;
+
           &__lABELXS {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
             font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             letter-spacing: -0.01em;
             position: absolute;
-            left: 0;
-            right: 36.1446%;
-            top: 0;
-            bottom: 60%;
+            inset: 0 36.1446% 60% 0;
             width: min-content;
             height: min-content;
-            text-shadow: 0px 6px 15px #0003;
+            text-shadow: 0 6px 15px #0003;
             white-space: nowrap;
             flex-direction: column;
           }
+
           &__laPlusProfessionnelle5 {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
             line-height: 14px;
             font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 72%;
-            bottom: 0;
+            inset: 72% 0 0;
             width: min-content;
             height: min-content;
             white-space: nowrap;
@@ -997,6 +1039,7 @@ svg {
     }
   }
 }
+
 .footer {
   position: relative;
   width: 1440px;
@@ -1007,6 +1050,7 @@ svg {
   padding: 50px 0;
   background-color: #ffe6f9;
   overflow: hidden;
+
   &__nav2 {
     width: 1305px;
     height: min-content;
@@ -1014,25 +1058,26 @@ svg {
     align-items: center;
     gap: 40px;
     padding: 20px 0;
+
     &__logo {
       position: relative;
       width: 149px;
       height: 50px;
+
       &__logo12 {
         position: absolute;
-        left: 0;
-        right: 78.5235%;
-        top: 0;
-        bottom: 0;
+        inset: 0 78.5235% 0 0;
         width: 32px;
         height: 50px;
         overflow: visible;
+
         &__icon5 {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
+
       &__chiiiz2 {
         background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
         background-position: center;
@@ -1042,74 +1087,79 @@ svg {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 40px;
-        font-family: Arciform Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: "Arciform Sans", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         letter-spacing: 0.05em;
         position: absolute;
-        left: 34.8993%;
-        right: 0;
-        top: 10%;
-        bottom: 10%;
+        inset: 10% 0 10% 34.8993%;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
     }
+
     &__nav3 {
       width: min-content;
       height: min-content;
       align-items: center;
       gap: 73px;
+
       &__aPropos2 {
         color: #570695;
         font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__nosBornes {
         color: #570695;
         font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__contact2 {
         color: #570695;
         font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__frame10000025182 {
         width: min-content;
         height: min-content;
         align-items: center;
         gap: 4px;
+
         &__plus2 {
           color: #570695;
           font-size: 16px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           width: min-content;
           height: min-content;
           white-space: nowrap;
           flex-direction: column;
         }
+
         &__vector2 {
           width: 8px;
           height: 4.9433px;
           overflow: visible;
+
           &__icon6 {
             width: 100%;
             height: 100%;
@@ -1119,18 +1169,21 @@ svg {
       }
     }
   }
+
   &__line {
     width: 1170px;
     max-width: 100%;
     height: 0;
     max-height: 100%;
     overflow: visible;
+
     &__icon7 {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   &__footer2 {
     width: 1440px;
     height: min-content;
@@ -1138,10 +1191,11 @@ svg {
     align-items: center;
     gap: 783px;
     padding: 0 135px 20px;
+
     &__copyright2024ChiizTousDroitsRe {
       color: #666;
       font-size: 14px;
-      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       letter-spacing: -0.01em;
       width: min-content;
@@ -1149,26 +1203,30 @@ svg {
       white-space: nowrap;
       flex-direction: column;
     }
+
     &__frame1000002519 {
       width: 129px;
       height: 23px;
       overflow: visible;
+
       &__icon8 {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
+
     &__frame10000025192 {
       width: min-content;
       height: min-content;
       justify-content: center;
       align-items: center;
       gap: 20px;
+
       &__conditionsDUtilisation {
         color: #666;
         font-size: 14px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;
@@ -1177,10 +1235,11 @@ svg {
         white-space: nowrap;
         flex-direction: column;
       }
+
       &__politiqueDeConfidentialite {
         color: #666;
         font-size: 14px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: min-content;
         height: min-content;

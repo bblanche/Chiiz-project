@@ -10,34 +10,34 @@
 .photo-slider::-webkit-scrollbar {
   display: none; /* Cache la scrollbar sur Chrome, Safari et Edge */
 }
+
 .photo-container {
   display: flex;
   transition: transform 0.5s linear; /* Transition pour un effet fluide */
   gap: 10px; /* Ajoute un espacement entre les photos */
 }
+
 .home_27-1035 {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: flex-start;
-  flex-wrap: nowrap;
   align-items: center;
-  gap: 0px;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: #ffffff;
+  gap: 0;
+  box-sizing: border-box; // overflow: hidden;
+  background: #fff;
   width: 1440px;
   margin: 0;            /* Supprime les marges par défaut */
   padding: 0;           /* Supprime les espacements par défaut */
   height: 100%;         /* Assure que le body prend toute la hauteur de la fenêtre */
-  overflow-y: scroll;   /* Permet le défilement vertical si nécessaire */
-  overflow-x: scroll;
+  overflow: scroll;   /* Permet le défilement vertical si nécessaire */
 }
+
 button {
   cursor: pointer; // Curseur en forme de main au survol
   transition: background-color 0.3s ease, transform 0.3s ease;
   border: none; // Suppression du cadre
-  background-color: transparent;  //suppression de la couleur de fond
+  background-color: transparent;  // Suppression de la couleur de fond
   // Effet de survol
   &:hover {
     transform: scale(1.05);  // Légère augmentation de taille
@@ -48,6 +48,7 @@ button {
     transform: scale(0.98);    // Réduction de la taille au clic
   }
 }
+
 // :host,
 // * {
 //   box-sizing: border-box;
@@ -87,8 +88,9 @@ svg {
 
 :host {
   position: relative;
-  //largeur de la page en fonction de la taille de l'écran
-  width: 90%; //changé de 1440px à 90%
+
+  // largeur de la page en fonction de la taille de l'écran
+  width: 90%; // changé de 1440px à 90%
   // width: 1440px ;  // Largeur de la page
   height: min-content;
   flex-direction: column;
@@ -96,6 +98,7 @@ svg {
   background-color: #fff;
   overflow:hidden;
 }
+
 .topDestinationSafeTourLandingP {
   position: relative;
   width: 100%;
@@ -103,17 +106,20 @@ svg {
   align-self: stretch;
   flex-direction: column;
   padding: 100px 132px;
+
   &__topDestinationsafeTourLandingP {
     width: 80%;
     height: min-content;
     align-self: stretch;
     flex-direction: column;
     gap: 50px;
+
     &__frame1000002522 {
       width: 100%;
       height: min-content;
       align-self: stretch;
       align-items: flex-end;
+
       // gap: 340px;
       &__texts {
         width: 80%;
@@ -121,38 +127,43 @@ svg {
         flex: 1;
         flex-direction: column;
         gap: 18px;
+
         &__nosOffres {
           color: #570695;
           font-size: 40px;
           line-height: 40px;
           font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           height: min-content;
           align-self: stretch;
           flex-direction: column;
         }
+
         &__trouvezLaBorneIdalePourVosVnem {
           height: min-content;
           align-self: stretch;
           flex-direction: column;
+
           &__textBlock3 {
             color: #676a6c;
             font-size: 18px;
             line-height: 28px;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
           }
         }
       }
+
       &__secondarybtn_3 {
         width: min-content;
         height: min-content;
         padding: 18px 50px;
         border-radius: 100px;
-        box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
-          0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
-          0px 100px 80px 0px #f201901a;
+        box-shadow: 0 1.8519px 3.1481px 0 #f2019006, 0 8.1481px 6.5185px 0 #f201900a,
+          0 20px 13px 0 #f201900d, 0 38.5185px 25.4815px 0 #f201900f, 0 64.8148px 46.8519px 0 #f2019013,
+          0 100px 80px 0 #f201901a;
+
         &__dcouvrir {
           background-image: linear-gradient(254.8deg, #7d00deff 0%, #f6018dff 100%);
           background-position: center;
@@ -163,7 +174,7 @@ svg {
           -webkit-text-fill-color: transparent;
           font-size: 16px;
           font-weight: bold;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           width: min-content;
           height: min-content;
@@ -174,12 +185,14 @@ svg {
         }
       }
     }
+
     &__frame1000002526 {
       width: 100%;
       height: min-content;
       align-self: stretch;
       align-items: center;
       gap: 2%;
+
       &__location2 {
         width: 100%;
         height: 400px;
@@ -192,42 +205,39 @@ svg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto, contain;
+
         &__texts2 {
           position: relative;
           width: 166px;
           height: 50px;
+
           &__facebooth {
             color: #fff;
             font-size: 24px;
             line-height: 20px;
             font-weight: bold;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             letter-spacing: -0.01em;
             position: absolute;
-            left: 0;
-            right: 32.5301%;
-            top: 0;
-            bottom: 60%;
+            inset: 0 32.5301% 60% 0;
             width: 100%;
             height: min-content;
-            text-shadow: 0px 6px 15px #0003;
+            text-shadow: 0 6px 15px #0003;
             white-space: nowrap;
             flex-direction: column;
           }
+
           &__laPlusProfessionnelle {
             opacity: 0.9;
             color: #fff;
             font-size: 16px;
             line-height: 14px;
             font-weight: 500;
-            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+            font-family: Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
               'Liberation Sans', sans-serif;
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 72%;
-            bottom: 0;
+            inset: 72% 0 0;
             width: 100%;
             height: min-content;
             white-space: nowrap;
