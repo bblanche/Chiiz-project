@@ -1,5 +1,5 @@
 <div class="header">
-  <button class="button">
+  <button class="button" routerLink="/" >
     <div class="header__group1000002517">
       <div class="header__group1000002517__logo1">
         <img src="assets/logo-1-icon.svg" alt="" class="header__group1000002517__logo1__icon7" />
@@ -11,10 +11,10 @@
     <button class="button">
       <div class="header__nav__propos">À propos</div>
     </button>
-    <button class="button">
+    <button class="button" routerLink="/nos-offres">
       <div class="header__nav__nosOffres2">Nos Offres</div>
     </button>
-    <button class="button">
+    <button class="button" (click)="scrollToBottom()">
       <div class="header__nav__contact">Contact</div>
     </button>
     <button class="button">
@@ -27,7 +27,7 @@
   </button>
   </div>
   <div class="header__frame3">
-    <button class="button">
+    <button class="button" routerLink="/nos-offres">
       <div class="header__frame3__frame1"><div class="header__frame3__frame1__rserver">Réserver</div></div>
     </button>
   </div>
