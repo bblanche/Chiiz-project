@@ -19,7 +19,7 @@ import { ReservationFormComponent } from './reservation-form/reservation-form.co
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Page d'accueil
   { path: 'nos-offres', component: NosOffresComponent }, // Route pour "Nos Offres"
-  { path: 'photobooth/:id', component: DetailsComponent }, // Route pour les détails d'un photobooth
+  { path: 'pack/:id', component: DetailsComponent }, // Route pour les détails d'un photobooth
   { path: 'reservation/:id', component: ReservationComponent }, // Route pour la réservation
   //visualiser le formulaire de réservation
   {path: 'reservation_form/:id', component: ReservationFormComponent}

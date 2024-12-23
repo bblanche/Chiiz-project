@@ -1,3 +1,35 @@
+.pack-details {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.details-table th,
+.details-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.details-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.details-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
 .home_27-1035 {
   position: relative;
   display: flex;

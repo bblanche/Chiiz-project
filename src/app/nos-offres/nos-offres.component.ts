@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import type { ElementRef, OnInit } from '@angular/core';
 import { IconProperty1ChevronLeftPComponent } from 'src/app/nos-offres/icon-property-1-chevron-left-p/icon-property-1-chevron-left-p.component';
 import {IconProperty1ChevronRightComponent} from 'src/app/nos-offres/icon-property-1-chevron-right/icon-property-1-chevron-right.component';
-import { AppareilComponent } from 'src/app/appareil/appareil.component';
+import { PackService } from '../pack.service';
 import { AppareilService } from 'src/app/appareil/appareil.service';
 
 /* @figmaId 95:295 */
@@ -13,12 +13,12 @@ import { AppareilService } from 'src/app/appareil/appareil.service';
 })
 export class NosOffresComponent implements OnInit {
   @ViewChild('slider') slider!: ElementRef;
-  public appareils: any[] = [];
+  public packs: any[] = [];
 
-  constructor(private appareilService: AppareilService) {}
+  constructor(private packService: PackService) {}
 
   ngOnInit(): void {
-    this.appareils = this.appareilService.getAppareils();
+    this.packs = this.packService.getPacks();
   }
 
   scrollToCard(index: number): void {

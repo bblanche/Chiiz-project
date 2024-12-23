@@ -1,3 +1,5 @@
+
+<Chiiz-header></Chiiz-header>
 <div class="heroSection">
   <!-- <div class="heroSection__heroBg"></div> -->
   
@@ -23,17 +25,17 @@
             class="heroSection__content__heroImages__img1__illustration1__icon3"
           />
         </div>
-        <div class="heroSection__content__heroImages__img1__label_mirror1" [ngStyle]="{'background-image': 'url(' + appareil.photo + ')'}"></div>
+        <div class="heroSection__content__heroImages__img1__label_mirror1" [ngStyle]="{'background-image': 'url(' + pack.photobooth.photo + ')'}"></div>
       </div>
     </div>
     <div class="heroSection__content__heroText">
-      <div class="heroSection__content__heroText__laBelMiroir">{{appareil.nom}}</div>
+      <div class="heroSection__content__heroText__laBelMiroir">{{pack.nom}}</div>
       <div class="heroSection__content__heroText__laLaBelEstUneBornePhotoMiroirA">
-        {{ appareil.longDescription }}
+        {{ pack.photobooth.longDescription }}
       </div>
       <div class="heroSection__content__heroText__frame1000002527">
         <div class="heroSection__content__heroText__frame1000002527__caracteristiques">Caractéristiques</div>
-        <div class="heroSection__content__heroText__frame1000002527__frame1000002518" *ngFor="let caracteristique of appareil.caracteristiques">
+        <div class="heroSection__content__heroText__frame1000002527__frame1000002518" *ngFor="let caracteristique of pack.caracteristiques | keyvalue">
           <div class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore">
             <div class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore__arrowIcon">
               <img
@@ -45,7 +47,7 @@
             <div
               class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore__priseDeVueEnSelfieAvecAPNProfe"
             >
-            {{ caracteristique }}
+            <strong>{{ caracteristique.key }}:</strong> {{ caracteristique.value }}
             </div>
           </div>
         </div>
@@ -53,7 +55,7 @@
           
         
       </div>
-      <button class="heroSection__content__heroText__frame1Button" [routerLink]="['/reservation', appareil.id]">
+      <button class="heroSection__content__heroText__frame1Button" [routerLink]="['/reservation', pack.id]">
         <div class="heroSection__content__heroText__frame1Button__louerCetteBorne">Louer cette borne</div>
       </button>
     </div>
@@ -61,8 +63,90 @@
 </div>
 <div class="pricingTable2">
   <div class="pricingTable2__nosPacks">Nos Packs</div>
-  <div class="pricingTable2__frame1000002531">
-    <div class="pricingTable2__frame1000002531__group3">
+  <table class="details-table">
+    <thead>
+      <tr>
+        <th>Caractéristiques</th>
+        <th>Valeur</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let caracteristique of pack.caracteristiques | keyvalue;">
+        <td>{{ caracteristique.key }}</td>
+        <td>{{ caracteristique.value }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <div class="details-table">
+    <div class="table-row header">
+      <div class="table-cell">Caractéristiques</div>
+      <div class="table-cell">Valeur</div>
+    </div>
+    
+    <div class="table-row" *ngFor="let caracteristique of pack.caracteristiques | keyvalue">
+      <div class="table-cell">{{ caracteristique.key }}</div>
+      <div class="table-cell">{{ caracteristique.value }}</div>
+    </div>
+  </div> -->
+  <button class="heroSection__content__heroText__frame1Button" [routerLink]="['/reservation', pack.id]">
+    <div class="heroSection__content__heroText__frame1Button__louerCetteBorne">Louer cette borne</div>
+  </button>
+  <!-- <div class="pricingTable2__frame1000002531"> -->
+    
+          <!-- <div class="characteristics-table-container">
+        <table class="characteristics-table">
+          <thead>
+            <tr>
+              <th>Caractéristiques</th>
+              <th *ngFor="let pack of packs">{{ pack.nom }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>✨ Personnalisation des photos</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.personnalisation }}</td>
+            </tr>
+            <tr>
+              <td>🛠 Installation facile et rapide</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.installation }}</td>
+            </tr>
+            <tr>
+              <td>Aménagement mini espace photo</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.espacePhoto }}</td>
+            </tr>
+            <tr>
+              <td>📸 Photos de qualité illimitées</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.photosIllimitees }}</td>
+            </tr>
+            <tr>
+              <td>🎉 Animation garantie</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.animation }}</td>
+            </tr>
+            <tr>
+              <td>🔄 Partage instantané</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.partageInstantane }}</td>
+            </tr>
+            <tr>
+              <td>🖨️ Impressions sur place</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.impressions }}</td>
+            </tr>
+            <tr>
+              <td>🎥 Option Vidéo, Boomerang & GIF</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.optionsMultimedia }}</td>
+            </tr>
+            <tr>
+              <td>📔 Option Livre d'or ou questionnaire</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.livreOr }}</td>
+            </tr>
+            <tr>
+              <td>⏱ Durée</td>
+              <td *ngFor="let pack of packs">{{ pack.caracteristiques.duree }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+
+    <!-- <div class="pricingTable2__frame1000002531__group3">
       <div class="pricingTable2__frame1000002531__group3__shadow"></div>
       <div class="pricingTable2__frame1000002531__group3__pricingCard2">
         <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529">
@@ -153,8 +237,8 @@
           <div class="pricingTable2__frame1000002531__group3__pricingCard2__primaryButton__buttonLabel">Commander</div>
         </button>
       </div>
-    </div>
-    <div class="pricingTable2__frame1000002531__group7">
+    </div> -->
+    <!-- <div class="pricingTable2__frame1000002531__group7">
       <div class="pricingTable2__frame1000002531__group7__shadow2"></div>
       <div class="pricingTable2__frame1000002531__group7__pricingCard22">
         <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292">
@@ -343,8 +427,8 @@
           </div>
         </button>
       </div>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 </div>
 <div class="feature">
   <div class="feature__card">
@@ -409,111 +493,7 @@
         </div>
       </button>
     </div>
-    <!-- <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525">
-      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2">
-        <div
-          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2"
-        >
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2__facebooth"
-          >
-            Facebooth
-          </div>
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location2__texts2__laPlusProfessionnelle"
-          >
-            La plus professionnelle
-          </div>
-        </div>
-      </div>
-      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3">
-        <div
-          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3"
-        >
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3__labelbox"
-          >
-            Labelbox
-          </div>
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location3__texts3__laPlusProfessionnelle2"
-          >
-            La plus professionnelle
-          </div>
-        </div>
-      </div>
-      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4">
-        <div
-          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4"
-        >
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4__labelboxMini"
-          >
-            Labelbox Mini
-          </div>
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location4__texts4__laPlusProfessionnelle3"
-          >
-            La plus professionnelle
-          </div>
-        </div>
-      </div>
-      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5">
-        <div
-          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5"
-        >
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5__tinyLabel"
-          >
-            Tiny Label
-          </div>
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location5__texts5__laPlusProfessionnelle4"
-          >
-            La plus professionnelle
-          </div>
-        </div>
-      </div>
-      <div class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6">
-        <div
-          class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6"
-        >
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6__lABELXS"
-          >
-            LABEL XS
-          </div>
-          <div
-            class="topDestinationSafeTourLandingP__topDestinationSafeTourLandingP2__frame1000002525__location6__texts6__laPlusProfessionnelle5"
-          >
-            La plus professionnelle
-          </div>
-        </div>
-      </div>
-    </div> -->
     <Chiiz-appareil></Chiiz-appareil>
-  </div>
-</div>
-<div class="header">
-  <div class="header__group1000002517">
-    <div class="header__group1000002517__logo1">
-      <img src="assets/logo-1-icon.svg" alt="" class="header__group1000002517__logo1__icon24" />
-    </div>
-    <div class="header__group1000002517__chiiiz">Chiiiz</div>
-  </div>
-  <div class="header__nav">
-    <div class="header__nav__aPropos">À propos</div>
-    <div class="header__nav__nosOffres">Nos Offres</div>
-    <div class="header__nav__contact">Contact</div>
-    <div class="header__nav__frame10000025183">
-      <div class="header__nav__frame10000025183__plus">Plus</div>
-      <div class="header__nav__frame10000025183__vector">
-        <img src="assets/vector-icon.svg" alt="" class="header__nav__frame10000025183__vector__icon25" />
-      </div>
-    </div>
-  </div>
-  <div class="header__frame3">
-    <div class="header__frame3__frame1"><div class="header__frame3__frame1__reserver">Réserver</div></div>
   </div>
 </div>
 <Chiiz-footer></Chiiz-footer>

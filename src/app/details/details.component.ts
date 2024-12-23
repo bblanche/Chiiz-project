@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import type { OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AppareilService } from '../appareil/appareil.service';
+// import { AppareilService } from '../appareil/appareil.service';
+import { PackService } from '../pack.service';
 import { Location } from '@angular/common';
 
 /* @figmaId 37:3267 */
@@ -11,17 +12,17 @@ import { Location } from '@angular/common';
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
-  appareil: any;
+  pack: any;
 
   constructor(
     private route: ActivatedRoute,
-    private appareilService: AppareilService,
+    private packService: PackService,
     private location: Location // Injection du service Location
   ) {}
   
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
-    this.appareil = this.appareilService.getAppareilById(id);
+    this.pack = this.packService.getPackById(id);
   }
 
   goBack(): void {
