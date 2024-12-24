@@ -7,13 +7,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reservation-form.component.scss']
 })
 export class ReservationFormComponent implements OnInit {
-  @Input() photobooth: any; // Recevoir le photobooth sélectionné
+  @Input() pack_selected: any; // Recevoir le pack sélectionné
   reservationForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.reservationForm = this.fb.group({
-      modele: ['', Validators.required],
-      package: ['standard', Validators.required],
+      montant: ['', Validators.required],
+      package: ['', Validators.required],
       date: ['', Validators.required],
       lieu: ['', Validators.required],
       nom: ['', Validators.required],
@@ -24,9 +24,16 @@ export class ReservationFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.photobooth) {
-      this.reservationForm.value({
-        modele: this.photobooth.nom
+    // Calculer la date de demain
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1); // Ajouter 1 jour à la date actuelle
+    const tomorrowISO = tomorrow.toISOString().split('T')[0]; // Format ISO (YYYY-MM-DD)
+
+    if (this.pack_selected) {
+      this.reservationForm.patchValue({
+        package: this.pack_selected.nom,
+        montant: this.pack_selected.prix,
+        date: tomorrowISO, // Définir la date par défaut
       });
     }
   }
@@ -35,6 +42,9 @@ export class ReservationFormComponent implements OnInit {
     if (this.reservationForm.valid) {
       console.log('Détails de la réservation :', this.reservationForm.value);
       alert('Votre réservation a été envoyée avec succès !');
+      // Vous pouvez ajouter un service HTTP ici pour envoyer les données au backend
+    } else {
+      alert('Veuillez remplir correctement le formulaire avant de soumettre.');
     }
   }
 }

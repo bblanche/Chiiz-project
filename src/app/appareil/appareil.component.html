@@ -1,44 +1,28 @@
-<!-- 
-<div class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526">
-    <div class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2">
-      <div class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2__texts2">
-        <div
-          class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2__texts2__facebooth"
-        >
-          Facebooth
-        </div>
-        <div
-          class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2__texts2__laPlusProfessionnelle"
-        >
-          La plus professionnelle
-        </div>
-      </div>
-    </div> -->
 
-<div class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526"  #slider> <!--class="photo-slider"-->   
-    <!-- <div class="photo-container"> -->
-        <ng-container *ngFor="let appareil of appareils">
-            <button class="button" [routerLink]="['/photobooth', appareil.id]">
-                <!-- Utiliser ngStyle pour lier dynamiquement l'URL -->
-                <div class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2" [ngStyle]="{'background-image': 'linear-gradient(180deg, #fff0 0%, #57069596 100%), url(' + appareil.photo + ')'}">
-                    <div
-                    class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2__texts2"
-                    >
-                    <div
-                        class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2__texts2__facebooth"
-                    >
-                    {{ appareil.nom }}
-                    </div>
-                    <div
-                        class="topDestinationSafeTourLandingP__topDestinationsafeTourLandingP__frame1000002526__location2__texts2__laPlusProfessionnelle"
-                    >
-                    {{ appareil.description }}
-                    </div>
-                    </div>
-                </div>
-        </button>
+  <div class="photo-slider-container">
+    <div class="photo-slider" #slider>
+      <div class="photo-container">
+        <ng-container *ngFor="let pack of packs">
+          <button class="slider-button" [routerLink]="['/pack', pack.id]">
+            <div class="slider-card" [ngStyle]="{'background-image': 'linear-gradient(180deg, #fff0 0%, #57069596 100%), url(' + pack.photobooth.photo + ')'}">
+              <div class="slider-texts">
+                <div class="slider-title">{{ pack.nom }}</div>
+                <div class="slider-description">{{ pack.photobooth.description }}</div>
+              </div>
+            </div>
+          </button>
         </ng-container>
-    <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="pagination">
+    <button 
+      *ngFor="let pack of packs; let i = index" 
+      (click)="scrollToCard(i)"
+    >
+      {{ i + 1 }}
+    </button>
   </div>
 
   

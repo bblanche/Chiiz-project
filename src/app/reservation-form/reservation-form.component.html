@@ -1,19 +1,13 @@
 <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="reservation-form">
     <div class="form-grid">
       <div class="form-group">
-        <label for="modele">Modèle de la borne</label>
-        <select id="modele" formControlName="modele" readonly>
-          <option>{{ photobooth?.nom }}</option>
-        </select>
-      </div>
-  
-      <div class="form-group">
         <label for="package">Package</label>
-        <select id="package" formControlName="package">
-          <option value="standard">Standard</option>
-          <option value="premium">Premium</option>
-          <option value="vip">VIP</option>
-        </select>
+        <input id="package" type="text" formControlName="package" readonly />
+      </div>
+
+      <div class="form-group">
+        <label for="montant">Montant</label>
+        <input id="montant" type="text" formControlName="montant" readonly />
       </div>
   
       <div class="form-group">

@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'pack/:id', component: DetailsComponent }, // Route pour les détails d'un photobooth
   { path: 'reservation/:id', component: ReservationComponent }, // Route pour la réservation
   //visualiser le formulaire de réservation
-  {path: 'reservation_form/:id', component: ReservationFormComponent}
+  // {path: 'reservation_form/:id', component: ReservationFormComponent}
   // { path: '**', redirectTo: '' } // Redirige vers la page d'accueil pour les chemins inconnus
 ];
 

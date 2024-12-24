@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AppareilService } from 'src/app/appareil/appareil.service';
+import { PackService } from '../pack.service';
 
 @Component({
   selector: 'app-reservation',
@@ -9,42 +9,20 @@ import { AppareilService } from 'src/app/appareil/appareil.service';
   styleUrls: ['./reservation.component.scss']
 })
 export class ReservationComponent implements OnInit {
-  // reservationForm: FormGroup;
-  photobooth: any;
+  pack: any;
 
   constructor(
     private route: ActivatedRoute,
-    // private fb: FormBuilder,
-    private appareil: AppareilService
-  ) {
-    // this.reservationForm = this.fb.group({
-    //   modele: ['', Validators.required],
-    //   package: ['standard', Validators.required],
-    //   date: ['', Validators.required],
-    //   lieu: ['', Validators.required],
-    //   nom: ['', Validators.required],
-    //   email: ['', [Validators.required, Validators.email]],
-    //   whatsapp: ['', Validators.required],
-    //   terms: [false, Validators.requiredTrue]
-    // });
-  }
+    private pack_selected: PackService
+  ) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
-    this.photobooth = this.appareil.getAppareilById(id);
-
-    // if (this.photobooth) {
-    //   this.reservationForm.patchValue({
-    //     modele: this.photobooth.nom
-    //   });
-    // }
+    this.pack = this.pack_selected.getPackById(id);
+    if (!this.pack) {
+      console.error(`Aucun pack trouvé avec l'ID ${id}`);
+      // Ajoutez une logique ici pour rediriger ou afficher un message d'erreur si nécessaire
+    }
   }
-
-  // onSubmit(): void {
-  //   if (this.reservationForm.valid) {
-  //     console.log('Détails de la réservation :', this.reservationForm.value);
-  //     alert('Votre réservation a été envoyée avec succès !');
-  //   }
-  // }
 }
 

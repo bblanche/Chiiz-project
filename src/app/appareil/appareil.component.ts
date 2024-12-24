@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { AppareilService } from './appareil.service';
+import { PackService } from '../pack.service';
 
 @Component({
   selector: 'Chiiz-appareil',
@@ -7,13 +7,32 @@ import { AppareilService } from './appareil.service';
   styleUrls: ['./appareil.component.scss']
 })
 
-export class AppareilComponent implements OnInit, OnDestroy {
+export class AppareilComponent implements OnInit {
 
-  public appareils: any[] = [];
-
-  constructor(private appareilService: AppareilService) { }
-
-  @ViewChild('slider', { static: true }) slider!: ElementRef<HTMLDivElement>;
+  @ViewChild('slider') slider!: ElementRef;
+    public packs: any[] = [];
+  
+    constructor(private packService: PackService) {}
+  
+    ngOnInit(): void {
+      this.packs = this.packService.getPacks();
+    }
+  
+    scrollToCard(index: number): void {
+      const sliderElement = this.slider.nativeElement;
+  
+      // Largeur totale d'une carte incluant l'espacement (gap)
+      const cardWidth = 276 + 20; // 276px de largeur + 20px de gap (ajuste si nécessaire)
+  
+      // Calculer la position de défilement
+      const scrollPosition = index * cardWidth;
+  
+      // Déplacer le slider
+      sliderElement.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth' // Animation douce
+      });
+    }
   // ngOnInit(): void {
   // }
 
@@ -120,32 +139,6 @@ export class AppareilComponent implements OnInit, OnDestroy {
   //   }
   // ];
 
-  intervalId!: any;
-
-  ngOnInit() {
-    this.appareils = this.appareilService.getAppareils();
-
-    const slider = this.slider.nativeElement;
-
-    this.intervalId = setInterval(() => {
-      slider.scrollBy({
-        left: 200, // Définit le défilement horizontal en pixels
-        behavior: 'smooth' // Ajoute un effet de défilement fluide
-      });
-
-      // Reviens au début si la fin est atteinte
-      if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
-        slider.scrollTo({ left: 0, behavior: 'smooth' });
-      }
-    }, 2000); // Défile toutes les 2 secondes
-  }
-
-  ngOnDestroy() {
-    // Nettoie l'intervalle quand le composant est détruit
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-  }
 }
 
 
