@@ -124,7 +124,7 @@ svg {
         flex-direction: column;
         &__textBlock {
           color: #570695;
-          font-size: 90px;
+          font-size: 8vw;
           font-weight: 800;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
@@ -133,7 +133,7 @@ svg {
         &__textBlock2 {
           margin-top: 0;
           color: #570695;
-          font-size: 90px;
+          font-size: 8vw;
           font-weight: 800;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
@@ -142,8 +142,8 @@ svg {
       }
       &__rendezVosMomentsSpciauxInoubli {
         color: #2d2d2d;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 2vw;
+        line-height: 3vw;
         font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
           'Liberation Sans', sans-serif;
         width: 100%;
@@ -153,7 +153,7 @@ svg {
       &__secondarybtn {
         width: min-content;
         height: min-content;
-        padding: 18px 50px;
+        padding: 1vw 2vw;
         border-radius: 100px;
         box-shadow: 0px 1.8519px 3.1481px 0px #f2019006, 0px 8.1481px 6.5185px 0px #f201900a,
           0px 20px 13px 0px #f201900d, 0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013,
@@ -166,7 +166,7 @@ svg {
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-size: 16px;
+          font-size: 3vw;
           font-weight: bold;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
@@ -184,6 +184,7 @@ svg {
       height: min-content;
       align-items: center;
       &__img2 {
+        max-width: 100%; // Pour que l'image soit responsive
         position: relative;
         width: 50%;
         height: 414.75px;
@@ -193,8 +194,8 @@ svg {
           right: 4.2636%;
           top: 86.739%;
           bottom: 0;
-          width: 50%;
-          height: 55px;
+          width: 70%; // Ajuster la taille des éléments flous
+          height: auto;
           overflow: visible;
           filter: blur(15px);
           &__icon2 {
@@ -209,8 +210,9 @@ svg {
           right: 0;
           top: 0;
           bottom: 6.6908%;
+          max-width: 100%; // Pour que l'image soit responsive
           width: 100%; //changé
-          height: 387px;
+          height: auto;
           background-image: url('/assets/_68aa145e0b10f0e5436e4b0bdc7949.png');
           background-position: center;
           background-repeat: no-repeat;
@@ -219,6 +221,7 @@ svg {
       }
       &__img1 {
         position: relative;
+        max-width: 100%; // Pour que l'image soit responsive
         width: 70%; //changé
         height: 758.5px;
         &__ellipse8 {
@@ -254,6 +257,74 @@ svg {
     }
   }
 }
+@media (max-width: 1200px) {
+  .herosection {
+    padding: 150px 40px;
+  }
+  .herosection__content {
+    width: 100%; /* Adapter à l'écran */
+  }
+  .herosection__content__heroText__immortalisezVosMoments__textBlock,
+  .herosection__content__heroText__immortalisezVosMoments__textBlock2 {
+    font-size: 72px; /* Réduire la taille de police */
+  }
+}
+
+@media (max-width: 992px) {
+  .herosection {
+    padding: 100px 30px;
+    flex-direction: column; /* Passer en colonne */
+  }
+  .herosection__content {
+    width: 100%; /* Prendre toute la largeur */
+  }
+  .herosection__content__heroText {
+    width: 100%;
+    align-items: center; /* Centrer le texte */
+  }
+  .herosection__content__heroImages {
+    width: 100%; /* Adapter les images */
+  }
+  .herosection__content__heroImages__img1,
+  .herosection__content__heroImages__img2 {
+    width: 100%; /* S'assurer qu'elles prennent la largeur disponible */
+  }
+}
+
+@media (max-width: 768px) {
+  .herosection {
+    padding: 80px 20px;
+  }
+  .herosection__content__heroText__immortalisezVosMoments__textBlock,
+  .herosection__content__heroText__immortalisezVosMoments__textBlock2 {
+    font-size: 60px; /* Réduire encore la taille de police */
+  }
+  .herosection__content__heroText__rendezVosMomentsSpciauxInoubli {
+    font-size: 14px; /* Réduire le texte des descriptions */
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .herosection {
+    padding: 60px 10px;
+  }
+  .herosection__content {
+    width: 100%;
+    flex-direction: column; /* Tout empiler verticalement */
+  }
+  .herosection__content__heroText__immortalisezVosMoments__textBlock,
+  .herosection__content__heroText__immortalisezVosMoments__textBlock2 {
+    font-size: 48px; /* Plus petit pour mobiles compacts */
+    text-align: center; /* Centrer le texte */
+  }
+  .herosection__content__heroImages__img1,
+  .herosection__content__heroImages__img2 {
+    width: 100%; /* Ajuster les images */
+    height: auto; /* Garder le ratio */
+  }
+}
+
 .feature {
   position: relative;
   width: 100%; //changé
@@ -261,8 +332,8 @@ svg {
   align-self: stretch;
   justify-content: center;
   align-items: center;
-  gap: 70px;
-  padding: 100px 0;
+  gap: 10vw; // Utilisation de vw pour l'espace entre les éléments
+  padding: 8vw 0; // Utilisation de vw pour les paddings responsive
   background-color: #ffe6f9;
   &___7e3000d5f9c890a1d1634d9920bc40 {
     width: 33%; //changé
@@ -281,8 +352,8 @@ svg {
     gap: 20px;
     &__inoubliable {
       color: #7d00de;
-      font-size: 16px;
-      line-height: 18px;
+      font-size: 2.5vw; // Utilisation de vw pour une taille de police responsive
+      line-height: 4vw;
       font-weight: bold;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
@@ -295,8 +366,8 @@ svg {
     }
     &__desBornesPhotoUniquesPourVosVn {
       color: #570695;
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 5vw; // Utilisation de vw pour une taille de police responsive
+      line-height: 5vw;
       font-weight: bold;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
@@ -308,8 +379,8 @@ svg {
     }
     &__louezNosBornesPhotoPourCapture {
       color: #2d2d2d;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: 2vw;
+      line-height: 4vw;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       letter-spacing: -0.01em;
@@ -340,8 +411,8 @@ svg {
         }
         &__desImpressionsInstantanesDeHau {
           color: #2d2d2d;
-          font-size: 16px;
-          line-height: 18px;
+          font-size: 1.5vw;
+          line-height: 2vw;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           width: 30%;
@@ -353,6 +424,7 @@ svg {
     }
   }
 }
+
 .feature_2 {
   position: relative;
   width: 100%;
@@ -370,8 +442,8 @@ svg {
     gap: 20px;
     &__capturezVosMomentsSpciaux {
       color: #7d00de;
-      font-size: 16px;
-      line-height: 18px;
+      font-size: 2.5vw; /* Taille dynamique en fonction de la largeur de l'écran */
+      line-height: 4vw;
       font-weight: bold;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
@@ -385,8 +457,8 @@ svg {
     }
     &__adaptPourTousVosVnements {
       color: #570695;
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 5vw;
+      line-height: 5vw;
       font-weight: bold;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
@@ -399,8 +471,8 @@ svg {
     }
     &__notreServiceDeLocationDeBornes {
       color: #2d2d2d;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: 2vw;
+      line-height: 4vw;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
       letter-spacing: -0.01em;
@@ -435,17 +507,17 @@ svg {
         border-radius: 12px;
         &__mariageicon {
           z-index: 0;
-          width: 90px;
-          height: 90px;
+          width: 15vw; /* Taille dynamique en fonction de la largeur */
+          height: 15vw;
           justify-content: center;
           align-items: center;
-          padding: 17px;
+          padding: 2vw; 
           border-radius: 45px;
           background-color: #ed019333;
           box-shadow: 0px 30px 35px -8px #fab33f26;
           &__engagementring1 {
-            width: 48px;
-            height: 48px;
+            width: 10vw; /* Taille dynamique pour l'icône */
+            height: 10vw;
             background-image: url('/assets/engagementring1.png');
             background-position: center;
             background-repeat: no-repeat;
@@ -454,7 +526,8 @@ svg {
         }
         &__mariage {
           color: #2d2d2d;
-          font-size: 22px;
+          font-size: 4vw; /* Ajuster le texte */
+          line-height: 4vw;
           font-weight: 500;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
@@ -468,8 +541,8 @@ svg {
         }
         &__immortalisezVotreMariageAvecNo {
           color: #2d2d2d;
-          font-size: 16px;
-          line-height: 28px;
+          font-size: 2.5vw;
+          line-height: 4vw;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           letter-spacing: 0.005em;
@@ -493,17 +566,17 @@ svg {
         border-radius: 12px;
         &__hbdicon {
           z-index: 0;
-          width: 90px;
-          height: 90px;
+          width: 15vw;
+          height: 15vw;
           justify-content: center;
           align-items: center;
-          padding: 17px;
+          padding: 2vw; 
           border-radius: 45px;
           background-color: #ed019333;
           box-shadow: 0px 30px 35px -8px #fab33f26;
           &__birthdaycake1 {
-            width: 48px;
-            height: 48px;
+            width: 10vw;
+            height: 10vw;
             background-image: url('/assets/birthdaycake1.png');
             background-position: center;
             background-repeat: no-repeat;
@@ -512,7 +585,8 @@ svg {
         }
         &__anniversaire {
           color: #2d2d2d;
-          font-size: 22px;
+          font-size: 4vw;
+          line-height: 4vw;
           font-weight: 500;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
@@ -526,8 +600,8 @@ svg {
         }
         &__ajoutezUneToucheAmusanteVotreF {
           color: #2d2d2d;
-          font-size: 16px;
-          line-height: 28px;
+          font-size: 2.5vw;
+          line-height: 4vw;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           letter-spacing: 0.005em;
@@ -544,6 +618,7 @@ svg {
       width: 24%;
       height: min-content;
       &__n7e3000d5f9c890a1d1634d9920bc4 {
+        max-width: 100%;
         width: 100%;
         height: 580px;
         border-radius: 25px;
@@ -571,17 +646,17 @@ svg {
         border-radius: 12px;
         &__baby_showericon {
           z-index: 0;
-          width: 90px;
-          height: 90px;
+          width: 15vw; /* Dynamique en fonction de la largeur de l'écran */
+          height: 15vw;
           justify-content: center;
           align-items: center;
-          padding: 17px;
+          padding: 2vw; /* Ajuste le padding pour plus de réactivité */
           border-radius: 45px;
           background-color: #ed019333;
           box-shadow: 0px 30px 35px -8px #fab33f26;
           &__babyshower1 {
-            width: 48px;
-            height: 48px;
+            width: 10vw; /* Ajuste la taille de l'image */
+            height: 10vw;
             background-image: url('/assets/babyshower1.png');
             background-position: center;
             background-repeat: no-repeat;
@@ -590,7 +665,8 @@ svg {
         }
         &__babyShower {
           color: #2d2d2d;
-          font-size: 22px;
+          font-size: 4vw; /* Ajuste la taille du texte */
+          line-height: 4vw;
           font-weight: 500;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
@@ -604,8 +680,8 @@ svg {
         }
         &__capturezVosMomentsDeJoieLorsDe {
           color: #2d2d2d;
-          font-size: 16px;
-          line-height: 28px;
+          font-size: 2.5vw; /* Ajuste la taille du texte */
+          line-height: 4vw;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           letter-spacing: 0.005em;
@@ -629,17 +705,17 @@ svg {
         border-radius: 12px;
         &__baptisicon {
           z-index: 0;
-          width: 90px;
-          height: 90px;
+          width: 15vw; /* Dynamique en fonction de la largeur de l'écran */
+          height: 15vw;
           justify-content: center;
           align-items: center;
-          padding: 17px;
+          padding: 2vw;
           border-radius: 45px;
           background-color: #ed019333;
           box-shadow: 0px 30px 35px -8px #fab33f26;
           &__baptism1 {
-            width: 48px;
-            height: 48px;
+            width: 10vw; /* Ajuste la taille de l'image */
+            height: 10vw;
             background-image: url('/assets/baptism1.png');
             background-position: center;
             background-repeat: no-repeat;
@@ -648,7 +724,8 @@ svg {
         }
         &__baptme {
           color: #2d2d2d;
-          font-size: 22px;
+          font-size: 4vw;
+          line-height: 4vw;
           font-weight: 500;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
@@ -662,8 +739,8 @@ svg {
         }
         &__ajoutezUneToucheAmusanteVotreF2 {
           color: #2d2d2d;
-          font-size: 16px;
-          line-height: 28px;
+          font-size: 2.5vw;
+          line-height: 4vw;
           font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             'Liberation Sans', sans-serif;
           letter-spacing: 0.005em;
@@ -690,7 +767,7 @@ svg {
       0px 38.5185px 25.4815px 0px #f201900f, 0px 64.8148px 46.8519px 0px #f2019013, 0px 100px 80px 0px #f201901a;
     &__rservezMaintenant2 {
       color: #fff;
-      font-size: 16px;
+      font-size: 3vw;
       font-weight: bold;
       font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
         'Liberation Sans', sans-serif;
@@ -1825,198 +1902,262 @@ svg {
     
   }
 }
-.footer {
-  position: relative;
-  width: 1440px;
-  height: min-content;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 50px 0;
-  background-color: #ffe6f9;
-  overflow: hidden;
-  &__nav_2 {
-    width: 1305px;
-    height: min-content;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    padding: 20px 0;
-    &__logo {
-      position: relative;
-      width: 149px;
-      height: 50px;
-      &__logo12 {
-        position: absolute;
-        left: 0;
-        right: 78.5235%;
-        top: 0;
-        bottom: 0;
-        width: 32px;
-        height: 50px;
-        overflow: visible;
-        &__icon12 {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      &__chiiiz_2 {
-        background-image: linear-gradient(247.6deg, #7d00deff 0%, #f6018dff 100%);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: auto;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 40px;
-        font-family: Arciform Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        letter-spacing: 0.05em;
-        position: absolute;
-        left: 34.8993%;
-        right: 0;
-        top: 10%;
-        bottom: 10%;
-        width: min-content;
-        height: min-content;
-        white-space: nowrap;
-        flex-direction: column;
-      }
-    }
-    &__nav_3 {
-      width: min-content;
-      height: min-content;
-      align-items: center;
-      gap: 73px;
-      &__propos2 {
-        color: #570695;
-        font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        width: min-content;
-        height: min-content;
-        white-space: nowrap;
-        flex-direction: column;
-      }
-      &__nosBornes {
-        color: #570695;
-        font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        width: min-content;
-        height: min-content;
-        white-space: nowrap;
-        flex-direction: column;
-      }
-      &__contact_2 {
-        color: #570695;
-        font-size: 16px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        width: min-content;
-        height: min-content;
-        white-space: nowrap;
-        flex-direction: column;
-      }
-      &__frame1000002518_5 {
-        width: min-content;
-        height: min-content;
-        align-items: center;
-        gap: 4px;
-        &__plus_2 {
-          color: #570695;
-          font-size: 16px;
-          font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-            'Liberation Sans', sans-serif;
-          width: min-content;
-          height: min-content;
-          white-space: nowrap;
-          flex-direction: column;
-        }
-        &__vector_2 {
-          width: 8px;
-          height: 4.9433px;
-          overflow: visible;
-          &__icon13 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-    }
+
+
+// Media Queries
+@media (max-width: 1200px) {
+  .feature {
+    gap: 8vw;
+    padding: 8vw 0;
   }
-  &__line {
-    width: 1170px;
-    max-width: 100%;
-    height: 0;
-    max-height: 100%;
-    overflow: visible;
-    &__icon14 {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+
+  .feature__7e3000d5f9c890a1d1634d9920bc40 {
+    width: 40%;
+    height: 500px;
   }
-  &__footer2 {
-    width: 1440px;
-    height: min-content;
-    justify-content: space-between;
-    align-items: center;
-    gap: 783px;
-    padding: 0 135px 20px;
-    &__copyright2024ChiizTousDroitsRs {
-      color: #666;
-      font-size: 13px;
-      font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-        'Liberation Sans', sans-serif;
-      letter-spacing: -0.01em;
-      width: min-content;
-      height: min-content;
-      white-space: nowrap;
-      flex-direction: column;
-    }
-    &__frame1000002519_5 {
-      width: 129px;
-      height: 23px;
-      overflow: visible;
-      &__icon15 {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    &__frame1000002519_6 {
-      width: min-content;
-      height: min-content;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      &__conditionsDutilisation {
-        color: #666;
-        font-size: 13px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        width: min-content;
-        height: min-content;
-        text-align: end;
-        align-items: end;
-        white-space: nowrap;
-        flex-direction: column;
-      }
-      &__politiqueDeConfidentialit {
-        color: #666;
-        font-size: 13px;
-        font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-          'Liberation Sans', sans-serif;
-        width: min-content;
-        height: min-content;
-        text-align: end;
-        align-items: end;
-        white-space: nowrap;
-        flex-direction: column;
-      }
-    }
+
+  .feature__content2 {
+    width: 50%;
+  }
+
+  .feature__content2__inoubliable {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .feature__content2__desBornesPhotoUniquesPourVosVn {
+    font-size: 6vw;
+    line-height: 7vw;
+  }
+
+  .feature__content2__louezNosBornesPhotoPourCapture {
+    font-size: 2.5vw;
+  }
+
+  .feature__content2__frame1000002518__learnMore__desImpressionsInstantanesDeHau {
+    font-size: 2vw;
   }
 }
+
+@media (max-width: 992px) {
+  .feature {
+    gap: 6vw;
+    padding: 6vw 0;
+  }
+
+  .feature__7e3000d5f9c890a1d1634d9920bc40 {
+    width: 50%;
+    height: 400px;
+  }
+
+  .feature__content2 {
+    width: 60%;
+  }
+
+  .feature__content2__inoubliable {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+
+  .feature__content2__desBornesPhotoUniquesPourVosVn {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+
+  .feature__content2__louezNosBornesPhotoPourCapture {
+    font-size: 3vw;
+  }
+
+  .feature__content2__frame1000002518__learnMore__desImpressionsInstantanesDeHau {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature {
+    gap: 5vw;
+    padding: 5vw 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature__7e3000d5f9c890a1d1634d9920bc40 {
+    width: 80%;
+    height: 300px;
+  }
+
+  .feature__content2 {
+    width: 90%;
+  }
+
+  .feature__content2__inoubliable {
+    font-size: 6vw;
+    line-height: 7vw;
+  }
+
+  .feature__content2__desBornesPhotoUniquesPourVosVn {
+    font-size: 8vw;
+    line-height: 9vw;
+  }
+
+  .feature__content2__louezNosBornesPhotoPourCapture {
+    font-size: 4vw;
+  }
+
+  .feature__content2__frame1000002518__learnMore__desImpressionsInstantanesDeHau {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature {
+    gap: 4vw;
+    padding: 4vw 0;
+  }
+
+  .feature__7e3000d5f9c890a1d1634d9920bc40 {
+    width: 100%;
+    height: 250px;
+  }
+
+  .feature__content2 {
+    width: 100%;
+  }
+
+  .feature__content2__inoubliable {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+
+  .feature__content2__desBornesPhotoUniquesPourVosVn {
+    font-size: 10vw;
+    line-height: 12vw;
+  }
+
+  .feature__content2__louezNosBornesPhotoPourCapture {
+    font-size: 5vw;
+  }
+
+  .feature__content2__frame1000002518__learnMore__desImpressionsInstantanesDeHau {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature_2 {
+    padding-top: 5%;
+    gap: 20px;
+
+    &__content_2 {
+      width: 90%;
+    }
+
+    &__capturezVosMomentsSpciaux {
+      font-size: 14px;
+    }
+
+    &__adaptPourTousVosVnements {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__notreServiceDeLocationDeBornes {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .feature_2__feature_3 {
+    gap: 20px;
+
+    &__frame10000025182 {
+      width: 45%;
+    }
+
+    &__card3 {
+      padding: 30px 15px;
+    }
+
+    &__mariageicon {
+      width: 70px;
+      height: 70px;
+      padding: 12px;
+
+      &__engagementring1 {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__mariage {
+      font-size: 18px;
+    }
+
+    &__immortalisezVotreMariageAvecNo {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &__card4 {
+      padding: 30px 15px;
+    }
+
+    &__hbdicon {
+      width: 70px;
+      height: 70px;
+      padding: 12px;
+
+      &__birthdaycake1 {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__anniversaire {
+      font-size: 18px;
+    }
+
+    &__ajoutezUneToucheAmusanteVotreF {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &__frame1000002518_2 {
+      width: 45%;
+
+      &__n7e3000d5f9c890a1d1634d9920bc4 {
+        height: 400px;
+      }
+    }
+    &__frame1000002519 {
+      &__card03, &__card42 {
+        padding: 30px 15px;
+      }
+  
+      &__baby_showericon, &__baptisicon {
+        width: 25vw;
+        height: 25vw;
+      }
+  
+      &__babyShower, &__baptme {
+        font-size: 4vw;
+      }
+  
+      &__capturezVosMomentsDeJoieLorsDe, &__ajoutezUneToucheAmusanteVotreF2 {
+        font-size: 3vw;
+      }
+    }
+  
+    &__secondarybtn_2 {
+      padding: 10px 30px;
+      font-size: 4vw;
+    }
+  }
+
+  .feature_2__secondarybtn_2 {
+    font-size: 14px;
+    padding: 15px 40px;
+  }
+}
+
+
