@@ -35,7 +35,7 @@
       </div>
       <div class="heroSection__content__heroText__frame1000002527">
         <div class="heroSection__content__heroText__frame1000002527__caracteristiques">Caractéristiques</div>
-        <div class="heroSection__content__heroText__frame1000002527__frame1000002518" *ngFor="let caracteristique of pack.caracteristiques | keyvalue">
+        <!-- <div class="heroSection__content__heroText__frame1000002527__frame1000002518" *ngFor="let caracteristique of pack.caracteristiques | keyvalue">
           <div class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore">
             <div class="heroSection__content__heroText__frame1000002527__frame1000002518__learnMore__arrowIcon">
               <img
@@ -50,7 +50,21 @@
             <strong>{{ caracteristique.key }}:</strong> {{ caracteristique.value }}
             </div>
           </div>
-        </div>
+        </div> -->
+        <table class="details-table">
+          <thead>
+            <tr>
+              <th>Caractéristiques</th>
+              <th>Valeur</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let caracteristique of pack.caracteristiques | keyvalue">
+              <td>{{ caracteristique.key }}</td>
+              <td>{{ caracteristique.value }}</td>
+            </tr>
+          </tbody>
+        </table>
       
           
         
@@ -63,35 +77,10 @@
 </div>
 <div class="pricingTable2">
   <div class="pricingTable2__nosPacks">Nos Packs</div>
-  <table class="details-table">
-    <thead>
-      <tr>
-        <th>Caractéristiques</th>
-        <th>Valeur</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let caracteristique of pack.caracteristiques | keyvalue;">
-        <td>{{ caracteristique.key }}</td>
-        <td>{{ caracteristique.value }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- <div class="details-table">
-    <div class="table-row header">
-      <div class="table-cell">Caractéristiques</div>
-      <div class="table-cell">Valeur</div>
-    </div>
-    
-    <div class="table-row" *ngFor="let caracteristique of pack.caracteristiques | keyvalue">
-      <div class="table-cell">{{ caracteristique.key }}</div>
-      <div class="table-cell">{{ caracteristique.value }}</div>
-    </div>
-  </div> -->
   <button class="heroSection__content__heroText__frame1Button" [routerLink]="['/reservation', pack.id]">
     <div class="heroSection__content__heroText__frame1Button__louerCetteBorne">Louer cette borne</div>
   </button>
-  <!-- <div class="pricingTable2__frame1000002531"> -->
+  <div class="pricingTable2__frame1000002531">
     
           <!-- <div class="characteristics-table-container">
         <table class="characteristics-table">
@@ -146,7 +135,7 @@
         </table>
       </div> -->
 
-    <!-- <div class="pricingTable2__frame1000002531__group3">
+    <div class="pricingTable2__frame1000002531__group3">
       <div class="pricingTable2__frame1000002531__group3__shadow"></div>
       <div class="pricingTable2__frame1000002531__group3__pricingCard2">
         <div class="pricingTable2__frame1000002531__group3__pricingCard2__frame1000002529">
@@ -237,8 +226,8 @@
           <div class="pricingTable2__frame1000002531__group3__pricingCard2__primaryButton__buttonLabel">Commander</div>
         </button>
       </div>
-    </div> -->
-    <!-- <div class="pricingTable2__frame1000002531__group7">
+    </div>
+    <div class="pricingTable2__frame1000002531__group7">
       <div class="pricingTable2__frame1000002531__group7__shadow2"></div>
       <div class="pricingTable2__frame1000002531__group7__pricingCard22">
         <div class="pricingTable2__frame1000002531__group7__pricingCard22__frame10000025292">
@@ -427,8 +416,8 @@
           </div>
         </button>
       </div>
-    </div> -->
-  <!-- </div> -->
+    </div>
+  </div>
 </div>
 <div class="feature">
   <div class="feature__card">

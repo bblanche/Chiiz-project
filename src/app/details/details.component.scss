@@ -1,3 +1,5 @@
+
+
 .pack-details {
   margin: 1.5rem 0;
   padding: 1.5rem;
@@ -27,9 +29,6 @@
 .details-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
-
-
 .home_27-1035 {
   position: relative;
   display: flex;
@@ -78,7 +77,7 @@ button {
 }
 
 :host,
-:not(span, a, ul, ol, li, p) {
+:not(span, a, ul, ol, li, p):not(table):not(table *) {
   display: flex;
 }
 
@@ -2001,3 +2000,5 @@ svg {
     }
   }
 }
+
+
