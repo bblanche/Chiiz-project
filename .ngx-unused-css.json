@@ -1,0 +1,10 @@
+{
+  "path": "src/app/reservation",
+  "ignore": [
+    ".mat-"
+  ],
+  "cli": true,
+  "globalStyles": "src/styles.scss",
+  "styleExt": ".scss",
+  "include": ["**/*.scss"]
+}
